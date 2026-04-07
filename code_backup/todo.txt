@@ -1,0 +1,66 @@
+New stuff from Apr 7:
+Display the round trip travel time
+Set custom zoom to get the same shot every time
+Put circular “buttons” on midpoints of sections. When clicked, a checkpoint should be inserted there (turn on checkpoint mode so the user can click on the position).
+- Alternatively, make use of the station highlighting button. Let the user navigate the stations by pressing buttons (e.g. a for previous station, d for next station). Add a button for inserting checkpoints in the selected station.
+Use GTFS data to generate the coordinates. Input a series of routeIDs and bus numbers and turn it into a json file storing stations. Then, manually add the checkpoints. 
+Scheduled frequencies: Make a 86400 element array containing whether or not a train will spawn every second. Every second, check the nth element of the array and see if a train will spawn. If there is one, then spawn it.  —> Edit: Maybe the 86400 element array will actually slow down progress. Might be better to just make an ordered array storing the spawns. Remember the position (in the array) of the next train spawn time. In every cycle, see if the time is reached. If it is, move to the next position (also a queue?). 
+Make a queue or deque to store the trains in a way that they can be added and popped. The adding/removing will always be first in first out. 
+Fix the issue with the train taking different amounts of time to travel compared with scheduled (suspect: One extra second is counted during running/dwelling in the step() function for trains). This is for making synchronization of branches possible. 
+Change the rolling stock thingy (the images on the trains. The rolling stock are different for different lines.)
+Branch synchronisation: Maybe consider keeping the spawn frequency uniform for a branch? (i.e. modify it slightly such that the gap between each train is equivalent.)
+
+Editor:
+- To reduce the amount of lines, make one javascript file called lines.js consisting of the functions that edit the lines object. The main html file functions should just be handlers that call functions in the new javascript file. Just like the MVC structure. The main UI should only consist of functions that call other functions in other files.
+- The function should take in the “lines” object. Since the object is a reference, it can just edit the lines on the spot.
+- Make the map/JSON display/left editing page separate components?
+
+
+To figure out how to do:
+- Scheduling - How to upload schedules of transit services easily?
+    - GTFS data? Use a python script to generate a json.
+- How to optimise performance of scheduled frequencies?
+    - Pre-generate the spawn schedule?
+
+
+
+Stuff to do:
+Add support for image icons. Also make some image generators for basic images (circular image, text image).
+Add z-indexes, allowing for users to put things on top of each other.
+Make the animation generator fetch a json directly, so no uploading is needed.
+
+New progress function for longer lines
+Refer to the mtr wiki on the number of trains operating on each line. Make sure it is consistent.
+Idea: Separate a "branch editor" from the "line editor" to reduce the number of lines??
+The system currently can't simulate transit systems with schedules. The following should be done to accomodate them:
+- Make "single-trip" options for lines, where trains disappear when they travel to one end.
+- For "single-trip" lines, create "unidirectional" and "bidirectional" options. For bidirectional lines, trains spawn on both ends.
+- For the spawning of "single trip" trains, give two options: "scheduled" and "scheduled frequency".
+- For "scheduled" spawning, a list of times (in seconds) is given. Trains spawn at each time in the list.
+- For "scheduled frequencies" spawning, a list of times is given, along with a list of frequencies. At each time in the list, the frequency is changed to the corresponding frequency value. 
+- For the animation player, let the number of seconds be the time since 00:00:00 (24 hour clock). Display the time. Make it possible to start/stop at any time.
+
+
+Half-finished:
+Make images work for the train labels (maybe put a train image and a circle around it.)
+Add settings bar (e.g. hiding the lines, enabling/disabling certain lines in the video generator)
+
+
+Finished:
+Idea: Make the generation stage a separate file. It should be a function that takes in the lines json and returns the array of the train positions vs time.
+Display the label next to the line in the editor.
+Dragging stations around (on the list, not on the map) --> made the move up function, even better as it isn't weird.
+Cloning of lines/branches.
+Set up auto-travel time function based on distance (account for checkpoints!)
+Write the autocheckpoint function to automatically determine progress for checkpoints
+Highlight lines when clicking a button
+Make autoprogress possible for an entire branch 
+
+
+
+Ongoing:
+Split the code into shorter readable segments
+
+
+Later stuff to consider:
+- Interface for making new icons (just store images in a string?)

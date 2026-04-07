@@ -1,0 +1,1777 @@
+[
+  {
+    "line_id": 0,
+    "name": "Island Line",
+    "line_color": "#0860a8",
+    "branches": [
+      {
+        "branch_id": 0,
+        "SPAWN_EVERY": 216,
+        "offset_time": 0,
+        "stations": [
+          {
+            "name": "Kennedy Town",
+            "lat": 22.281,
+            "lng": 114.1289,
+            "run": 62.559059848801624,
+            "dwell": 120
+          },
+          {
+            "name": "HKU",
+            "lat": 22.28397009551155,
+            "lng": 114.13545726009193,
+            "run": 68.35761179155065,
+            "dwell": 30,
+            "checkpoints": [
+              {
+                "lat": 22.283831030034076,
+                "lng": 114.14032973016454,
+                "progress": 0.578409628190463
+              }
+            ]
+          },
+          {
+            "name": "Sai Ying Pun",
+            "lat": 22.286,
+            "lng": 114.143,
+            "run": 66.52926541557596,
+            "dwell": 30
+          },
+          {
+            "name": "Sheung Wan",
+            "lat": 22.287,
+            "lng": 114.151,
+            "run": 70.49284072551896,
+            "dwell": 30
+          },
+          {
+            "name": "Central",
+            "lat": 22.282,
+            "lng": 114.158,
+            "run": 64.68753318066969,
+            "dwell": 30
+          },
+          {
+            "name": "Admiralty",
+            "lat": 22.279,
+            "lng": 114.165,
+            "run": 67.6335333466593,
+            "dwell": 30
+          },
+          {
+            "name": "Wan Chai",
+            "lat": 22.277,
+            "lng": 114.173,
+            "run": 88.95008692444206,
+            "dwell": 30
+          },
+          {
+            "name": "Causeway Bay",
+            "lat": 22.28,
+            "lng": 114.185,
+            "run": 62.69001352276145,
+            "dwell": 30
+          },
+          {
+            "name": "Tin Hau",
+            "lat": 22.282,
+            "lng": 114.192,
+            "run": 59.90918066620107,
+            "dwell": 30
+          },
+          {
+            "name": "Fortress Hill",
+            "lat": 22.288,
+            "lng": 114.194,
+            "run": 60.08420217053945,
+            "dwell": 30
+          },
+          {
+            "name": "North Point",
+            "lat": 22.291,
+            "lng": 114.2,
+            "run": 78.48524468229753,
+            "dwell": 30
+          },
+          {
+            "name": "Quarry Bay",
+            "lat": 22.28817715954519,
+            "lng": 114.20993928773792,
+            "run": 65.390673087994,
+            "dwell": 30
+          },
+          {
+            "name": "Tai Koo",
+            "lat": 22.285,
+            "lng": 114.217,
+            "run": 63.04425442234766,
+            "dwell": 30
+          },
+          {
+            "name": "Sai Wan Ho",
+            "lat": 22.281,
+            "lng": 114.223,
+            "run": 57.809706309342026,
+            "dwell": 30
+          },
+          {
+            "name": "Shau Kei Wan",
+            "lat": 22.279,
+            "lng": 114.229,
+            "run": 82.84991104864564,
+            "dwell": 30,
+            "checkpoints": [
+              {
+                "lat": 22.28003445312011,
+                "lng": 114.23484734230085,
+                "progress": 0.5294316798397072
+              }
+            ]
+          },
+          {
+            "name": "Heng Fa Chuen",
+            "lat": 22.277,
+            "lng": 114.239,
+            "run": 99.66107935645196,
+            "dwell": 30,
+            "checkpoints": [
+              {
+                "lat": 22.273511023755287,
+                "lng": 114.24123842181612,
+                "progress": 0.3021499451453706
+              }
+            ]
+          },
+          {
+            "name": "Chai Wan",
+            "lat": 22.265,
+            "lng": 114.237,
+            "run": 1,
+            "dwell": 120
+          }
+        ],
+        "branch_type": "normal"
+      }
+    ],
+    "label": "Island Line",
+    "markertype": "hkmtr",
+    "image": "assets/mtr_train1.png",
+    "max_speed": 20,
+    "acceleration": 0.8,
+    "icon": "<div style=\"\n        background-color:#0860a8;overflow: hidden;\n        width:24px;height:24px;border-radius:50%;\n        border:4px solid #0860a8;\"><img src=\"assets/mtr_train1.png\" style=\"\n        height:100%; width: 100%; object-fit:cover;display:block;\"></div>  "
+  },
+  {
+    "line_id": 1,
+    "name": "South Island Line",
+    "line_color": "#bac429",
+    "branches": [
+      {
+        "branch_id": 0,
+        "SPAWN_EVERY": 300,
+        "offset_time": 0,
+        "stations": [
+          {
+            "name": "Admiralty",
+            "lat": 22.279,
+            "lng": 114.165,
+            "run": 221.0110073478737,
+            "dwell": 120,
+            "checkpoints": [
+              {
+                "lat": 22.2748,
+                "lng": 114.1629,
+                "progresss": 0.15
+              },
+              {
+                "lat": 22.2523,
+                "lng": 114.1771,
+                "progresss": 0.9
+              }
+            ]
+          },
+          {
+            "name": "Ocean Park",
+            "lat": 22.2486,
+            "lng": 114.1742,
+            "run": 56.51242231880796,
+            "dwell": 30
+          },
+          {
+            "name": "Wong Chuk Hang",
+            "lat": 22.2481,
+            "lng": 114.1681,
+            "run": 97.8135875035658,
+            "dwell": 30,
+            "checkpoints": [
+              {
+                "lat": 22.246995082472296,
+                "lng": 114.16165784266205,
+                "progress": 0.4630292376625
+              }
+            ]
+          },
+          {
+            "name": "Lei Tung",
+            "lat": 22.2422,
+            "lng": 114.1561,
+            "run": 60.546907583422225,
+            "dwell": 30
+          },
+          {
+            "name": "South Horizons",
+            "lat": 22.2425,
+            "lng": 114.1492,
+            "run": 90,
+            "dwell": 120
+          }
+        ],
+        "branch_type": "normal"
+      }
+    ],
+    "label": "South Island Line",
+    "markertype": "hkmtr",
+    "image": "assets/mtr_train1.png",
+    "max_speed": 20,
+    "acceleration": 0.8,
+    "icon": "<div style=\"\n        background-color:#bac429;overflow: hidden;\n        width:24px;height:24px;border-radius:50%;\n        border:4px solid #bac429;\"><img src=\"assets/mtr_train1.png\" style=\"\n        height:100%; width: 100%; object-fit:cover;display:block;\"></div>  "
+  },
+  {
+    "line_id": 2,
+    "name": "Disneyland Resort Line",
+    "line_color": "#f173ac",
+    "branches": [
+      {
+        "branch_id": 0,
+        "SPAWN_EVERY": 600,
+        "offset_time": 0,
+        "stations": [
+          {
+            "name": "Sunny Bay",
+            "lat": 22.3317,
+            "lng": 114.0289,
+            "run": 180.72360229845157,
+            "dwell": 90,
+            "checkpoints": [
+              {
+                "lat": 22.3332,
+                "lng": 114.0316,
+                "progresss": 0.1
+              },
+              {
+                "lat": 22.3306,
+                "lng": 114.0355,
+                "progresss": 0.25
+              },
+              {
+                "lat": 22.3173,
+                "lng": 114.0374,
+                "progresss": 0.8
+              }
+            ]
+          },
+          {
+            "name": "Disneyland Resort",
+            "lat": 22.3156,
+            "lng": 114.045,
+            "run": 90,
+            "dwell": 90
+          }
+        ],
+        "branch_type": "normal"
+      }
+    ],
+    "label": "Disneyland Resort Line",
+    "markertype": "hkmtr",
+    "image": "assets/mtr_train1.png",
+    "max_speed": 20,
+    "acceleration": 0.8,
+    "icon": "<div style=\"\n        background-color:#f173ac;overflow: hidden;\n        width:24px;height:24px;border-radius:50%;\n        border:4px solid #f173ac;\"><img src=\"assets/mtr_train1.png\" style=\"\n        height:100%; width: 100%; object-fit:cover;display:block;\"></div>  "
+  },
+  {
+    "line_id": 3,
+    "name": "Tseung Kwan O line",
+    "line_color": "#7d499d",
+    "branches": [
+      {
+        "branch_id": 0,
+        "SPAWN_EVERY": 540,
+        "offset_time": 0,
+        "stations": [
+          {
+            "name": "North Point",
+            "lat": 22.2908,
+            "lng": 114.2008,
+            "run": 73.72798943748798,
+            "dwell": 90
+          },
+          {
+            "name": "Quarry Bay",
+            "lat": 22.2878,
+            "lng": 114.2097,
+            "run": 187.57307580620636,
+            "dwell": 30,
+            "checkpoints": [
+              {
+                "lat": 22.30000459165125,
+                "lng": 114.23292147249975,
+                "progress": 0.845044920032863
+              }
+            ]
+          },
+          {
+            "name": "Yau Tong",
+            "lat": 22.2978,
+            "lng": 114.2372,
+            "run": 132.77253880327837,
+            "dwell": 30,
+            "checkpoints": [
+              {
+                "lat": 22.2944,
+                "lng": 114.2419,
+                "progresss": 0.3
+              }
+            ]
+          },
+          {
+            "name": "Tiu Keng Leng",
+            "lat": 22.3042,
+            "lng": 114.2525,
+            "run": 67.71850169165715,
+            "dwell": 30
+          },
+          {
+            "name": "Tseung Kwan O",
+            "lat": 22.3075,
+            "lng": 114.26,
+            "run": 75.40077061579106,
+            "dwell": 30
+          },
+          {
+            "name": "Hang Hau",
+            "lat": 22.3156,
+            "lng": 114.2644,
+            "run": 75.21527918459157,
+            "dwell": 30
+          },
+          {
+            "name": "Po Lam",
+            "lat": 22.3225,
+            "lng": 114.2581,
+            "run": 90,
+            "dwell": 90
+          }
+        ],
+        "branch_type": "normal"
+      },
+      {
+        "branch_id": 1,
+        "SPAWN_EVERY": 540,
+        "offset_time": 180,
+        "stations": [
+          {
+            "name": "North Point",
+            "lat": 22.2908,
+            "lng": 114.2008,
+            "run": 73.72798943748798,
+            "dwell": 90
+          },
+          {
+            "name": "Quarry Bay",
+            "lat": 22.2878,
+            "lng": 114.2097,
+            "run": 188.25259051323906,
+            "dwell": 30,
+            "checkpoints": [
+              {
+                "lat": 22.30012750551397,
+                "lng": 114.23295969299201,
+                "progress": 0.5
+              }
+            ]
+          },
+          {
+            "name": "Yau Tong",
+            "lat": 22.2978,
+            "lng": 114.2372,
+            "run": 132.77253880327837,
+            "dwell": 30,
+            "checkpoints": [
+              {
+                "lat": 22.2944,
+                "lng": 114.2419,
+                "progresss": 0.3
+              }
+            ]
+          },
+          {
+            "name": "Tiu Keng Leng",
+            "lat": 22.3042,
+            "lng": 114.2525,
+            "run": 67.71850169165715,
+            "dwell": 30
+          },
+          {
+            "name": "Tseung Kwan O",
+            "lat": 22.3075,
+            "lng": 114.26,
+            "run": 75.40077061579106,
+            "dwell": 30
+          },
+          {
+            "name": "Hang Hau",
+            "lat": 22.3156,
+            "lng": 114.2644,
+            "run": 75.21527918459157,
+            "dwell": 30
+          },
+          {
+            "name": "Po Lam",
+            "lat": 22.3225,
+            "lng": 114.2581,
+            "run": 90,
+            "dwell": 90
+          }
+        ],
+        "branch_type": "normal"
+      },
+      {
+        "branch_id": 2,
+        "SPAWN_EVERY": 540,
+        "offset_time": 180,
+        "stations": [
+          {
+            "name": "Tiu Keng Leng",
+            "lat": 22.3042,
+            "lng": 114.2525,
+            "run": 67.71850169165715,
+            "dwell": 90
+          },
+          {
+            "name": "Tseung Kwan O",
+            "lat": 22.3075,
+            "lng": 114.26,
+            "run": 177.01113984043334,
+            "dwell": 30,
+            "checkpoints": [
+              {
+                "lat": 22.3105,
+                "lng": 114.2689,
+                "progresss": 0.3
+              },
+              {
+                "lat": 22.3021,
+                "lng": 114.275,
+                "progresss": 0.7
+              }
+            ]
+          },
+          {
+            "name": "LOHAS Park",
+            "lat": 22.2958,
+            "lng": 114.2689,
+            "run": 90,
+            "dwell": 120
+          }
+        ],
+        "branch_type": "normal"
+      }
+    ],
+    "label": "Tseung Kwan O line",
+    "markertype": "hkmtr",
+    "image": "assets/mtr_train1.png",
+    "max_speed": 20,
+    "acceleration": 0.8,
+    "icon": "<div style=\"\n        background-color:#7d499d;overflow: hidden;\n        width:24px;height:24px;border-radius:50%;\n        border:4px solid #7d499d;\"><img src=\"assets/mtr_train1.png\" style=\"\n        height:100%; width: 100%; object-fit:cover;display:block;\"></div>  "
+  },
+  {
+    "line_id": 4,
+    "name": "Tsuen Wan Line",
+    "line_color": "#ed1d24",
+    "branches": [
+      {
+        "branch_id": 0,
+        "SPAWN_EVERY": 210,
+        "offset_time": 0,
+        "stations": [
+          {
+            "name": "Central",
+            "lat": 22.2819,
+            "lng": 114.1575,
+            "run": 65.62351175781939,
+            "dwell": 90
+          },
+          {
+            "name": "Admiralty",
+            "lat": 22.2789,
+            "lng": 114.1647,
+            "run": 144.50054273176792,
+            "dwell": 30,
+            "checkpoints": [
+              {
+                "lat": 22.2832,
+                "lng": 114.1713,
+                "progresss": 0.4
+              }
+            ]
+          },
+          {
+            "name": "Tsim Sha Tsui",
+            "lat": 22.2972,
+            "lng": 114.1722,
+            "run": 68.44222271628252,
+            "dwell": 30
+          },
+          {
+            "name": "Jordan",
+            "lat": 22.305,
+            "lng": 114.1717,
+            "run": 68.61240309817394,
+            "dwell": 30
+          },
+          {
+            "name": "Yau Ma Tei",
+            "lat": 22.3128,
+            "lng": 114.1708,
+            "run": 61.303654009425124,
+            "dwell": 30
+          },
+          {
+            "name": "Mong Kok",
+            "lat": 22.3192,
+            "lng": 114.1694,
+            "run": 54.4590242785649,
+            "dwell": 30
+          },
+          {
+            "name": "Prince Edward",
+            "lat": 22.3244,
+            "lng": 114.1683,
+            "run": 72.43726378336332,
+            "dwell": 30
+          },
+          {
+            "name": "Sham Shui Po",
+            "lat": 22.3308,
+            "lng": 114.1622,
+            "run": 63.93118634297268,
+            "dwell": 30
+          },
+          {
+            "name": "Cheung Sha Wan",
+            "lat": 22.3353,
+            "lng": 114.1564,
+            "run": 67.97358415378328,
+            "dwell": 30
+          },
+          {
+            "name": "Lai Chi Kok",
+            "lat": 22.3372,
+            "lng": 114.1483,
+            "run": 80.76442362477857,
+            "dwell": 30
+          },
+          {
+            "name": "Mei Foo",
+            "lat": 22.3381,
+            "lng": 114.1375,
+            "run": 106.56331622226227,
+            "dwell": 30
+          },
+          {
+            "name": "Lai King",
+            "lat": 22.3483,
+            "lng": 114.1261,
+            "run": 73.60630703036638,
+            "dwell": 30
+          },
+          {
+            "name": "Kuai Fong",
+            "lat": 22.3569,
+            "lng": 114.1278,
+            "run": 64.42089613518463,
+            "dwell": 30
+          },
+          {
+            "name": "Kuai Hing",
+            "lat": 22.3633,
+            "lng": 114.1311,
+            "run": 85.86008981034186,
+            "dwell": 30,
+            "checkpoints": [
+              {
+                "lat": 22.36920045496767,
+                "lng": 114.13009180755789,
+                "progress": 0.5457114177168538
+              }
+            ]
+          },
+          {
+            "name": "Tai Wo Hau",
+            "lat": 22.3708,
+            "lng": 114.125,
+            "run": 65.1573008694734,
+            "dwell": 30
+          },
+          {
+            "name": "Tsuen Wan",
+            "lat": 22.3736,
+            "lng": 114.1178,
+            "run": 120,
+            "dwell": 90
+          }
+        ],
+        "branch_type": "normal"
+      }
+    ],
+    "label": "Tsuen Wan Line",
+    "markertype": "hkmtr",
+    "image": "assets/mtr_train1.png",
+    "max_speed": 20,
+    "acceleration": 0.8,
+    "icon": "<div style=\"\n        background-color:#ed1d24;overflow: hidden;\n        width:24px;height:24px;border-radius:50%;\n        border:4px solid #ed1d24;\"><img src=\"assets/mtr_train1.png\" style=\"\n        height:100%; width: 100%; object-fit:cover;display:block;\"></div>  "
+  },
+  {
+    "line_id": 5,
+    "name": "Kwun Tong Line",
+    "line_color": "#00ab4e",
+    "branches": [
+      {
+        "branch_id": 0,
+        "SPAWN_EVERY": 252,
+        "offset_time": 0,
+        "stations": [
+          {
+            "name": "Whampoa",
+            "lat": 22.305,
+            "lng": 114.1897,
+            "run": 67.48411574203048,
+            "dwell": 90
+          },
+          {
+            "name": "Ho Man Tin",
+            "lat": 22.3092,
+            "lng": 114.1828,
+            "run": 110.10391104987217,
+            "dwell": 30,
+            "checkpoints": [
+              {
+                "lat": 22.31027385666707,
+                "lng": 114.17979441006464,
+                "progress": 0.19472997734953965
+              },
+              {
+                "lat": 22.307135507340018,
+                "lng": 114.17490047536619,
+                "progress": 0.5546247449635072
+              }
+            ]
+          },
+          {
+            "name": "Yau Ma Tei",
+            "lat": 22.3128,
+            "lng": 114.1708,
+            "run": 61.303654009425124,
+            "dwell": 30
+          },
+          {
+            "name": "Mong Kok",
+            "lat": 22.3192,
+            "lng": 114.1694,
+            "run": 54.4590242785649,
+            "dwell": 30
+          },
+          {
+            "name": "Prince Edward",
+            "lat": 22.3244,
+            "lng": 114.1683,
+            "run": 66.72663150675221,
+            "dwell": 30
+          },
+          {
+            "name": "Shek Kip Mei",
+            "lat": 22.3319,
+            "lng": 114.1686,
+            "run": 72.54379777090436,
+            "dwell": 30
+          },
+          {
+            "name": "Kowloon Tong",
+            "lat": 22.3369,
+            "lng": 114.1761,
+            "run": 82.47086542914475,
+            "dwell": 30
+          },
+          {
+            "name": "Lok Fu",
+            "lat": 22.3381,
+            "lng": 114.1872,
+            "run": 64.84614739191922,
+            "dwell": 30
+          },
+          {
+            "name": "Wong Tai Sin",
+            "lat": 22.3417,
+            "lng": 114.1939,
+            "run": 66.20944328869413,
+            "dwell": 30
+          },
+          {
+            "name": "Diamond Hill",
+            "lat": 22.34,
+            "lng": 114.2017,
+            "run": 71.97638215407262,
+            "dwell": 30
+          },
+          {
+            "name": "Choi Hung",
+            "lat": 22.3348,
+            "lng": 114.2089,
+            "run": 96.68369916874474,
+            "dwell": 30,
+            "checkpoints": [
+              {
+                "lat": 22.33113413544128,
+                "lng": 114.21300617186164,
+                "progress": 0.4094129778974671
+              }
+            ]
+          },
+          {
+            "name": "Kowloon Bay",
+            "lat": 22.3236,
+            "lng": 114.2142,
+            "run": 83.41052928820761,
+            "dwell": 30,
+            "checkpoints": [
+              {
+                "lat": 22.31806578917352,
+                "lng": 114.21476627118301,
+                "progress": 0.5291227345298349
+              }
+            ]
+          },
+          {
+            "name": "Ngau Tau Kok",
+            "lat": 22.3153,
+            "lng": 114.2192,
+            "run": 65.84691473351343,
+            "dwell": 30
+          },
+          {
+            "name": "Kwun Tong",
+            "lat": 22.3122,
+            "lng": 114.2264,
+            "run": 71.07256319948719,
+            "dwell": 30
+          },
+          {
+            "name": "Lam Tin",
+            "lat": 22.3067,
+            "lng": 114.2331,
+            "run": 78.78867534216577,
+            "dwell": 30
+          },
+          {
+            "name": "Yau Tong",
+            "lat": 22.2978,
+            "lng": 114.2372,
+            "run": 132.77253880327837,
+            "dwell": 30,
+            "checkpoints": [
+              {
+                "lat": 22.2944,
+                "lng": 114.2419,
+                "progresss": 0.3
+              }
+            ]
+          },
+          {
+            "name": "Tiu Keng Leng",
+            "lat": 22.3042,
+            "lng": 114.2525,
+            "run": 90,
+            "dwell": 90
+          }
+        ],
+        "branch_type": "normal"
+      }
+    ],
+    "label": "Kwun Tong Line",
+    "markertype": "hkmtr",
+    "image": "assets/mtr_train1.png",
+    "max_speed": 20,
+    "acceleration": 0.8,
+    "icon": "<div style=\"\n        background-color:#00ab4e;overflow: hidden;\n        width:24px;height:24px;border-radius:50%;\n        border:4px solid #00ab4e;\"><img src=\"assets/mtr_train1.png\" style=\"\n        height:100%; width: 100%; object-fit:cover;display:block;\"></div>  "
+  },
+  {
+    "line_id": 6,
+    "name": "Tung Chung Line",
+    "line_color": "#f7943e",
+    "branches": [
+      {
+        "branch_id": 0,
+        "SPAWN_EVERY": 420,
+        "offset_time": 0,
+        "stations": [
+          {
+            "name": "Hong Kong",
+            "lat": 22.2852,
+            "lng": 114.1581,
+            "run": 115.31248698339776,
+            "dwell": 90,
+            "checkpoints": [
+              {
+                "lat": 22.289711123765017,
+                "lng": 114.15435832238889,
+                "progress": 0.2524523167440371
+              },
+              {
+                "lat": 22.296465288708035,
+                "lng": 114.15590377545158,
+                "progress": 0.5589479765208953
+              }
+            ]
+          },
+          {
+            "name": "Kowloon",
+            "lat": 22.305,
+            "lng": 114.1614,
+            "run": 85.72290661973534,
+            "dwell": 30,
+            "checkpoints": [
+              {
+                "lat": 22.311961085221707,
+                "lng": 114.16179858391594,
+                "progress": 0.5274079218745892
+              }
+            ]
+          },
+          {
+            "name": "Olympic",
+            "lat": 22.3178,
+            "lng": 114.1594,
+            "run": 76.54365160273103,
+            "dwell": 30
+          },
+          {
+            "name": "Nam Cheong",
+            "lat": 22.3267,
+            "lng": 114.1533,
+            "run": 149.09670374122533,
+            "dwell": 30
+          },
+          {
+            "name": "Lai King",
+            "lat": 22.3483,
+            "lng": 114.1261,
+            "run": 108.49528595653243,
+            "dwell": 30
+          },
+          {
+            "name": "Tsing Yi",
+            "lat": 22.3583,
+            "lng": 114.1069,
+            "run": 288.0317046332353,
+            "dwell": 30
+          },
+          {
+            "name": "Sunny Bay",
+            "lat": 22.3317,
+            "lng": 114.0289,
+            "run": 333.4368408940646,
+            "dwell": 30
+          },
+          {
+            "name": "Tung Chung",
+            "lat": 22.2892,
+            "lng": 113.9417,
+            "run": 90,
+            "dwell": 90
+          }
+        ],
+        "branch_type": "normal"
+      }
+    ],
+    "label": "Tung Chung Line",
+    "markertype": "hkmtr",
+    "image": "assets/mtr_train1.png",
+    "max_speed": 35,
+    "acceleration": 0.8,
+    "icon": "<div style=\"\n        background-color:#f7943e;overflow: hidden;\n        width:24px;height:24px;border-radius:50%;\n        border:4px solid #f7943e;\"><img src=\"assets/mtr_train1.png\" style=\"\n        height:100%; width: 100%; object-fit:cover;display:block;\"></div>  "
+  },
+  {
+    "line_id": 7,
+    "name": "Airport Express",
+    "line_color": "#00888a",
+    "branches": [
+      {
+        "branch_id": 0,
+        "SPAWN_EVERY": 600,
+        "offset_time": 100,
+        "stations": [
+          {
+            "name": "Hong Kong",
+            "lat": 22.2852,
+            "lng": 114.1581,
+            "run": 115.57553478638516,
+            "dwell": 300,
+            "checkpoints": [
+              {
+                "lat": 22.28968066416793,
+                "lng": 114.15429969156651,
+                "progress": 0.2519346548561513
+              },
+              {
+                "lat": 22.296593748214843,
+                "lng": 114.1558451446292,
+                "progress": 0.5641881251057548
+              }
+            ]
+          },
+          {
+            "name": "Kowloon",
+            "lat": 22.305,
+            "lng": 114.1614,
+            "run": 290.2921999796081,
+            "dwell": 30,
+            "checkpoints": [
+              {
+                "lat": 22.312116758774405,
+                "lng": 114.16163493326059,
+                "progress": 0.0917509036176679
+              },
+              {
+                "lat": 22.317837037272675,
+                "lng": 114.15974604618395,
+                "progress": 0.1688263520080016
+              },
+              {
+                "lat": 22.326495503046203,
+                "lng": 114.15385810802606,
+                "progress": 0.3006415919332068
+              },
+              {
+                "lat": 22.33765430601181,
+                "lng": 114.13733846487791,
+                "progress": 0.5444659395716036
+              },
+              {
+                "lat": 22.34841738724473,
+                "lng": 114.12647736418745,
+                "progress": 0.7341868445379337
+              }
+            ]
+          },
+          {
+            "name": "Tsing Yi",
+            "lat": 22.3583,
+            "lng": 114.1069,
+            "run": 649.8484640295264,
+            "dwell": 30,
+            "checkpoints": [
+              {
+                "lat": 22.3317,
+                "lng": 114.0289,
+                "progress": 0.4030396365124842
+              },
+              {
+                "lat": 22.2901,
+                "lng": 113.9475,
+                "progress": 0.8539975689514508
+              }
+            ]
+          },
+          {
+            "name": "Airport",
+            "lat": 22.3161,
+            "lng": 113.9367,
+            "run": 69.71347137815383,
+            "dwell": 120,
+            "checkpoints": [
+              {
+                "lat": 22.31981932786143,
+                "lng": 113.93611235156791,
+                "progress": 0.4300076831456402
+              }
+            ]
+          },
+          {
+            "name": "AsiaWorld-Expo",
+            "lat": 22.3217,
+            "lng": 113.9411,
+            "run": 90,
+            "dwell": 300
+          }
+        ],
+        "branch_type": "normal"
+      }
+    ],
+    "label": "Airport Express",
+    "markertype": "hkmtr",
+    "image": "assets/mtr_train1.png",
+    "max_speed": 35,
+    "acceleration": 0.8,
+    "icon": "<div style=\"\n        background-color:#00888a;overflow: hidden;\n        width:24px;height:24px;border-radius:50%;\n        border:4px solid #00888a;\"><img src=\"assets/mtr_train1.png\" style=\"\n        height:100%; width: 100%; object-fit:cover;display:block;\"></div>  "
+  },
+  {
+    "line_id": 8,
+    "name": "Tuen Ma Line",
+    "line_color": "#923011",
+    "branches": [
+      {
+        "branch_id": 0,
+        "SPAWN_EVERY": 360,
+        "offset_time": 0,
+        "stations": [
+          {
+            "name": "Wu Kai Sha",
+            "lat": 22.4292,
+            "lng": 114.2439,
+            "run": 82.45225481804056,
+            "dwell": 90
+          },
+          {
+            "name": "Ma On Shan",
+            "lat": 22.4247,
+            "lng": 114.2316,
+            "run": 70.64683684144205,
+            "dwell": 30
+          },
+          {
+            "name": "Heng On",
+            "lat": 22.4175,
+            "lng": 114.2258,
+            "run": 126.69127779794374,
+            "dwell": 30,
+            "checkpoints": []
+          },
+          {
+            "name": "Tai Shui Hang",
+            "lat": 22.4089,
+            "lng": 114.2231,
+            "run": 60.68893076837165,
+            "dwell": 30,
+            "checkpoints": [
+              {
+                "lat": 22.39786705334254,
+                "lng": 114.21094803261549,
+                "progress": 0.6031494331399818
+              }
+            ]
+          },
+          {
+            "name": "Shek Mun",
+            "lat": 22.3878,
+            "lng": 114.2083,
+            "run": 73.5356785720526,
+            "dwell": 30
+          },
+          {
+            "name": "City One",
+            "lat": 22.3828,
+            "lng": 114.2036,
+            "run": 69.15243698869165,
+            "dwell": 30
+          },
+          {
+            "name": "Sha Tin Wai",
+            "lat": 22.3772,
+            "lng": 114.195,
+            "run": 62.90616260712835,
+            "dwell": 30
+          },
+          {
+            "name": "Che Kung Temple",
+            "lat": 22.3747,
+            "lng": 114.1861,
+            "run": 80.62036358381961,
+            "dwell": 30
+          },
+          {
+            "name": "Tai Wai",
+            "lat": 22.3731,
+            "lng": 114.1786,
+            "run": 169.0960031039819,
+            "dwell": 30
+          },
+          {
+            "name": "Hin Keng",
+            "lat": 22.3639,
+            "lng": 114.1708,
+            "run": 74.2317413414684,
+            "dwell": 30,
+            "checkpoints": [
+              {
+                "lat": 22.360910309146526,
+                "lng": 114.17045553690716,
+                "progress": 0.07620512552193064
+              },
+              {
+                "lat": 22.344082450640535,
+                "lng": 114.1886711689981,
+                "progress": 0.6797318572428788
+              }
+            ]
+          },
+          {
+            "name": "Diamond Hill",
+            "lat": 22.34,
+            "lng": 114.2016,
+            "run": 69.39231324789513,
+            "dwell": 30
+          },
+          {
+            "name": "Kai Tak",
+            "lat": 22.3303,
+            "lng": 114.1994,
+            "run": 72.00742529229096,
+            "dwell": 30
+          },
+          {
+            "name": "Sung Wong Toi",
+            "lat": 22.3258,
+            "lng": 114.1914,
+            "run": 71.14979548894803,
+            "dwell": 30
+          },
+          {
+            "name": "To Kwa Wan",
+            "lat": 22.3172,
+            "lng": 114.1875,
+            "run": 60.02451511696687,
+            "dwell": 30
+          },
+          {
+            "name": "Ho Man Tin",
+            "lat": 22.3092,
+            "lng": 114.1828,
+            "run": 71.99225873075899,
+            "dwell": 30
+          },
+          {
+            "name": "Hung Hom",
+            "lat": 22.3028,
+            "lng": 114.1817,
+            "run": 82.60270884168953,
+            "dwell": 30
+          },
+          {
+            "name": "East Tsim Sha Tsui",
+            "lat": 22.2956,
+            "lng": 114.1753,
+            "run": 125.84842316444283,
+            "dwell": 30
+          },
+          {
+            "name": "Austin",
+            "lat": 22.3047,
+            "lng": 114.1664,
+            "run": 102.63648629551173,
+            "dwell": 30,
+            "checkpoints": [
+              {
+                "lat": 22.318113918938828,
+                "lng": 114.16214908294126,
+                "progress": 0.5409328989049199
+              }
+            ]
+          },
+          {
+            "name": "Nam Cheong",
+            "lat": 22.3267,
+            "lng": 114.1533,
+            "run": 172.42783526239919,
+            "dwell": 30
+          },
+          {
+            "name": "Mei Foo",
+            "lat": 22.3381,
+            "lng": 114.1375,
+            "run": 296.14157615992156,
+            "dwell": 30,
+            "checkpoints": [
+              {
+                "lat": 22.355997868685673,
+                "lng": 114.12614600509538,
+                "progress": 0.5123368403475693
+              }
+            ]
+          },
+          {
+            "name": "Tsuen Wan West",
+            "lat": 22.3686,
+            "lng": 114.1097,
+            "run": 143.40403712494472,
+            "dwell": 30,
+            "checkpoints": [
+              {
+                "lat": 22.415931852773106,
+                "lng": 114.0708463484103,
+                "progress": 0.7479643710222867
+              }
+            ]
+          },
+          {
+            "name": "Kam Sheung Road",
+            "lat": 22.4347,
+            "lng": 114.0633,
+            "run": 103.27123939677723,
+            "dwell": 30,
+            "checkpoints": [
+              {
+                "lat": 22.4462528046266,
+                "lng": 114.0531114323633,
+                "progress": 0.47516390428840677
+              }
+            ]
+          },
+          {
+            "name": "Yuen Long",
+            "lat": 22.4461,
+            "lng": 114.0353,
+            "run": 191.47730313524698,
+            "dwell": 30,
+            "checkpoints": []
+          },
+          {
+            "name": "Long Ping",
+            "lat": 22.4478,
+            "lng": 114.0253,
+            "run": 98.9069216849097,
+            "dwell": 30,
+            "checkpoints": [
+              {
+                "lat": 22.451411979127407,
+                "lng": 114.00983874660827,
+                "progress": 0.7867052304341768
+              }
+            ]
+          },
+          {
+            "name": "Tin Shui Wai",
+            "lat": 22.449386576788992,
+            "lng": 114.00611148343546,
+            "run": 253.66582816032843,
+            "dwell": 30,
+            "checkpoints": [
+              {
+                "lat": 22.44037273858356,
+                "lng": 113.99309923118982,
+                "progress": 0.3232225760942902
+              }
+            ]
+          },
+          {
+            "name": "Siu Hong",
+            "lat": 22.4119,
+            "lng": 113.9786,
+            "run": 116.52461294859198,
+            "dwell": 30
+          },
+          {
+            "name": "Tuen Mun",
+            "lat": 22.3953,
+            "lng": 113.9731,
+            "run": 90,
+            "dwell": 90
+          }
+        ],
+        "branch_type": "normal"
+      }
+    ],
+    "label": "Tuen Ma Line",
+    "markertype": "hkmtr",
+    "image": "assets/mtr_train1.png",
+    "max_speed": 35,
+    "acceleration": 0.8,
+    "icon": "<div style=\"\n        background-color:#923011;overflow: hidden;\n        width:24px;height:24px;border-radius:50%;\n        border:4px solid #923011;\"><img src=\"assets/mtr_train1.png\" style=\"\n        height:100%; width: 100%; object-fit:cover;display:block;\"></div>  "
+  },
+  {
+    "line_id": 9,
+    "name": "East Rail Line",
+    "line_color": "#53b7e8",
+    "branches": [
+      {
+        "branch_id": 0,
+        "SPAWN_EVERY": 720,
+        "offset_time": 0,
+        "stations": [
+          {
+            "name": "Admiralty",
+            "lat": 22.2789,
+            "lng": 114.1647,
+            "run": 74.97817553034818,
+            "dwell": 90
+          },
+          {
+            "name": "Exhibition Centre",
+            "lat": 22.2817,
+            "lng": 114.1752,
+            "run": 131.6237847743849,
+            "dwell": 30,
+            "checkpoints": [
+              {
+                "lat": 22.283,
+                "lng": 114.1835,
+                "progress": 0.25
+              }
+            ]
+          },
+          {
+            "name": "Hung Hom",
+            "lat": 22.3028,
+            "lng": 114.1817,
+            "run": 110.705006894707,
+            "dwell": 30
+          },
+          {
+            "name": "Mong Kok East",
+            "lat": 22.3222,
+            "lng": 114.1728,
+            "run": 91.44815997989399,
+            "dwell": 30
+          },
+          {
+            "name": "Kowloon Tong",
+            "lat": 22.3369,
+            "lng": 114.1761,
+            "run": 168.61511981920455,
+            "dwell": 30,
+            "checkpoints": [
+              {
+                "lat": 22.350239841702855,
+                "lng": 114.17179605435749,
+                "progress": 0.3542017322713432
+              },
+              {
+                "lat": 22.3639,
+                "lng": 114.1708,
+                "progress": 0.7025525035655266
+              }
+            ]
+          },
+          {
+            "name": "Tai Wai",
+            "lat": 22.3731,
+            "lng": 114.1786,
+            "run": 83.34329735762817,
+            "dwell": 30
+          },
+          {
+            "name": "Sha Tin",
+            "lat": 22.3825,
+            "lng": 114.1875,
+            "run": 95.326883809515,
+            "dwell": 30
+          },
+          {
+            "name": "Fo Tan",
+            "lat": 22.3953,
+            "lng": 114.1983,
+            "run": 110.92540079110199,
+            "dwell": 30
+          },
+          {
+            "name": "University",
+            "lat": 22.4133,
+            "lng": 114.2103,
+            "run": 218.78491646664853,
+            "dwell": 30,
+            "checkpoints": [
+              {
+                "lat": 22.42247011937655,
+                "lng": 114.2122314597668,
+                "progress": 0.16956933178384762
+              },
+              {
+                "lat": 22.4362,
+                "lng": 114.1981,
+                "progress": 0.5135405226464941
+              }
+            ]
+          },
+          {
+            "name": "Tai Po Market",
+            "lat": 22.4447,
+            "lng": 114.1706,
+            "run": 77.7221958980707,
+            "dwell": 30
+          },
+          {
+            "name": "Tai Wo",
+            "lat": 22.4511,
+            "lng": 114.1611,
+            "run": 219.31357584346603,
+            "dwell": 30,
+            "checkpoints": [
+              {
+                "lat": 22.4578,
+                "lng": 114.1507,
+                "progress": 0.3
+              },
+              {
+                "lat": 22.4859,
+                "lng": 114.1537,
+                "progress": 0.75
+              }
+            ]
+          },
+          {
+            "name": "Fanling",
+            "lat": 22.4922,
+            "lng": 114.1386,
+            "run": 85.55372406430081,
+            "dwell": 30
+          },
+          {
+            "name": "Sheung Shui",
+            "lat": 22.5011,
+            "lng": 114.1281,
+            "run": 143.34085303938238,
+            "dwell": 30,
+            "checkpoints": [
+              {
+                "lat": 22.507864333605355,
+                "lng": 114.12022535649083,
+                "progress": 0.3168951849355415
+              }
+            ]
+          },
+          {
+            "name": "Lo Wu",
+            "lat": 22.5283,
+            "lng": 114.1133,
+            "run": 90,
+            "dwell": 90,
+            "checkpoints": []
+          }
+        ],
+        "branch_type": "normal"
+      },
+      {
+        "branch_id": 3,
+        "SPAWN_EVERY": 720,
+        "offset_time": 240,
+        "stations": [
+          {
+            "name": "Admiralty",
+            "lat": 22.2789,
+            "lng": 114.1647,
+            "run": 74.97817553034818,
+            "dwell": 90
+          },
+          {
+            "name": "Exhibition Centre",
+            "lat": 22.2817,
+            "lng": 114.1752,
+            "run": 131.6237847743849,
+            "dwell": 30,
+            "checkpoints": [
+              {
+                "lat": 22.283,
+                "lng": 114.1835,
+                "progress": 0.25
+              }
+            ]
+          },
+          {
+            "name": "Hung Hom",
+            "lat": 22.3028,
+            "lng": 114.1817,
+            "run": 110.705006894707,
+            "dwell": 30
+          },
+          {
+            "name": "Mong Kok East",
+            "lat": 22.3222,
+            "lng": 114.1728,
+            "run": 91.44815997989399,
+            "dwell": 30
+          },
+          {
+            "name": "Kowloon Tong",
+            "lat": 22.3369,
+            "lng": 114.1761,
+            "run": 168.61511981920455,
+            "dwell": 30,
+            "checkpoints": [
+              {
+                "lat": 22.350239841702855,
+                "lng": 114.17179605435749,
+                "progress": 0.3542017322713432
+              },
+              {
+                "lat": 22.3639,
+                "lng": 114.1708,
+                "progress": 0.7025525035655266
+              }
+            ]
+          },
+          {
+            "name": "Tai Wai",
+            "lat": 22.3731,
+            "lng": 114.1786,
+            "run": 83.34329735762817,
+            "dwell": 30
+          },
+          {
+            "name": "Sha Tin",
+            "lat": 22.3825,
+            "lng": 114.1875,
+            "run": 95.326883809515,
+            "dwell": 30
+          },
+          {
+            "name": "Fo Tan",
+            "lat": 22.3953,
+            "lng": 114.1983,
+            "run": 110.92540079110199,
+            "dwell": 30
+          },
+          {
+            "name": "University",
+            "lat": 22.4133,
+            "lng": 114.2103,
+            "run": 218.78491646664853,
+            "dwell": 30,
+            "checkpoints": [
+              {
+                "lat": 22.42247011937655,
+                "lng": 114.2122314597668,
+                "progress": 0.16956933178384762
+              },
+              {
+                "lat": 22.4362,
+                "lng": 114.1981,
+                "progress": 0.5135405226464941
+              }
+            ]
+          },
+          {
+            "name": "Tai Po Market",
+            "lat": 22.4447,
+            "lng": 114.1706,
+            "run": 77.7221958980707,
+            "dwell": 30
+          },
+          {
+            "name": "Tai Wo",
+            "lat": 22.4511,
+            "lng": 114.1611,
+            "run": 219.31357584346603,
+            "dwell": 30,
+            "checkpoints": [
+              {
+                "lat": 22.4578,
+                "lng": 114.1507,
+                "progress": 0.3
+              },
+              {
+                "lat": 22.4859,
+                "lng": 114.1537,
+                "progress": 0.75
+              }
+            ]
+          },
+          {
+            "name": "Fanling",
+            "lat": 22.4922,
+            "lng": 114.1386,
+            "run": 85.55372406430081,
+            "dwell": 30
+          },
+          {
+            "name": "Sheung Shui",
+            "lat": 22.5011,
+            "lng": 114.1281,
+            "run": 143.34085303938238,
+            "dwell": 30,
+            "checkpoints": [
+              {
+                "lat": 22.507864333605355,
+                "lng": 114.12022535649083,
+                "progress": 0.3168951849355415
+              }
+            ]
+          },
+          {
+            "name": "Lo Wu",
+            "lat": 22.5283,
+            "lng": 114.1133,
+            "run": 90,
+            "dwell": 90,
+            "checkpoints": []
+          }
+        ],
+        "branch_type": "normal"
+      },
+      {
+        "branch_id": 2,
+        "SPAWN_EVERY": 720,
+        "offset_time": 480,
+        "stations": [
+          {
+            "name": "Admiralty",
+            "lat": 22.2789,
+            "lng": 114.1647,
+            "run": 74.97817553034818,
+            "dwell": 90
+          },
+          {
+            "name": "Exhibition Centre",
+            "lat": 22.2817,
+            "lng": 114.1752,
+            "run": 131.6237847743849,
+            "dwell": 30,
+            "checkpoints": [
+              {
+                "lat": 22.283,
+                "lng": 114.1835,
+                "progress": 0.25
+              }
+            ]
+          },
+          {
+            "name": "Hung Hom",
+            "lat": 22.3028,
+            "lng": 114.1817,
+            "run": 110.705006894707,
+            "dwell": 30
+          },
+          {
+            "name": "Mong Kok East",
+            "lat": 22.3222,
+            "lng": 114.1728,
+            "run": 91.44815997989399,
+            "dwell": 30
+          },
+          {
+            "name": "Kowloon Tong",
+            "lat": 22.3369,
+            "lng": 114.1761,
+            "run": 168.46307356019616,
+            "dwell": 30,
+            "checkpoints": [
+              {
+                "lat": 22.350223895758216,
+                "lng": 114.17205502061826,
+                "progress": 0.3525460801459111
+              },
+              {
+                "lat": 22.3639,
+                "lng": 114.1708,
+                "progress": 0.7021898649279467
+              }
+            ]
+          },
+          {
+            "name": "Tai Wai",
+            "lat": 22.3731,
+            "lng": 114.1786,
+            "run": 83.34329735762817,
+            "dwell": 30
+          },
+          {
+            "name": "Sha Tin",
+            "lat": 22.3825,
+            "lng": 114.1875,
+            "run": 95.326883809515,
+            "dwell": 30
+          },
+          {
+            "name": "Fo Tan",
+            "lat": 22.3953,
+            "lng": 114.1983,
+            "run": 110.92540079110199,
+            "dwell": 30
+          },
+          {
+            "name": "University",
+            "lat": 22.4133,
+            "lng": 114.2103,
+            "run": 219.95899372214228,
+            "dwell": 30,
+            "checkpoints": [
+              {
+                "lat": 22.422524396591797,
+                "lng": 114.21265599591825,
+                "progress": 0.17088607147053278
+              },
+              {
+                "lat": 22.4362,
+                "lng": 114.1981,
+                "progress": 0.5167817931175163
+              }
+            ]
+          },
+          {
+            "name": "Tai Po Market",
+            "lat": 22.4447,
+            "lng": 114.1706,
+            "run": 77.7221958980707,
+            "dwell": 30
+          },
+          {
+            "name": "Tai Wo",
+            "lat": 22.4511,
+            "lng": 114.1611,
+            "run": 219.31357584346603,
+            "dwell": 30,
+            "checkpoints": [
+              {
+                "lat": 22.4578,
+                "lng": 114.1507,
+                "progress": 0.3
+              },
+              {
+                "lat": 22.4859,
+                "lng": 114.1537,
+                "progress": 0.75
+              }
+            ]
+          },
+          {
+            "name": "Fanling",
+            "lat": 22.4922,
+            "lng": 114.1386,
+            "run": 85.55372406430081,
+            "dwell": 30
+          },
+          {
+            "name": "Sheung Shui",
+            "lat": 22.5011,
+            "lng": 114.1281,
+            "run": 245.29372697166946,
+            "dwell": 30,
+            "checkpoints": [
+              {
+                "lat": 22.50747726287306,
+                "lng": 114.1197920864276,
+                "progress": 0.15730125299320094
+              },
+              {
+                "lat": 22.5046,
+                "lng": 114.0789,
+                "progress": 0.7545280465033675
+              }
+            ]
+          },
+          {
+            "name": "Lok Ma Chau",
+            "lat": 22.5144,
+            "lng": 114.0658,
+            "run": 90,
+            "dwell": 90
+          }
+        ],
+        "branch_type": "normal"
+      }
+    ],
+    "label": "East Rail Line",
+    "markertype": "hkmtr",
+    "image": "assets/mtr_train1.png",
+    "max_speed": 35,
+    "acceleration": 0.8,
+    "icon": "<div style=\"\n        background-color:#53b7e8;overflow: hidden;\n        width:24px;height:24px;border-radius:50%;\n        border:4px solid #53b7e8;\"><img src=\"assets/mtr_train1.png\" style=\"\n        height:100%; width: 100%; object-fit:cover;display:block;\"></div>  "
+  }
+]
