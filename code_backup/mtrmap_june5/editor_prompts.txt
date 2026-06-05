@@ -1,0 +1,31 @@
+Make a separate js file called lines.js containing all of the functions that modify the object this.lines in editor_version1/editor_version1.html. Examples include the functions that add, delete, or modify items such as lines, branches, stations, and checkpoints. Also move utility functions such as nextUniqueLineId, nextUniqueBranchId, and nextUniqueLineName to lines.js. 
+
+Then, in @editor_version/editor_version1.html, let the buttons/functions call the functions in the lines.js. This should shorten editor_version1.html. 
+
+
+
+In editor_version1.html, add the following keys:
+- If I press D, then the highlighted station shifts to the next station in the branch of the currently highlighted station. If the thing currently being highlighted is a checkpoint, then change the highlighted station to the next station relative to the station the currently highlighted checkpoint is in. If the highlighted station is the last station, then go back to the first station. If nothing is being highlighted, then do nothing.
+- If I press A, then the highlighted station shifts to the previous station in the branch. Everything should be the same as when I press D, except that the highlighted station becomes the previous station instead of the next.
+- If I press C, then the camera (e.g. the viewport of the map) centers on the currently highlighted station. Don't change the zoom, just center the camera on the new position.
+- If I press E, then the code enters checkpoint mode at the current highlighted station. This should be the same as if I pressed the "add checkpoint" button.
+
+The program editor_version1.html currently uses leaflet.js for drawing things on a map. Switch the library to Maplibre.
+
+In editor_version1.html, add the following keys:
+- If I press S, then if the currently highlighted object is a checkpoint, then switch the highlighted object to next checkpoint relative to the currently highlighted checkpoint. If the highlighted checkpoint is the last checkpoint of its station, then switch the highlighted object to the next station relative to the station the currently highlighted object is part of. If the currently highlighted object is a station, then if the station has checkpoints, change the highlighted object to the first checkpoint of the currently highlighted station. If the currently highlighted station doesn't have checkpoints, then highlight the next station. If the currently highlighted station is the last station, then go back to the first station.
+- If I press A, then if the highlighted object is a checkpoint, then switch the highlighted object to the previous checkpoint. If the highlighted object is a station, then switch the highlighed object to the checkpoint or station right before it. For all cases, do the opposite of when I press S. Instead of highlighting the next checkpoint or station, highlight the previous one.
+- For when I press E, write a new function. Make it different from the current add_checkpoint function. Change it as follows: If a station that has no checkpoints is highlighed, then enter checkpoint mode like before, inserting a checkpoint to the station; If a station with checkpoints is highlighted, then enter checkpoint mode, inserting a checkpoint between the station and it's first checkpoint; If a checkpoint is highlighted, then enter checkpoint mode, inserting a checkpoint after the currently highlighted checkpoint but before the next one. If that checkpoint is the last checkpoint of its station, then simply insert another checkpoint after it.
+
+
+
+In @editor_version1/editor_version1.html, For each branch of each line, switch the branch type input (i.e. the input corresponding to branch.branch_type) from a textbox to an select input where the user has to select between "normal" and "circular". By default, it should be "normal".
+
+In @editor_version1/editor_version1.html, For the branch type input for each branch of each line (i.e. the input corresponding to branch.branch_type), add an option called "unidirectional". When this option gets selected, more inputs get shown for that branch: 
+- One is a "select" bar that allows the user to select between "scheduled" and "scheduled_frequencies". It should toggle a variable called "scheduling" in each branch.
+- The second one is a list of times (times only, no dates) that the user can insert/delete times from, with a "frequency" value corresponding to each time entry. If the user currently selected "scheduled_frequencies", then the "frequency" value should be able to be changed; If the user currently selected "scheduled", then the "frequency" value should be hidden. The list itself, however, should be the same regardless of whether the user selects "scheduled" or "scheduled_frequencies", as only one of these can be selected at one time. Also, the list of times should be in order. Make sure that the list of times gets stored in each branch inside the this.lines object. 
+
+
+In @editor_version/editor_version1.html, add a save button, and let the program save the current version of the this.lines object into a cookie. When the program gets opened again, check if there is a cookie saved. If yes, then set this.lines to be the version of this.lines saved in the cookie.
+
+In @editor_version/editor_version1.html, check the saveToCookie function in the vue app. Check why it doesn't save a cookie and fix it.
