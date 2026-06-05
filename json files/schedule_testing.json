@@ -1,0 +1,549 @@
+[
+  {
+    "line_id": 2,
+    "name": "Disneyland Resort Line",
+    "line_color": "#f173ac",
+    "markertype": "hkmtr",
+    "image": "assets/mtr_train1.png",
+    "branches": [
+      {
+        "branch_id": 0,
+        "SPAWN_EVERY": 300,
+        "offset_time": 0,
+        "branch_type": "normal",
+        "stations": [
+          {
+            "name": "Sunny Bay",
+            "lat": 22.3317,
+            "lng": 114.0289,
+            "run": 210,
+            "dwell": 90,
+            "checkpoints": [
+              {
+                "lat": 22.3332,
+                "lng": 114.0316,
+                "progress": 0.1
+              },
+              {
+                "lat": 22.3306,
+                "lng": 114.0355,
+                "progress": 0.25
+              },
+              {
+                "lat": 22.3173,
+                "lng": 114.0374,
+                "progress": 0.8
+              }
+            ]
+          },
+          {
+            "name": "Disneyland Resort",
+            "lat": 22.3156,
+            "lng": 114.045,
+            "run": 90,
+            "dwell": 90
+          }
+        ]
+      }
+    ],
+    "icon": "<div style=\"\n        background-color:#f173ac;overflow: hidden;\n        width:24px;height:24px;border-radius:50%;\n        border:4px solid #f173ac;\"><img src=\"assets/mtr_train1.png\" style=\"\n        height:100%; width: 100%; object-fit:cover;display:block;\"></div>  ",
+    "label": "Disneyland Resort Line",
+    "max_speed": 22.2,
+    "acceleration": 1
+  },
+  {
+    "line_id": 3,
+    "name": "Tseung Kwan O line",
+    "line_color": "#7d499d",
+    "branches": [
+      {
+        "branch_id": 0,
+        "SPAWN_EVERY": 396,
+        "branch_type": "normal",
+        "offset_time": 0,
+        "stations": [
+          {
+            "name": "North Point",
+            "lat": 22.2908,
+            "lng": 114.2008,
+            "run": 90,
+            "dwell": 90
+          },
+          {
+            "name": "Quarry Bay",
+            "lat": 22.2878,
+            "lng": 114.2097,
+            "run": 210,
+            "dwell": 30
+          },
+          {
+            "name": "Yau Tong",
+            "lat": 22.2978,
+            "lng": 114.2372,
+            "run": 150,
+            "dwell": 30,
+            "checkpoints": [
+              {
+                "lat": 22.2944,
+                "lng": 114.2419,
+                "progress": 0.3
+              }
+            ]
+          },
+          {
+            "name": "Tiu Keng Leng",
+            "lat": 22.3042,
+            "lng": 114.2525,
+            "run": 90,
+            "dwell": 30
+          },
+          {
+            "name": "Tseung Kwan O",
+            "lat": 22.3075,
+            "lng": 114.26,
+            "run": 90,
+            "dwell": 30
+          },
+          {
+            "name": "Hang Hau",
+            "lat": 22.3156,
+            "lng": 114.2644,
+            "run": 90,
+            "dwell": 30
+          },
+          {
+            "name": "Po Lam",
+            "lat": 22.3225,
+            "lng": 114.2581,
+            "run": 90,
+            "dwell": 90
+          }
+        ]
+      },
+      {
+        "branch_id": 1,
+        "branch_type": "normal",
+        "SPAWN_EVERY": 396,
+        "offset_time": 132,
+        "stations": [
+          {
+            "name": "North Point",
+            "lat": 22.2908,
+            "lng": 114.2008,
+            "run": 90,
+            "dwell": 90
+          },
+          {
+            "name": "Quarry Bay",
+            "lat": 22.2878,
+            "lng": 114.2097,
+            "run": 210,
+            "dwell": 30
+          },
+          {
+            "name": "Yau Tong",
+            "lat": 22.2978,
+            "lng": 114.2372,
+            "run": 150,
+            "dwell": 30,
+            "checkpoints": [
+              {
+                "lat": 22.2944,
+                "lng": 114.2419,
+                "progress": 0.3
+              }
+            ]
+          },
+          {
+            "name": "Tiu Keng Leng",
+            "lat": 22.3042,
+            "lng": 114.2525,
+            "run": 90,
+            "dwell": 30
+          },
+          {
+            "name": "Tseung Kwan O",
+            "lat": 22.3075,
+            "lng": 114.26,
+            "run": 90,
+            "dwell": 30
+          },
+          {
+            "name": "Hang Hau",
+            "lat": 22.3156,
+            "lng": 114.2644,
+            "run": 90,
+            "dwell": 30
+          },
+          {
+            "name": "Po Lam",
+            "lat": 22.3225,
+            "lng": 114.2581,
+            "run": 90,
+            "dwell": 90
+          }
+        ]
+      },
+      {
+        "branch_id": 2,
+        "SPAWN_EVERY": 396,
+        "offset_time": 264,
+        "branch_type": "normal",
+        "stations": [
+          {
+            "name": "North Point",
+            "lat": 22.2908,
+            "lng": 114.2008,
+            "run": 90,
+            "dwell": 90
+          },
+          {
+            "name": "Quarry Bay",
+            "lat": 22.2878,
+            "lng": 114.2097,
+            "run": 210,
+            "dwell": 30
+          },
+          {
+            "name": "Yau Tong",
+            "lat": 22.2978,
+            "lng": 114.2372,
+            "run": 150,
+            "dwell": 30,
+            "checkpoints": [
+              {
+                "lat": 22.2944,
+                "lng": 114.2419,
+                "progress": 0.3
+              }
+            ]
+          },
+          {
+            "name": "Tiu Keng Leng",
+            "lat": 22.3042,
+            "lng": 114.2525,
+            "run": 90,
+            "dwell": 30
+          },
+          {
+            "name": "Tseung Kwan O",
+            "lat": 22.3075,
+            "lng": 114.26,
+            "run": 150,
+            "dwell": 30,
+            "checkpoints": [
+              {
+                "lat": 22.3105,
+                "lng": 114.2689,
+                "progress": 0.3
+              },
+              {
+                "lat": 22.3021,
+                "lng": 114.275,
+                "progress": 0.7
+              }
+            ]
+          },
+          {
+            "name": "LOHAS Park",
+            "lat": 22.2958,
+            "lng": 114.2689,
+            "run": 90,
+            "dwell": 120
+          }
+        ]
+      }
+    ],
+    "icon": "<div style=\"\n        background-color:#7d499d;\n        width:20px;height:20px;border-radius:50%;\n        border:2px solid #fff;\"></div>  ",
+    "label": "Tseung Kwan O line",
+    "markertype": "default",
+    "image": "",
+    "max_speed": 22.2,
+    "acceleration": 1
+  },
+  {
+    "line_id": 10,
+    "name": "Test line",
+    "line_color": "#01ffff",
+    "label": "000",
+    "markertype": "hklrt",
+    "branches": [
+      {
+        "branch_id": 0,
+        "SPAWN_EVERY": 100,
+        "offset_time": 0,
+        "branch_type": "circular",
+        "stations": [
+          {
+            "name": "station 1",
+            "lat": 22.3103,
+            "lng": 114.1235,
+            "run": 60,
+            "dwell": 30
+          },
+          {
+            "name": "station 2",
+            "lat": 22.3003,
+            "lng": 114.1429,
+            "run": 180,
+            "dwell": 30
+          },
+          {
+            "name": "station 3",
+            "lat": 22.2967,
+            "lng": 114.1149,
+            "run": 90,
+            "dwell": 30,
+            "checkpoints": [
+              {
+                "lat": 22.3,
+                "lng": 114.11,
+                "progress": 0.4
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "icon": "<div style=\"\n        background-color: #fff;\n        height: 18px; width: 32px;border-radius:9px;font-size: 11px;text-align: center;vertical-align: middle;\n        border:2px solid #01ffff;\">000</div>  ",
+    "image": "",
+    "max_speed": 22.2,
+    "acceleration": 1
+  },
+  {
+    "line_id": 4,
+    "name": "New Line",
+    "line_color": "#f21c1c",
+    "branches": [
+      {
+        "branch_id": 1,
+        "SPAWN_EVERY": 300,
+        "offset_time": 0,
+        "stations": [
+          {
+            "name": "New Station",
+            "lat": 22.27803192990649,
+            "lng": 114.13011682036444,
+            "run": 88,
+            "dwell": 90,
+            "checkpoints": [
+              {
+                "lat": 22.28124936255061,
+                "lng": 114.13384164327692,
+                "progress": 0.42168755354444215
+              }
+            ]
+          },
+          {
+            "name": "New Station",
+            "lat": 22.282104410017467,
+            "lng": 114.1407684450898,
+            "run": 109,
+            "dwell": 30,
+            "checkpoints": []
+          }
+        ],
+        "branch_type": "unidirectional",
+        "scheduling": "scheduled",
+        "timetable": [
+          {
+            "time": "00:00",
+            "frequency": 1
+          },
+          {
+            "time": "00:10",
+            "frequency": 1
+          },
+          {
+            "time": "00:20",
+            "frequency": 2
+          },
+          {
+            "time": "00:33",
+            "frequency": 1
+          },
+          {
+            "time": "01:00",
+            "frequency": 1
+          },
+          {
+            "time": "01:30",
+            "frequency": 4
+          }
+        ]
+      }
+    ],
+    "max_speed": 20,
+    "acceleration": 0.8,
+    "label": "New Line",
+    "markertype": "default",
+    "image": "",
+    "icon": "<div style=\"\n        background-color:#f21c1c;\n        width:20px;height:20px;border-radius:50%;\n        border:2px solid #fff;\"></div>  "
+  },
+  {
+    "line_id": 5,
+    "name": "blue",
+    "line_color": "#1f56f9",
+    "branches": [
+      {
+        "branch_id": 0,
+        "SPAWN_EVERY": 300,
+        "offset_time": 0,
+        "stations": [
+          {
+            "name": "New Station",
+            "lat": 22.260784101720418,
+            "lng": 114.17124822492747,
+            "run": 128,
+            "dwell": 30,
+            "checkpoints": [
+              {
+                "lat": 22.26433528005495,
+                "lng": 114.18011684415569,
+                "progress": 0.4830265756462305
+              }
+            ]
+          },
+          {
+            "name": "New Station",
+            "lat": 22.25971379441809,
+            "lng": 114.18917359662532,
+            "run": 135,
+            "dwell": 30,
+            "checkpoints": [
+              {
+                "lat": 22.25841579933069,
+                "lng": 114.20006657749741,
+                "progress": 0.5161266837841443
+              },
+              {
+                "lat": 22.259966163716257,
+                "lng": 114.20600581108602,
+                "progress": 0.8061226354675163
+              }
+            ]
+          },
+          {
+            "name": "New Station",
+            "lat": 22.262746310518665,
+            "lng": 114.20883368171292,
+            "run": 123,
+            "dwell": 30,
+            "checkpoints": [
+              {
+                "lat": 22.264899027066917,
+                "lng": 114.21392478920632,
+                "progress": 0.29414936139684855
+              },
+              {
+                "lat": 22.264758090526655,
+                "lng": 114.22108232712219,
+                "progress": 0.6703718050718656
+              }
+            ]
+          },
+          {
+            "name": "New Station",
+            "lat": 22.26114086900283,
+            "lng": 114.22598806968324,
+            "run": 153,
+            "dwell": 30,
+            "checkpoints": [
+              {
+                "lat": 22.25475123343756,
+                "lng": 114.22869672916067,
+                "progress": 0.2982109812509065
+              },
+              {
+                "lat": 22.248549441895292,
+                "lng": 114.22991503348624,
+                "progress": 0.5720773477602776
+              },
+              {
+                "lat": 22.24305216980207,
+                "lng": 114.22793528895619,
+                "progress": 0.823836126449976
+              }
+            ]
+          },
+          {
+            "name": "New Station",
+            "lat": 22.241160501156145,
+            "lng": 114.22406061036122,
+            "run": 139,
+            "dwell": 30,
+            "checkpoints": [
+              {
+                "lat": 22.240092010862014,
+                "lng": 114.21590453373636,
+                "progress": 0.37336489740333556
+              },
+              {
+                "lat": 22.238823352170783,
+                "lng": 114.20829013169788,
+                "progress": 0.7240432226356689
+              }
+            ]
+          },
+          {
+            "name": "New Station",
+            "lat": 22.23348870990185,
+            "lng": 114.20632798459565,
+            "run": 163,
+            "dwell": 30,
+            "checkpoints": [
+              {
+                "lat": 22.231070188397126,
+                "lng": 114.20920385994327,
+                "progress": 0.1453670194957848
+              },
+              {
+                "lat": 22.228532696199395,
+                "lng": 114.21757970218465,
+                "progress": 0.47509050605222825
+              },
+              {
+                "lat": 22.228250749786454,
+                "lng": 114.22656469658966,
+                "progress": 0.8114450252349882
+              }
+            ]
+          },
+          {
+            "name": "New Station",
+            "lat": 22.230098714873762,
+            "lng": 114.23119220985433,
+            "run": 90,
+            "dwell": 30
+          }
+        ],
+        "branch_type": "bidirectional",
+        "scheduling": "scheduled_frequencies",
+        "timetable": [
+          {
+            "time": "00:00",
+            "frequency": 3
+          },
+          {
+            "time": "01:00",
+            "frequency": 5
+          },
+          {
+            "time": "03:00",
+            "frequency": 2
+          },
+          {
+            "time": "04:00",
+            "frequency": 10
+          }
+        ]
+      }
+    ],
+    "max_speed": 20,
+    "acceleration": 0.8,
+    "label": "blue",
+    "markertype": "default",
+    "image": "",
+    "icon": "<div style=\"\n        background-color:#1f56f9;\n        width:20px;height:20px;border-radius:50%;\n        border:2px solid #fff;\"></div>  "
+  }
+]
