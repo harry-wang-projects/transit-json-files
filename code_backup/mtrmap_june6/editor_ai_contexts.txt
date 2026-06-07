@@ -1,0 +1,12 @@
+editor_version1.html:
+
+Focus on the folder @editor_version1.
+This is a json editor that edits a json file (an object in the code) that stores information about a subway network. The network consists of lines, which consist of branches, which consist of stations. All information can be edited. In addition, the positions (latitude, longtitudes) of stations can be edited by clicking on a map.
+
+Rules:
+Only do the things specified in the prompt. Do not change parts of the code that I did not tell you to change.
+
+Task:
+When a checkpoint or station is being highlighted on a map, the "show on map" button turns into a different color. Make it such that the div containing details of the checkpoint/station highlighted (i.e. the station-section or checkpoint-section div) gets a background color of light green. 
+
+Make sure that the code can run in the end.

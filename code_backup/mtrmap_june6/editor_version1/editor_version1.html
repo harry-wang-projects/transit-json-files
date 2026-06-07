@@ -1,0 +1,1243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subway Map Editor</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/maplibre-gl/dist/maplibre-gl.css" />
+    <script src="https://unpkg.com/maplibre-gl/dist/maplibre-gl.js"></script>
+    <link rel="stylesheet" href="editor_version1.css">
+</head>
+<body>
+    <div id="app">
+        <div class="editor-panel">
+            <div class="controls">
+                <button @click="addLine" class="add">Add Line</button>
+                <button @click="importJSON">Import JSON</button>
+                <button @click="exportJSON">Export JSON</button>
+                <button @click="saveToCookie" class="add">Save to Cookie</button>
+                <button @click="zoomOut">Zoom Out</button>
+                <button @click="showSettings = !showSettings" :class="['settings-toggle', { active: showSettings }]">
+                    {{ showSettings ? 'Close Settings' : 'Settings' }}
+                </button>
+            </div>
+
+            <!-- Settings panel -->
+            <div v-if="showSettings" class="settings-panel">
+                <h3>Line Settings</h3>
+                <p v-if="lines.length === 0" style="font-size:13px;color:#666;">No lines to configure.</p>
+                <div v-for="(line, lineIndex) in lines" :key="lineIndex" class="settings-line-row">
+                    <span class="settings-line-color" :style="{ backgroundColor: line.line_color }"></span>
+                    <span class="settings-line-name">{{ line.name || `Line ${lineIndex + 1}` }}</span>
+                    <div class="settings-zindex-group">
+                        <label>Z-index:</label>
+                        <input type="number" v-model.number="line.line_zindex">
+                    </div>
+                    <label class="toggle-switch" :title="line.line_visible !== false ? 'Visible' : 'Hidden'">
+                        <input type="checkbox" :checked="line.line_visible !== false" @change="line.line_visible = $event.target.checked">
+                        <span class="toggle-slider"></span>
+                    </label>
+                </div>
+            </div>
+
+            <template v-if="!showSettings">
+            <div v-if="lines.length === 0" class="line-editor">
+                <p>No lines added yet. Click "Add Line" to get started.</p>
+            </div>
+
+            <div v-else>
+                <div class="tabs">
+                    <div v-for="(line, lineIndex) in lines" 
+                         :key="lineIndex" 
+                         :class="['tab', { active: activeTab === lineIndex }]"
+                         @click="activeTab = lineIndex">
+                        <span class="tab-color" :style="{ backgroundColor: line.line_color }"></span>
+                        {{ line.name || `Line ${lineIndex + 1}` }}
+                    </div>
+                </div>
+                
+                <div v-for="(line, lineIndex) in lines" 
+                     :key="lineIndex" 
+                     :class="['tab-content', { active: activeTab === lineIndex }]">
+                    <div class="line-editor">
+                        <h2>{{ line.name || `Line ${lineIndex + 1}` }}</h2>
+                        
+                        <div class = "parameter-row">
+                            <div class="parameter-group">
+                                <label>Line ID:</label>
+                                <input type="number" v-model.number="line.line_id">
+                            </div>
+                            <div class="parameter-group">
+                                <label>Name:</label>
+                                <input type="text" v-model="line.name">
+                            </div>
+                            <div class="parameter-group">
+                                <label>Line Color:</label>
+                                <input type="color" v-model="line.line_color">
+                            </div>
+                        </div>
+                        <div class = "parameter-row">
+                            <div class="parameter-group">
+                                <label>Label:</label>
+                                <input type="text" v-model.number="line.label">
+                            </div>
+                            <div class="parameter-group">
+                                <label>Marker Type:</label>
+                                <select type="text" v-model="line.markertype">
+                                    <option value="default">Default</option>
+                                    <option value="hkmtr">hkmtr</option>
+                                    <option value="largehkmtr">largehkmtr</option>
+                                    <option value="hklrt">hklrt</option>
+                                    <option value="image">image</option>
+                                    <option value="largeimage">largeimage</option>
+                                    <option value="bus">bus</option>
+                                </select>
+                            </div>
+                            <div class="parameter-group">
+                                <label>Image</label>
+                                <input type="text" v-model="line.image">
+                            </div>
+                            <div class="parameter-group">
+                                <label>Icon Preview</label>
+                                <div v-html="line.icon" style="padding:2px;border:2px solid;border-color:#000000;background-color:#999999;width:100px;height:40px;"></div>
+                            </div>
+                        </div>
+                        <div class = "parameter-row">
+                            <div class="parameter-group">
+                                <label>Max Speed:</label>
+                                <input type="number" v-model.number="line.max_speed">
+                            </div>
+                            <div class="parameter-group">
+                                <label>Acceleration:</label>
+                                <input type="number" v-model="line.acceleration">
+                            </div>
+                        </div>
+                        <button @click="addBranch(lineIndex)" class="add">Add Branch</button>
+                        <button @click="cloneLine(lineIndex)" class="regular">Clone Line</button>
+                        <button @click="requestDeleteLine(lineIndex)" class="delete">Delete Line</button>
+                        <button @click="updateicon(lineIndex)" class="change">View Icon</button>
+
+                        <div v-if="line.branches.length === 0" class="branch-section">
+                            <p>No branches added yet. Click "Add Branch" to get started.</p>
+                        </div>
+                        
+                        <div v-else>
+                            <div class="branch-tabs">
+                                <div v-for="(branch, branchIndex) in line.branches" 
+                                     :key="branchIndex" 
+                                     :class="['branch-tab', { active: getActiveBranchTab(lineIndex) === branchIndex }]"
+                                     @click="setActiveBranchTab(lineIndex, branchIndex)">
+                                    Branch {{ branchIndex + 1 }} (ID: {{ branch.branch_id }})
+                                </div>
+                            </div>
+                            
+                            <div v-for="(branch, branchIndex) in line.branches" 
+                                 :key="branchIndex" 
+                                 :class="['branch-content', { active: getActiveBranchTab(lineIndex) === branchIndex }]">
+                                <div class="branch-section">
+                                    <div class="parameter-row">
+                                        <div class="parameter-group">
+                                            <label>Branch ID:</label>
+                                            <input type="number" v-model.number="branch.branch_id">
+                                        </div>
+                                        <div class="parameter-group">
+                                            <label>Spawn Every (seconds):</label>
+                                            <input type="number" v-model.number="branch.SPAWN_EVERY">
+                                        </div>
+                                        <div class="parameter-group">
+                                            <label>Branch Type:</label>
+                                            <select v-model="branch.branch_type" @change="onBranchTypeChange(lineIndex, branchIndex)">
+                                                <option value="normal">normal</option>
+                                                <option value="circular">circular</option>
+                                                <option value="unidirectional">unidirectional</option>
+                                                <option value="bidirectional">bidirectional</option>
+                                            </select>
+                                        </div>
+                                        <div class="parameter-group">
+                                            <label>Offset Time:</label>
+                                            <input type="number" v-model="branch.offset_time">
+                                        </div>
+                                    </div>
+                                    <div v-if="branch.branch_type === 'unidirectional' || branch.branch_type === 'bidirectional'" class="parameter-row">
+                                        <div class="parameter-group">
+                                            <label>Scheduling:</label>
+                                            <select v-model="branch.scheduling">
+                                                <option value="scheduled">scheduled</option>
+                                                <option value="scheduled_frequencies">scheduled_frequencies</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div v-if="branch.branch_type === 'unidirectional' || branch.branch_type === 'bidirectional'">
+                                        <div v-for="(entry, entryIndex) in (branch.timetable || [])" :key="entryIndex" class="parameter-row">
+                                            <div class="parameter-group">
+                                                <label>Time:</label>
+                                                <input type="time" v-model="entry.time" @change="sortTimetable(lineIndex, branchIndex)">
+                                            </div>
+                                            <div v-if="branch.scheduling === 'scheduled_frequencies'" class="parameter-group">
+                                                <label>Frequency:</label>
+                                                <input type="number" v-model.number="entry.frequency">
+                                            </div>
+                                            <div class="parameter-group">
+                                                <button @click="deleteTimetableEntry(lineIndex, branchIndex, entryIndex)" class="delete">Delete</button>
+                                            </div>
+                                        </div>
+                                        <div class="parameter-row">
+                                            <div class="parameter-group">
+                                                <button @click="addTimetableEntry(lineIndex, branchIndex)" class="add">Add Time</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="parameter-row">
+                                        <div class="parameter-group">
+                                            <button @click="requestDeleteBranch(lineIndex, branchIndex)" class="delete">Delete Branch</button>
+                                        </div>
+                                        <div class="parameter-group">
+                                            <button @click="cloneBranch(lineIndex, branchIndex)" class="regular">Clone Branch</button>
+                                        </div>
+                                        <div class="parameter-group">
+                                            <button @click="calculate_traveltimes(lineIndex, branchIndex)" class="regular">Calculate Times</button>
+                                        </div>
+                                        <div class="parameter-group">
+                                            <button @click="calculate_allprogresses(lineIndex, branchIndex)" class="regular">Calculate All Progresses</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="parameter-row">
+                                        <div class="parameter-group">
+                                            <button @click="updateBranchTraversalTime(lineIndex, branchIndex)" class="change">Show Traversal Time</button>
+                                        </div>
+                                        <div class="parameter-group">
+                                            <span v-if="getBranchTraversalTime(lineIndex, branchIndex) !== null">
+                                                Traversal time: {{ getBranchTraversalTime(lineIndex, branchIndex) }} s
+                                            </span>
+                                            <span v-else>Traversal time: not calculated</span>
+                                        </div>
+                                        <div class="parameter-group">
+                                            <button @click="flip_branch(lineIndex, branchIndex)" class="regular">Flip Branch</button>
+                                        </div>
+                                    </div>
+
+                                    <div v-for="(station, stationIndex) in branch.stations" :key="stationIndex" class="station-section" :class="{ 'map-highlight': isStationMapHighlight(lineIndex, branchIndex, stationIndex) }" :data-map-highlight="`station-${lineIndex}-${branchIndex}-${stationIndex}`">
+                                        
+                                        <div class="parameter-row">
+                                            <div class="parameter-group">
+                                                <label>Name:</label>
+                                                <input type="text" v-model="station.name">
+                                            </div>
+                                            <div class="parameter-group">
+                                                <label>Run Time (seconds):</label>
+                                                <input type="number" v-model.number="station.run">
+                                            </div>
+                                            <div class="parameter-group">
+                                                <label>Dwell Time (seconds):</label>
+                                                <input type="number" v-model.number="station.dwell">
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="parameter-row">
+                                            <div class="parameter-group">
+                                                <label>Latitude:</label>
+                                                <input type="number" step="0.0001" v-model.number="station.lat">
+                                            </div>
+                                            <div class="parameter-group">
+                                                <label>Longitude:</label>
+                                                <input type="number" step="0.0001" v-model.number="station.lng">
+                                            </div>
+                                            <div class="parameter-group">
+                                                <button @click="toggleCoordinateMode(lineIndex, branchIndex, stationIndex)" 
+                                                        :class="['coordinate-button', { active: isCoordinateModeActive(lineIndex, branchIndex, stationIndex) }]">
+                                                    {{ isCoordinateModeActive(lineIndex, branchIndex, stationIndex) ? 'Click Map to Set' : 'Set from Map' }}
+                                                </button>
+                                            </div>
+                                            <div class="parameter-group">
+                                                <button
+                                                    @click="moveStationUp(lineIndex, branchIndex, stationIndex)"
+                                                    :disabled="stationIndex === 0"
+                                                    class="regular">
+                                                    Move Up
+                                                </button>
+                                            </div>
+                                            <div class="parameter-group">
+                                                <button @click="requestDeleteStation(lineIndex, branchIndex, stationIndex)" class="delete">Delete Station</button>
+                                            </div>
+                                            <div class="parameter-group">
+                                                <button @click="addCheckpoint(lineIndex, branchIndex, stationIndex)" class="add">Add Checkpoint</button>
+                                            </div>
+                                            <div class="parameter-group">
+                                                <button @click="calculate_progress(lineIndex, branchIndex, stationIndex)" class="regular">Calculate Progresses</button>
+                                            </div>
+                                            <div class="parameter-group">
+                                                <button
+                                                    type="button"
+                                                    @click="showStationOnMap(lineIndex, branchIndex, stationIndex)"
+                                                    :class="['map-show', { active: isStationMapHighlight(lineIndex, branchIndex, stationIndex) }]">
+                                                    Show on map
+                                                </button>
+                                            </div>
+                                        </div>
+                                        
+                                        <div v-if="station.checkpoints" v-for="(checkpoint, checkpointIndex) in station.checkpoints" :key="checkpointIndex" class="checkpoint-section" :class="{ 'map-highlight': isCheckpointMapHighlight(lineIndex, branchIndex, stationIndex, checkpointIndex) }" :data-map-highlight="`checkpoint-${lineIndex}-${branchIndex}-${stationIndex}-${checkpointIndex}`">
+                                            <h4>Checkpoint {{ checkpointIndex + 1 }}</h4>
+                                            
+                                            <div class="parameter-row">
+                                                <div class="parameter-group">
+                                                    <label>Latitude:</label>
+                                                    <input type="number" step="0.0001" v-model.number="checkpoint.lat">
+                                                </div>
+                                                <div class="parameter-group">
+                                                    <label>Longitude:</label>
+                                                    <input type="number" step="0.0001" v-model.number="checkpoint.lng">
+                                                </div>
+                                                <div class="parameter-group">
+                                                    <label>Progress:</label>
+                                                    <input type="number" step="0.01" v-model.number="checkpoint.progress">
+                                                </div>
+                                                <div class="parameter-group">
+                                                    <button @click="toggleCheckpointCoordinateMode(lineIndex, branchIndex, stationIndex, checkpointIndex)" 
+                                                            :class="['coordinate-button', { active: isCheckpointCoordinateModeActive(lineIndex, branchIndex, stationIndex, checkpointIndex) }]">
+                                                        {{ isCheckpointCoordinateModeActive(lineIndex, branchIndex, stationIndex, checkpointIndex) ? 'Click Map to Set' : 'Set from Map' }}
+                                                    </button>
+                                                </div>
+                                                <div class="parameter-group">
+                                                    <button
+                                                        @click="moveCheckpointUp(lineIndex, branchIndex, stationIndex, checkpointIndex)"
+                                                        :disabled="checkpointIndex === 0"
+                                                        class="regular">
+                                                        Move Up
+                                                    </button>
+                                                </div>
+                                                <div class="parameter-group">
+                                                    <button @click="requestDeleteCheckpoint(lineIndex, branchIndex, stationIndex, checkpointIndex)" class="delete">Delete Checkpoint</button>
+                                                </div>
+                                                <div class="parameter-group">
+                                                    <button
+                                                        type="button"
+                                                        @click="showCheckpointOnMap(lineIndex, branchIndex, stationIndex, checkpointIndex)"
+                                                        :class="['map-show', { active: isCheckpointMapHighlight(lineIndex, branchIndex, stationIndex, checkpointIndex) }]">
+                                                        Show on map
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                    <button @click="addStation(lineIndex, branchIndex)" class="add">Add Station</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </template>
+        </div>
+
+        <div class="map-panel">
+            <div id="map"></div>
+        </div>
+        
+        <div class="json-panel">
+            <pre>{{ formattedJSON }}</pre>
+        </div>
+
+        <!-- Delete confirmation modal (inside #app so Vue controls visibility and clicks) -->
+        <div v-if="confirmModal.show" class="confirm-modal-overlay" @click.self="cancelDelete">
+            <div class="confirm-modal">
+                <h3>Confirm deletion</h3>
+                <p>{{ confirmModal.message }}</p>
+                <div class="confirm-modal-actions">
+                    <button type="button" class="cancel" @click="cancelDelete">Cancel</button>
+                    <button type="button" class="delete" @click="confirmDelete">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module">
+        import {generate_train_icon_2} from "./editor_visualstuff.js";
+        import {
+            deepClone, nextUniqueLineId, nextUniqueBranchId, nextUniqueLineName,
+            addLine, cloneLine, requestDeleteLine, requestDeleteBranch, requestDeleteStation, requestDeleteCheckpoint,
+            confirmDelete, cancelDelete, deleteLine, addBranch, cloneBranch, deleteBranch,
+            updateicon, addStation, deleteStation, addCheckpoint, deleteCheckpoint, insertCheckpointAt,
+            moveStationUp, moveCheckpointUp, flip_branch, calculate_progress, calculate_allprogresses, calculate_traveltimes, computeBranchJourneySeconds
+        } from "./lines.js";
+        const { createApp } = Vue;
+
+        createApp({
+            data() {
+                return {
+                    lines: [],
+                    map: null,
+                    markers: [],
+                    polylines: [],
+                    segmentButtons: [],
+                    activeTab: 0,
+                    activeBranchTabs: {},
+                    branchTraversalTimes: {},
+                    coordinateMode: null,
+                    showSettings: false,
+                    confirmModal: {
+                        show: false,
+                        message: '',
+                        pendingDelete: null
+                    },
+                    /** { type: 'station'|'checkpoint', lineIndex, branchIndex, stationIndex, checkpointIndex? } */
+                    mapHighlight: null
+                };
+            },
+            computed: {
+                formattedJSON() {
+                    return JSON.stringify(this.lines, null, 2);
+                }
+            },
+            mounted() {
+                this.initMap();
+                this.loadFromCookie();
+                if (this.lines.length === 0) {
+                    this.loadSampleData();
+                }
+                window.addEventListener('keydown', this.handleKeyPress);
+            },
+            watch: {
+                coordinateMode: {
+                    handler(newMode) {
+                        if (newMode) {
+                            this.map.getCanvas().style.cursor = 'crosshair';
+                        } else {
+                            this.map.getCanvas().style.cursor = '';
+                        }
+                    }
+                },
+                lines: {
+                    handler() {
+                        this.updateMap(false);
+                    },
+                    deep: true
+                }
+            },
+            methods: {
+                deepClone(obj) { return deepClone(obj); },
+                nextUniqueLineId() { return nextUniqueLineId(this); },
+                nextUniqueBranchId(lineIndex) { return nextUniqueBranchId(this, lineIndex); },
+                nextUniqueLineName(baseName) { return nextUniqueLineName(this, baseName); },
+                addLine() {
+                    addLine(this);
+                    const nl = this.lines[this.lines.length - 1];
+                    if (!nl.hasOwnProperty('line_visible')) nl.line_visible = true;
+                    if (!nl.hasOwnProperty('line_zindex')) nl.line_zindex = 0;
+                },
+                cloneLine(lineIndex) { cloneLine(this, lineIndex); },
+                requestDeleteLine(lineIndex) { requestDeleteLine(this, lineIndex); },
+                requestDeleteBranch(lineIndex, branchIndex) { requestDeleteBranch(this, lineIndex, branchIndex); },
+                requestDeleteStation(lineIndex, branchIndex, stationIndex) { requestDeleteStation(this, lineIndex, branchIndex, stationIndex); },
+                requestDeleteCheckpoint(lineIndex, branchIndex, stationIndex, checkpointIndex) { requestDeleteCheckpoint(this, lineIndex, branchIndex, stationIndex, checkpointIndex); },
+                confirmDelete() { confirmDelete(this); },
+                cancelDelete() { cancelDelete(this); },
+                deleteLine(lineIndex) { deleteLine(this, lineIndex); },
+                addBranch(lineIndex) { addBranch(this, lineIndex); },
+                cloneBranch(lineIndex, branchIndex) { cloneBranch(this, lineIndex, branchIndex); },
+                deleteBranch(lineIndex, branchIndex) { deleteBranch(this, lineIndex, branchIndex); },
+                updateicon(lineIndex) { updateicon(this, lineIndex); },
+                addStation(lineIndex, branchIndex) { addStation(this, lineIndex, branchIndex); },
+                deleteStation(lineIndex, branchIndex, stationIndex) { deleteStation(this, lineIndex, branchIndex, stationIndex); },
+                addCheckpoint(lineIndex, branchIndex, stationIndex) { addCheckpoint(this, lineIndex, branchIndex, stationIndex); },
+                deleteCheckpoint(lineIndex, branchIndex, stationIndex, checkpointIndex) { deleteCheckpoint(this, lineIndex, branchIndex, stationIndex, checkpointIndex); },
+                insertCheckpointAt(lineIndex, branchIndex, stationIndex, insertIndex, initialLat, initialLng, initialProgress) { insertCheckpointAt(this, lineIndex, branchIndex, stationIndex, insertIndex, initialLat, initialLng, initialProgress); },
+                moveStationUp(lineIndex, branchIndex, stationIndex) { moveStationUp(this, lineIndex, branchIndex, stationIndex); },
+                moveCheckpointUp(lineIndex, branchIndex, stationIndex, checkpointIndex) { moveCheckpointUp(this, lineIndex, branchIndex, stationIndex, checkpointIndex); },
+                calculate_progress(lineIndex, branchIndex, stationIndex) { calculate_progress(this, lineIndex, branchIndex, stationIndex); },
+                calculate_allprogresses(lineIndex, branchIndex) { calculate_allprogresses(this, lineIndex, branchIndex); },
+                calculate_traveltimes(lineIndex, branchIndex) { calculate_traveltimes(this, lineIndex, branchIndex); },
+                calculateBranchTraversalTime(lineIndex, branchIndex) {
+                    // TODO: implement this function
+                    // should return the traversal time in seconds for the given branch
+                    return computeBranchJourneySeconds(this.lines[lineIndex].branches[branchIndex]);
+                },
+                updateBranchTraversalTime(lineIndex, branchIndex) {
+                    const key = `${lineIndex}-${branchIndex}`;
+                    this.branchTraversalTimes[key] = this.calculateBranchTraversalTime(lineIndex, branchIndex);
+                },
+                flip_branch(lineIndex, branchIndex){
+                    flip_branch(this, lineIndex, branchIndex);
+                },
+                getBranchTraversalTime(lineIndex, branchIndex) {
+                    const key = `${lineIndex}-${branchIndex}`;
+                    return this.branchTraversalTimes.hasOwnProperty(key) ? this.branchTraversalTimes[key] : null;
+                },
+                initMap() {
+                    this.map = new maplibregl.Map({
+                        container: 'map',
+                        style: {
+                            version: 8,
+                            sources: {
+                                osm: {
+                                    type: 'raster',
+                                    tiles: ['https://tile.openstreetmap.org/{z}/{x}/{y}.png'],
+                                    tileSize: 256,
+                                    attribution: '© OpenStreetMap contributors'
+                                }
+                            },
+                            layers: [{ id: 'osm', type: 'raster', source: 'osm' }]
+                        },
+                        center: [114.2, 22.3],
+                        zoom: 10
+                    });
+
+                    this.map.on('click', (e) => {
+                        if (this.coordinateMode) {
+                            const { target, lineIndex, branchIndex, stationIndex, checkpointIndex } = this.coordinateMode;
+                            const station = this.lines[lineIndex].branches[branchIndex].stations[stationIndex];
+                            if (target === 'station') {
+                                station.lat = e.lngLat.lat;
+                                station.lng = e.lngLat.lng;
+
+                                if(station.lng < 0){
+                                    station.lng = 360 + station.lng;
+                                }
+                            } else if (target === 'checkpoint' && station.checkpoints && station.checkpoints[checkpointIndex]) {
+                                station.checkpoints[checkpointIndex].lat = e.lngLat.lat;
+                                station.checkpoints[checkpointIndex].lng = e.lngLat.lng;
+
+                                if(station.checkpoints[checkpointIndex].lng < 0){
+                                    station.checkpoints[checkpointIndex].lng = 360 + station.checkpoints[checkpointIndex].lng;
+                                }
+                            }
+                            this.coordinateMode = null;
+                        }
+                    });
+                },
+                validateMapHighlight() {
+                    const h = this.mapHighlight;
+                    if (!h) return;
+                    const line = this.lines[h.lineIndex];
+                    if (!line || !line.branches) {
+                        this.mapHighlight = null;
+                        return;
+                    }
+                    const branch = line.branches[h.branchIndex];
+                    if (!branch || !branch.stations) {
+                        this.mapHighlight = null;
+                        return;
+                    }
+                    const station = branch.stations[h.stationIndex];
+                    if (!station) {
+                        this.mapHighlight = null;
+                        return;
+                    }
+                    if (h.type === 'checkpoint') {
+                        if (!station.checkpoints || !station.checkpoints[h.checkpointIndex]) {
+                            this.mapHighlight = null;
+                        }
+                    }
+                },
+                updateMap(change_zoom) {
+                    this.validateMapHighlight();
+                    this.markers.forEach(marker => marker.remove());
+                    this.polylines.forEach(id => {
+                        if (this.map.getLayer(id)) this.map.removeLayer(id);
+                        if (this.map.getSource(id)) this.map.removeSource(id);
+                    });
+                    if (this.segmentButtons) { this.segmentButtons.forEach(m => m.remove()); }
+                    this.markers = [];
+                    this.polylines = [];
+                    this.segmentButtons = [];
+
+                    if (!this.map.isStyleLoaded()) {
+                        this.map.once('load', () => this.updateMap(change_zoom));
+                        return;
+                    }
+
+                    let allCoords = [];
+                    let polylineCounter = 0;
+
+                    // Render lines in ascending z-index order so higher z-index appears on top
+                    const lineRenderOrder = this.lines
+                        .map((line, lineIndex) => ({ line, lineIndex }))
+                        .sort((a, b) => (a.line.line_zindex || 0) - (b.line.line_zindex || 0));
+
+                    lineRenderOrder.forEach(({ line, lineIndex }) => {
+                        if (line.line_visible === false) return;
+                        line.branches.forEach((branch, branchIndex) => {
+                            let coords = [];
+
+                            //copied from kimi_mtr.js
+                            for(let s = 0; s < branch.stations.length; s++){
+                                const station = branch.stations[s];
+                                coords.push([station.lng, station.lat]);
+                                if(s < branch.stations.length - 1 && station.checkpoints && Array.isArray(station.checkpoints)){
+                                    const sortedCheckpoints = [...station.checkpoints].sort((a, b) => {
+                                        const progA = a.progress !== undefined ? a.progress : (a.progresss !== undefined ? a.progresss : 0);
+                                        const progB = b.progress !== undefined ? b.progress : (b.progresss !== undefined ? b.progresss : 0);
+                                        return progA - progB;
+                                    });
+                                    sortedCheckpoints.forEach(cp => coords.push([cp.lng, cp.lat]));
+                                }
+                            }
+                            if(branch.hasOwnProperty("branch_type") && branch.branch_type === "circular"){
+                                const station = branch.stations[branch.stations.length - 1];
+                                if(station.checkpoints && Array.isArray(station.checkpoints)){
+                                    const sortedCheckpoints = [...station.checkpoints].sort((a, b) => {
+                                        const progA = a.progress !== undefined ? a.progress : (a.progresss !== undefined ? a.progresss : 0);
+                                        const progB = b.progress !== undefined ? b.progress : (b.progresss !== undefined ? b.progresss : 0);
+                                        return progA - progB;
+                                    });
+                                    sortedCheckpoints.forEach(cp => coords.push([cp.lng, cp.lat]));
+                                }
+                                coords.push([branch.stations[0].lng, branch.stations[0].lat]);
+                            }
+
+                            // stations and checkpoint markers (checkpoints are also polyline vertices; markers make them easy to highlight)
+                            branch.stations.forEach((station, stationIndex) => {
+                                if (station.lat && station.lng) {
+                                    const stationHl =
+                                        this.mapHighlight &&
+                                        this.mapHighlight.type === 'station' &&
+                                        this.mapHighlight.lineIndex === lineIndex &&
+                                        this.mapHighlight.branchIndex === branchIndex &&
+                                        this.mapHighlight.stationIndex === stationIndex;
+                                    const size = stationHl ? 32 : 12;
+                                    const el = document.createElement('div');
+                                    el.style.cssText = `width:${size}px;height:${size}px;border-radius:50%;background-color:${line.line_color};border:${stationHl ? '5px solid #ffcc00' : '2px solid #000'};opacity:${stationHl ? '1' : '0.8'};cursor:pointer;box-sizing:border-box;z-index:${line.line_zindex || 0};`;
+                                    el.addEventListener('click', (e) => {
+                                        e.stopPropagation();
+                                        this.showStationOnMap(lineIndex, branchIndex, stationIndex);
+                                    });
+                                    const popup = new maplibregl.Popup({ offset: 12 })
+                                        .setHTML(`<b>${station.name || 'Unnamed'}</b><br>${line.name}`);
+                                    const marker = new maplibregl.Marker({ element: el })
+                                        .setLngLat([station.lng, station.lat])
+                                        .setPopup(popup)
+                                        .addTo(this.map);
+                                    this.markers.push(marker);
+                                    allCoords.push([station.lng, station.lat]);
+                                }
+                                if (station.checkpoints && Array.isArray(station.checkpoints)) {
+                                    station.checkpoints.forEach((checkpoint, checkpointIndex) => {
+                                        if (checkpoint.lat && checkpoint.lng) {
+                                            const cpHl =
+                                                this.mapHighlight &&
+                                                this.mapHighlight.type === 'checkpoint' &&
+                                                this.mapHighlight.lineIndex === lineIndex &&
+                                                this.mapHighlight.branchIndex === branchIndex &&
+                                                this.mapHighlight.stationIndex === stationIndex &&
+                                                this.mapHighlight.checkpointIndex === checkpointIndex;
+                                            const cpSize = cpHl ? 28 : 8;
+                                            const cpEl = document.createElement('div');
+                                            cpEl.style.cssText = `width:${cpSize}px;height:${cpSize}px;border-radius:50%;background-color:#ffffff;border:${cpHl ? '5px solid #ffcc00' : `2px solid ${line.line_color}`};cursor:pointer;box-sizing:border-box;z-index:${line.line_zindex || 0};`;
+                                            cpEl.addEventListener('click', (e) => {
+                                                e.stopPropagation();
+                                                this.showCheckpointOnMap(lineIndex, branchIndex, stationIndex, checkpointIndex);
+                                            });
+                                            const cpPopup = new maplibregl.Popup({ offset: 12 })
+                                                .setHTML(`<b>Checkpoint ${checkpointIndex + 1}</b><br>${station.name || 'Unnamed'}<br>${line.name}`);
+                                            const cpMarker = new maplibregl.Marker({ element: cpEl })
+                                                .setLngLat([checkpoint.lng, checkpoint.lat])
+                                                .setPopup(cpPopup)
+                                                .addTo(this.map);
+                                            this.markers.push(cpMarker);
+                                        }
+                                    });
+                                }
+                            });
+
+                            if (coords.length > 1) {
+                                const sourceId = `polyline-${polylineCounter++}`;
+                                this.map.addSource(sourceId, {
+                                    type: 'geojson',
+                                    data: {
+                                        type: 'Feature',
+                                        geometry: { type: 'LineString', coordinates: coords }
+                                    }
+                                });
+                                this.map.addLayer({
+                                    id: sourceId,
+                                    type: 'line',
+                                    source: sourceId,
+                                    paint: {
+                                        'line-color': line.line_color,
+                                        'line-width': 4,
+                                        'line-opacity': 0.7
+                                    }
+                                });
+                                this.polylines.push(sourceId);
+                            }
+                        });
+                    });
+
+                    // Segment midpoint buttons for inserting checkpoints
+                    //test: Disable, see if performance increases
+
+                    /*
+                    const addSegBtn = (lat1, lng1, lat2, lng2, li, bi, si, insertIdx, initProg) => {
+                        const midLat = (lat1 + lat2) / 2;
+                        const midLng = (lng1 + lng2) / 2;
+                        const btnEl = document.createElement('button');
+                        btnEl.className = 'segment-midpoint-btn';
+                        btnEl.textContent = '+';
+                        btnEl.title = 'Insert checkpoint here';
+                        btnEl.addEventListener('click', (e) => {
+                            e.stopPropagation();
+                            this.insertCheckpointAt(li, bi, si, insertIdx, midLat, midLng, initProg);
+                        });
+                        const segMarker = new maplibregl.Marker({ element: btnEl, anchor: 'center' })
+                            .setLngLat([midLng, midLat])
+                            .addTo(this.map);
+                        this.segmentButtons.push(segMarker);
+                    };
+
+                    lineRenderOrder.forEach(({ line, lineIndex }) => {
+                        if (line.line_visible === false) return;
+                        line.branches.forEach((branch, branchIndex) => {
+                            const stations = branch.stations;
+                            if (!stations || stations.length < 2) return;
+                            const isCircular = branch.branch_type === 'circular';
+
+                            for (let s = 0; s < stations.length; s++) {
+                                const station = stations[s];
+                                const isLast = s === stations.length - 1;
+                                if (isLast && !isCircular) continue;
+
+                                const nextStation = isLast ? stations[0] : stations[s + 1];
+                                if (!station.lat || !station.lng || !nextStation.lat || !nextStation.lng) continue;
+
+                                const rawCps = (station.checkpoints && Array.isArray(station.checkpoints)) ? station.checkpoints : [];
+                                const sortedCpWithIdx = rawCps
+                                    .map((cp, idx) => ({ cp, originalIdx: idx }))
+                                    .sort((a, b) => (a.cp.progress || 0) - (b.cp.progress || 0));
+
+                                if (sortedCpWithIdx.length === 0) {
+                                    // station → nextStation (no checkpoints): insert into station s at index 0
+                                    addSegBtn(station.lat, station.lng, nextStation.lat, nextStation.lng,
+                                        lineIndex, branchIndex, s, 0, 0.5);
+                                } else {
+                                    // station → sorted_cp[0]: insert before sorted_cp[0] in raw array
+                                    const cp0 = sortedCpWithIdx[0];
+                                    if (cp0.cp.lat && cp0.cp.lng) {
+                                        addSegBtn(station.lat, station.lng, cp0.cp.lat, cp0.cp.lng,
+                                            lineIndex, branchIndex, s, cp0.originalIdx,
+                                            (cp0.cp.progress || 0) / 2);
+                                    }
+                                    // sorted_cp[j] → sorted_cp[j+1]: insert after cpA in raw array
+                                    for (let j = 0; j < sortedCpWithIdx.length - 1; j++) {
+                                        const cpA = sortedCpWithIdx[j];
+                                        const cpB = sortedCpWithIdx[j + 1];
+                                        if (!cpA.cp.lat || !cpA.cp.lng || !cpB.cp.lat || !cpB.cp.lng) continue;
+                                        addSegBtn(cpA.cp.lat, cpA.cp.lng, cpB.cp.lat, cpB.cp.lng,
+                                            lineIndex, branchIndex, s, cpA.originalIdx + 1,
+                                            ((cpA.cp.progress || 0) + (cpB.cp.progress || 0)) / 2);
+                                    }
+                                    // sorted_cp[last] → nextStation: insert after cpLast in raw array
+                                    const cpLast = sortedCpWithIdx[sortedCpWithIdx.length - 1];
+                                    if (cpLast.cp.lat && cpLast.cp.lng) {
+                                        addSegBtn(cpLast.cp.lat, cpLast.cp.lng, nextStation.lat, nextStation.lng,
+                                            lineIndex, branchIndex, s, cpLast.originalIdx + 1,
+                                            ((cpLast.cp.progress || 0) + 1) / 2);
+                                    }
+                                }
+                            }
+                        });
+                    });
+                    */
+                    // Only fit bounds if not in coordinate mode
+                    if (allCoords.length > 0 && !this.coordinateMode && change_zoom === true) {
+                        const lngs = allCoords.map(c => c[0]);
+                        const lats = allCoords.map(c => c[1]);
+                        this.map.fitBounds(
+                            [[Math.min(...lngs), Math.min(...lats)], [Math.max(...lngs), Math.max(...lats)]],
+                            { padding: 40 }
+                        );
+                    }
+                },
+                loadSampleData() {
+                    const sampleData = [
+                        {
+    line_id: 2,
+    name: "Disneyland Resort Line",
+    line_color: "#f173ac",
+    markertype: "hkmtr",
+    image:"assets/mtr_train1.png",
+    branches: [
+      {
+        branch_id: 0,
+        SPAWN_EVERY: 300,
+        offset_time: 0,
+        branch_type: "normal",
+        stations: [
+    {name:"Sunny Bay", lat:22.3317, lng:114.0289, run:210, dwell:90, checkpoints: [{lat:22.3332, lng:114.0316, progress: 0.1}, {lat:22.3306, lng:114.0355, progress: 0.25}, {lat:22.3173, lng:114.0374, progress: 0.8}]},
+    {name:"Disneyland Resort", lat:22.3156, lng:114.0450, run:90, dwell:90},
+        ]
+      }
+    ]
+  },
+  {
+    line_id: 3,
+    name: "Tseung Kwan O line",
+    line_color: "#7d499d",
+    branches: [
+      {
+        branch_id: 0,
+        SPAWN_EVERY: 396,
+        branch_type: "normal",
+        offset_time: 0,
+        stations: [
+          {name:"North Point", lat:22.2908, lng:114.2008, run:90, dwell:90},
+          {name:"Quarry Bay", lat:22.2878, lng:114.2097, run:210, dwell:30},
+          {name:"Yau Tong", lat:22.2978, lng:114.2372, run:150, dwell:30, checkpoints: [{lat:22.2944, lng:114.2419, progress: 0.3}]},
+          {name:"Tiu Keng Leng", lat:22.3042, lng:114.2525, run:90, dwell:30},
+          {name:"Tseung Kwan O", lat:22.3075, lng:114.2600, run:90, dwell:30},
+          {name:"Hang Hau", lat:22.3156, lng:114.2644, run:90, dwell:30},
+          {name:"Po Lam", lat:22.3225, lng:114.2581, run:90, dwell:90},
+        ]
+      },
+      {
+        branch_id: 1,
+        branch_type: "normal",
+        SPAWN_EVERY: 396,
+        offset_time: 132,
+        stations: [
+          {name:"North Point", lat:22.2908, lng:114.2008, run:90, dwell:90},
+          {name:"Quarry Bay", lat:22.2878, lng:114.2097, run:210, dwell:30},
+          {name:"Yau Tong", lat:22.2978, lng:114.2372, run:150, dwell:30, checkpoints: [{lat:22.2944, lng:114.2419, progress: 0.3}]},
+          {name:"Tiu Keng Leng", lat:22.3042, lng:114.2525, run:90, dwell:30},
+          {name:"Tseung Kwan O", lat:22.3075, lng:114.2600, run:90, dwell:30},
+          {name:"Hang Hau", lat:22.3156, lng:114.2644, run:90, dwell:30},
+          {name:"Po Lam", lat:22.3225, lng:114.2581, run:90, dwell:90},
+        ]
+      },
+      {
+        branch_id: 2,
+        SPAWN_EVERY: 396,
+        offset_time: 264,
+        branch_type: "normal",
+        stations: [
+          {name:"North Point", lat:22.2908, lng:114.2008, run:90, dwell:90},
+          {name:"Quarry Bay", lat:22.2878, lng:114.2097, run:210, dwell:30},
+          {name:"Yau Tong", lat:22.2978, lng:114.2372, run:150, dwell:30, checkpoints: [{lat:22.2944, lng:114.2419, progress: 0.3}]},
+          {name:"Tiu Keng Leng", lat:22.3042, lng:114.2525, run:90, dwell:30},
+          {name:"Tseung Kwan O", lat:22.3075, lng:114.2600, run:150, dwell:30,  checkpoints: [{lat:22.3105, lng:114.2689, progress: 0.3}, {lat:22.3021, lng:114.2750, progress: 0.7}]},
+          {name:"LOHAS Park", lat:22.2958, lng:114.2689, run:90, dwell:120},
+        ]
+      }
+    ]
+  },
+  {
+    line_id: 10,
+    name: "Test line",
+    line_color: "#01ffff",
+    label:"000",
+    markertype:"hklrt",
+    branches: [
+      {
+        branch_id: 0,
+        SPAWN_EVERY: 100,
+        offset_time: 0,
+        branch_type: "circular",
+        stations: [
+          {name:"station 1", lat:22.3103, lng:114.1235, run:60, dwell:30},
+          {name:"station 2", lat:22.3003, lng:114.1429, run:180, dwell:30},
+          {name:"station 3", lat:22.2967, lng:114.1149, run:90, dwell:30, checkpoints: [{lat:22.3000, lng:114.1100, progress: 0.4}]},
+        ]
+      },
+    ]
+  },
+                    
+                    ];
+
+                    this.lines = sampleData;
+                    //show icons
+                    for(let i = 0; i < this.lines.length; i++){
+                        this.lines[i].icon = generate_train_icon_2(this.lines[i].markertype, this.lines[i].line_color, this.lines[i].label, this.lines[i].image);
+                        if (!this.lines[i].hasOwnProperty('line_visible')) this.lines[i].line_visible = true;
+                        if (!this.lines[i].hasOwnProperty('line_zindex')) this.lines[i].line_zindex = 0;
+                    }
+                },
+                importJSON() {
+                    const input = document.createElement('input');
+                    input.type = 'file';
+                    input.accept = '.json';
+                    input.onchange = (e) => {
+                        const file = e.target.files[0];
+                        const reader = new FileReader();
+                        reader.onload = (event) => {
+                            try {
+                                this.lines = JSON.parse(event.target.result);
+
+                                //add line type to branches
+                                for(let i = 0; i < this.lines.length; i++){
+                                    for(let j = 0; j < this.lines[i].branches.length; j++){
+                                        if(!this.lines[i].branches[j].hasOwnProperty('branch_type')){
+                                            this.lines[i].branches[j].branch_type = "normal";
+                                        }
+                                    }
+                                    //properties it may or may not have
+                                    if(!this.lines[i].hasOwnProperty('label')){
+                                        this.lines[i].label = this.lines[i].name;
+                                    }
+                                    if(!this.lines[i].hasOwnProperty('markertype')){
+                                        this.lines[i].markertype = "default";
+                                    }
+                                    if(!this.lines[i].hasOwnProperty('image')){
+                                        this.lines[i].image = "";
+                                    }
+                                    if(!this.lines[i].hasOwnProperty('max_speed')){
+                                        this.lines[i].max_speed = 22.2;
+                                    }
+                                    if(!this.lines[i].hasOwnProperty('acceleration')){
+                                        this.lines[i].acceleration = 1.0;
+                                    }
+                                    //properties to set
+                                    this.lines[i].icon = generate_train_icon_2(this.lines[i].markertype, this.lines[i].line_color, this.lines[i].label, this.lines[i].image);
+                                    if (!this.lines[i].hasOwnProperty('line_visible')) this.lines[i].line_visible = true;
+                                    if (!this.lines[i].hasOwnProperty('line_zindex')) this.lines[i].line_zindex = 0;
+                                    for(let j = 0; j < this.lines[i].branches.length; j++){
+                                      for(let k = 0; k < this.lines[i].branches[j].stations.length; k++){
+                                        if(!this.lines[i].branches[j].stations[k].hasOwnProperty("checkpoints")){
+                                            this.lines[i].branches[j].stations[k].checkpoints = [];
+                                        }
+                                      }
+                                    }
+                                }
+                            } catch (error) {
+                                alert('Invalid JSON file');
+                            }
+                        };
+                        reader.readAsText(file);
+                    };
+                    input.click();
+                },
+                exportJSON() {
+                    const dataStr = JSON.stringify(this.lines, null, 2);
+                    const dataBlob = new Blob([dataStr], { type: 'application/json' });
+                    const url = URL.createObjectURL(dataBlob);
+                    const link = document.createElement('a');
+                    link.href = url;
+                    link.download = 'subway_map.json';
+                    link.click();
+                    URL.revokeObjectURL(url);
+                },
+                zoomOut() {
+                    this.updateMap(true);
+                },
+                getActiveBranchTab(lineIndex) {
+                    if (!(lineIndex in this.activeBranchTabs)) {
+                        this.activeBranchTabs[lineIndex] = 0;
+                    }
+                    return this.activeBranchTabs[lineIndex];
+                },
+                setActiveBranchTab(lineIndex, branchIndex) {
+                    this.activeBranchTabs[lineIndex] = branchIndex;
+                },
+                toggleCoordinateMode(lineIndex, branchIndex, stationIndex) {
+                    if (this.isCoordinateModeActive(lineIndex, branchIndex, stationIndex)) {
+                        this.coordinateMode = null;
+                    } else {
+                        this.coordinateMode = { target: 'station', lineIndex, branchIndex, stationIndex };
+                    }
+                },
+                isCoordinateModeActive(lineIndex, branchIndex, stationIndex) {
+                    return this.coordinateMode && 
+                           this.coordinateMode.target === 'station' &&
+                           this.coordinateMode.lineIndex === lineIndex &&
+                           this.coordinateMode.branchIndex === branchIndex &&
+                           this.coordinateMode.stationIndex === stationIndex;
+                },
+                toggleCheckpointCoordinateMode(lineIndex, branchIndex, stationIndex, checkpointIndex) {
+                    if (this.isCheckpointCoordinateModeActive(lineIndex, branchIndex, stationIndex, checkpointIndex)) {
+                        this.coordinateMode = null;
+                    } else {
+                        this.coordinateMode = { target: 'checkpoint', lineIndex, branchIndex, stationIndex, checkpointIndex };
+                    }
+                },
+                isCheckpointCoordinateModeActive(lineIndex, branchIndex, stationIndex, checkpointIndex) {
+                    return this.coordinateMode &&
+                           this.coordinateMode.target === 'checkpoint' &&
+                           this.coordinateMode.lineIndex === lineIndex &&
+                           this.coordinateMode.branchIndex === branchIndex &&
+                           this.coordinateMode.stationIndex === stationIndex &&
+                           this.coordinateMode.checkpointIndex === checkpointIndex;
+                },
+                scrollToMapHighlight() {
+                    this.$nextTick(() => {
+                        const h = this.mapHighlight;
+                        if (!h) return;
+                        const id =
+                            h.type === 'station'
+                                ? `station-${h.lineIndex}-${h.branchIndex}-${h.stationIndex}`
+                                : `checkpoint-${h.lineIndex}-${h.branchIndex}-${h.stationIndex}-${h.checkpointIndex}`;
+                        const el = document.querySelector(`[data-map-highlight="${id}"]`);
+                        if (!el) return;
+                        const panel = document.querySelector('.editor-panel');
+                        if (!panel) {
+                            el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                            return;
+                        }
+                        const panelRect = panel.getBoundingClientRect();
+                        const elRect = el.getBoundingClientRect();
+                        const scrollTop =
+                            elRect.top - panelRect.top + panel.scrollTop -
+                            (panel.clientHeight / 2) + (elRect.height / 2);
+                        panel.scrollTo({ top: scrollTop, behavior: 'smooth' });
+                    });
+                },
+                showStationOnMap(lineIndex, branchIndex, stationIndex) {
+                    this.activeTab = lineIndex;
+                    this.setActiveBranchTab(lineIndex, branchIndex);
+                    this.mapHighlight = {
+                        type: 'station',
+                        lineIndex,
+                        branchIndex,
+                        stationIndex
+                    };
+                    this.updateMap(false);
+                    this.scrollToMapHighlight();
+                },
+                showCheckpointOnMap(lineIndex, branchIndex, stationIndex, checkpointIndex) {
+                    this.activeTab = lineIndex;
+                    this.setActiveBranchTab(lineIndex, branchIndex);
+                    this.mapHighlight = {
+                        type: 'checkpoint',
+                        lineIndex,
+                        branchIndex,
+                        stationIndex,
+                        checkpointIndex
+                    };
+                    this.updateMap(false);
+                    this.scrollToMapHighlight();
+                },
+                isStationMapHighlight(lineIndex, branchIndex, stationIndex) {
+                    return (
+                        this.mapHighlight &&
+                        this.mapHighlight.type === 'station' &&
+                        this.mapHighlight.lineIndex === lineIndex &&
+                        this.mapHighlight.branchIndex === branchIndex &&
+                        this.mapHighlight.stationIndex === stationIndex
+                    );
+                },
+                isCheckpointMapHighlight(lineIndex, branchIndex, stationIndex, checkpointIndex) {
+                    return (
+                        this.mapHighlight &&
+                        this.mapHighlight.type === 'checkpoint' &&
+                        this.mapHighlight.lineIndex === lineIndex &&
+                        this.mapHighlight.branchIndex === branchIndex &&
+                        this.mapHighlight.stationIndex === stationIndex &&
+                        this.mapHighlight.checkpointIndex === checkpointIndex
+                    );
+                },
+                handleKeyPress(event) {
+                    const isInputField = event.target.tagName === 'INPUT';
+
+                    if (isInputField) {
+                        console.log(`Key pressed in input: ${event.key}`);
+                        return;
+                    } else {
+                        console.log(`Key pressed outside input: ${event.key}`);
+                    }
+                    console.log(`Key pressed: ${event.key}`);
+                    // Add your logic here
+                    if(event.key == " "){
+                        this.addStation(this.activeTab, this.activeBranchTabs[this.activeTab]);
+                    }
+                    if (event.key === 's' || event.key === 'S') {
+                        if (!this.mapHighlight) return;
+                        const h = this.mapHighlight;
+                        const branch = this.lines[h.lineIndex].branches[h.branchIndex];
+                        const numStations = branch.stations.length;
+                        const nextIndex = (h.stationIndex + 1) % numStations;
+                        this.showStationOnMap(h.lineIndex, h.branchIndex, nextIndex);
+                    }
+                    if (event.key === 'w' || event.key === 'W') {
+                        if (!this.mapHighlight) return;
+                        const h = this.mapHighlight;
+                        const branch = this.lines[h.lineIndex].branches[h.branchIndex];
+                        const numStations = branch.stations.length;
+                        const prevIndex = (h.stationIndex - 1 + numStations) % numStations;
+                        this.showStationOnMap(h.lineIndex, h.branchIndex, prevIndex);
+                    }
+                    if (event.key === 'd' || event.key === 'D') {
+                        if (!this.mapHighlight) return;
+                        const h = this.mapHighlight;
+                        const branch = this.lines[h.lineIndex].branches[h.branchIndex];
+                        const station = branch.stations[h.stationIndex];
+                        if (h.type === 'checkpoint') {
+                            const checkpoints = station.checkpoints;
+                            if (h.checkpointIndex < checkpoints.length - 1) {
+                                this.showCheckpointOnMap(h.lineIndex, h.branchIndex, h.stationIndex, h.checkpointIndex + 1);
+                            } else {
+                                const nextStationIndex = (h.stationIndex + 1) % branch.stations.length;
+                                this.showStationOnMap(h.lineIndex, h.branchIndex, nextStationIndex);
+                            }
+                        } else if (h.type === 'station') {
+                            if (station.checkpoints && station.checkpoints.length > 0) {
+                                this.showCheckpointOnMap(h.lineIndex, h.branchIndex, h.stationIndex, 0);
+                            } else {
+                                const nextStationIndex = (h.stationIndex + 1) % branch.stations.length;
+                                this.showStationOnMap(h.lineIndex, h.branchIndex, nextStationIndex);
+                            }
+                        }
+                    }
+                    if (event.key === 'a' || event.key === 'A') {
+                        if (!this.mapHighlight) return;
+                        const h = this.mapHighlight;
+                        const branch = this.lines[h.lineIndex].branches[h.branchIndex];
+                        const numStations = branch.stations.length;
+                        if (h.type === 'checkpoint') {
+                            if (h.checkpointIndex > 0) {
+                                this.showCheckpointOnMap(h.lineIndex, h.branchIndex, h.stationIndex, h.checkpointIndex - 1);
+                            } else {
+                                this.showStationOnMap(h.lineIndex, h.branchIndex, h.stationIndex);
+                            }
+                        } else if (h.type === 'station') {
+                            const prevStationIndex = (h.stationIndex - 1 + numStations) % numStations;
+                            const prevStation = branch.stations[prevStationIndex];
+                            if (prevStation.checkpoints && prevStation.checkpoints.length > 0) {
+                                this.showCheckpointOnMap(h.lineIndex, h.branchIndex, prevStationIndex, prevStation.checkpoints.length - 1);
+                            } else {
+                                this.showStationOnMap(h.lineIndex, h.branchIndex, prevStationIndex);
+                            }
+                        }
+                    }
+                    if (event.key === 'c' || event.key === 'C') {
+                        if (!this.mapHighlight) return;
+                        const h = this.mapHighlight;
+                        let lat, lng;
+                        if (h.type === 'station') {
+                            const station = this.lines[h.lineIndex].branches[h.branchIndex].stations[h.stationIndex];
+                            lat = station.lat;
+                            lng = station.lng;
+                        } else if (h.type === 'checkpoint') {
+                            const station = this.lines[h.lineIndex].branches[h.branchIndex].stations[h.stationIndex];
+                            const checkpoint = station.checkpoints[h.checkpointIndex];
+                            lat = checkpoint.lat;
+                            lng = checkpoint.lng;
+                        }
+                        if (lat && lng) {
+                            this.map.setCenter([lng, lat]);
+                        }
+                    }
+                    //go to checkpoint mode
+                    if (event.key === 'e' || event.key === 'E') {
+                        if (!this.mapHighlight) return;
+                        const h = this.mapHighlight;
+                        if (h.type === 'station') {
+                            this.insertCheckpointAt(h.lineIndex, h.branchIndex, h.stationIndex, 0);
+                        } else if (h.type === 'checkpoint') {
+                            this.insertCheckpointAt(h.lineIndex, h.branchIndex, h.stationIndex, h.checkpointIndex + 1);
+                        }
+                    }
+                    //set the checkpoint to a new point
+                    if (event.key === 'q' || event.key === 'Q') {
+                        if (!this.mapHighlight) return;
+                        const h = this.mapHighlight;
+                        if (h.type === 'station') {
+                            this.toggleCoordinateMode(h.lineIndex, h.branchIndex, h.stationIndex)
+                        } else if (h.type === 'checkpoint') {
+                            this.toggleCheckpointCoordinateMode(h.lineIndex, h.branchIndex, h.stationIndex, h.checkpointIndex);
+                        }
+                    }
+                    //reset the current highlight
+                    if (event.key === 'r' || event.key === 'R') {
+                        if (this.mapHighlight) return;
+                        let lineindex_to_use = this.activeTab;
+                        let branchindex_to_use = this.getActiveBranchTab(lineindex_to_use);
+
+                        if (this.lines[lineindex_to_use].branches[branchindex_to_use].stations.length == 0){
+                            return;
+                        } 
+                        this.showStationOnMap(lineindex_to_use, branchindex_to_use, 0);
+
+                    }
+                    //calculate everything
+                    if(event.key === 'k' || event.key === 'K') {
+                        let lineindex_to_use = this.activeTab;
+                        let branchindex_to_use = this.getActiveBranchTab(lineindex_to_use);
+                        this.calculate_allprogresses(lineindex_to_use, branchindex_to_use);
+                    }
+                    //calculate everything
+                    if(event.key === 'l' || event.key === 'L') {
+                        this.exportJSON();
+                    }
+                    //add time
+                    if(event.key === 't' || event.key === 'T') {
+                        let lineindex_to_use = this.activeTab;
+                        let branchindex_to_use = this.getActiveBranchTab(lineindex_to_use);
+                        this.addTimetableEntry(lineindex_to_use, branchindex_to_use);
+                    }
+                    //calculate everything
+                    if(event.key === 'l' || event.key === 'L') {
+                        this.exportJSON();
+                    }
+                },
+                onBranchTypeChange(lineIndex, branchIndex) {
+                    const branch = this.lines[lineIndex].branches[branchIndex];
+                    if (branch.branch_type === 'unidirectional' || branch.branch_type === 'bidirectional') {
+                        if (!branch.scheduling) branch.scheduling = 'scheduled';
+                        if (!branch.timetable) branch.timetable = [];
+                    }
+                },
+                addTimetableEntry(lineIndex, branchIndex) {
+                    const branch = this.lines[lineIndex].branches[branchIndex];
+                    if (!branch.timetable) branch.timetable = [];
+                    branch.timetable.push({ time: "23:59", frequency: 1 });
+                    this.sortTimetable(lineIndex, branchIndex);
+                },
+                deleteTimetableEntry(lineIndex, branchIndex, entryIndex) {
+                    this.lines[lineIndex].branches[branchIndex].timetable.splice(entryIndex, 1);
+                },
+                sortTimetable(lineIndex, branchIndex) {
+                    const branch = this.lines[lineIndex].branches[branchIndex];
+                    if (branch.timetable) {
+                        branch.timetable.sort((a, b) => a.time.localeCompare(b.time));
+                    }
+                },
+                saveToCookie() {
+                    const dataStr = JSON.stringify(this.lines);
+                    console.log(dataStr);
+                    localStorage.setItem('subwayMapData', dataStr);
+                    document.cookie = "username=John Doe";
+                    alert("test");
+                },
+                loadFromCookie() {
+                    const savedData = localStorage.getItem('subwayMapData');
+                    if (savedData) {
+                        try {
+                            this.lines = JSON.parse(savedData);
+                                for (let i = 0; i < this.lines.length; i++) {
+                                    for (let j = 0; j < this.lines[i].branches.length; j++) {
+                                        if (!this.lines[i].branches[j].hasOwnProperty('branch_type')) {
+                                            this.lines[i].branches[j].branch_type = "normal";
+                                        }
+                                    }
+                                    if (!this.lines[i].hasOwnProperty('label')) {
+                                        this.lines[i].label = this.lines[i].name;
+                                    }
+                                    if (!this.lines[i].hasOwnProperty('markertype')) {
+                                        this.lines[i].markertype = "default";
+                                    }
+                                    if (!this.lines[i].hasOwnProperty('image')) {
+                                        this.lines[i].image = "";
+                                    }
+                                    if (!this.lines[i].hasOwnProperty('max_speed')) {
+                                        this.lines[i].max_speed = 22.2;
+                                    }
+                                    if (!this.lines[i].hasOwnProperty('acceleration')) {
+                                        this.lines[i].acceleration = 1.0;
+                                    }
+                                    this.lines[i].icon = generate_train_icon_2(this.lines[i].markertype, this.lines[i].line_color, this.lines[i].label, this.lines[i].image);
+                                    if (!this.lines[i].hasOwnProperty('line_visible')) this.lines[i].line_visible = true;
+                                    if (!this.lines[i].hasOwnProperty('line_zindex')) this.lines[i].line_zindex = 0;
+                                }
+                                return true;
+                            } catch (error) {
+                                console.error('Error loading from cookie:', error);
+                                return false;
+                            }
+                        }
+                    return false;
+                }
+            }
+        }).mount('#app');
+    </script>
+</body>
+</html>

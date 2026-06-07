@@ -1,0 +1,69 @@
+
+Currently, the program uses Leaflet.js to display the markers and play the animation. Switch the mapping library to Maplibre. Since animation-generator.js only generates an array of coordinates for the trains every second, it doesn't draw anything. Hence, don't edit animation-generator.js.
+
+Fill in the function "split_bidirectional" in @kimi_mtr/kimi_mtr.js . It cycles through all branches of all lines, and searches for branches of type "bidirectional". For "bidirectional" branches, it should split that branch into two "unidirectional" branches. Specifically, turn the original branch into a "unidirectional" branch and clone a flipped version of that "unidirectional" branch. To flip a branch involves the following:
+- Keep the timetable and branch_type the same.
+- Reverse the order of the stations. If the original stations were in the order A, B, C, D, then change it to D, C, B, A.
+- Shift the station the checkpoints belong to. If the original stations were in the order A, B, C, D and the flipped stations are in the order D, C, B, A, then A's checkpoints should be transferred to B, B's checkpoints should be transferred to C, and so on.
+- Flip the order of each list of checkpoints. If the checkpoints of a station were initially in the order E, F, G, then the order should be changed to G, F, E. Furthermore, the progress of each checkpoint should be updated to 1 - [original progress].
+
+Remember to add the newly cloned branch to the list of branches in the line it belongs to.
+
+
+
+
+Move time display (currently the element tickdisplay) into the box containing the "playback stage" items. Furthermore, show a 24-hour time alongside it. The 24-hour time should be the time that is equal to n seconds past 00:00:00, where n is the current time in seconds, i.e. the variable "elapsedSeconds". For example, 14:02:33 corresponds to 14*60*60 + 2*60 + 33 = 50553 seconds.
+
+Next, make an input in the "playback stage" box where the user can set the current time. The input should be in the form of a 24-hour time (14:02:33). Convert this time to seconds (i.e. 50553 seconds for 14:02:33) and set the current time to this.
+
+Finally, display the 24-hour time on the map. Don't put it at a specific latitude or longtitude. Make it hover at the top of the map.
+
+
+Make it so that for the "lines" array, I can set "z-index" variables for each line (It will be called "line_zindex" in each line object). The "z-index" determines how forward/backward the markers of each line get shown on the map. For example, if line A has a z-index of 10 and line B has a z-index of 5, then the trains (i.e. markers representing trains) of line A should be on top of the trains of line B on the map. 
+
+The following is an example of where the z-index should be read:
+
+{
+   "line_id": 0,
+   "name": "Island Line",
+   "line_color": "#0860a8",
+   "branches": [
+     {
+       "branch_id": 0,
+       "SPAWN_EVERY": 216,
+       "offset_time": 0,
+       "stations": [
+         {
+           "name": "Chai Wan",
+           "lat": 22.265,
+           "lng": 114.237,
+           "run": 114,
+           "dwell": 120,
+           "checkpoints": [
+             {
+               "lat": 22.272069382233497,
+               "lng": 114.24096219688232,
+               "progress": 0.5
+             }
+           ]
+         },
+         {
+           "name": "Heng Fa Chuen",
+           "lat": 22.277,
+           "lng": 114.239,
+           "run": 96,
+           "dwell": 30,
+           "checkpoints": []
+         },
+       ],
+       "branch_type": "normal"
+     }
+   ],
+   "label": "Island Line",
+   "markertype": "hkmtr",
+   "image": "assets/mtr_train1.png",
+   "max_speed": 18,
+   "acceleration": 0.6,
+   "line_visible": true,
+   "line_zindex": 0
+ },

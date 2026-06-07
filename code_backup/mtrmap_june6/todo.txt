@@ -1,0 +1,39 @@
+Stuff to do (data):
+- Use GTFS data to generate the coordinates. Input a series of routeIDs and bus numbers and turn it into a json file storing stations. Then, manually add the checkpoints. 
+- Look into how to get the route geometries of the routes (GeoJSON)?
+- Change the MTR rolling stock images (the images on the trains. The rolling stock are different for different lines.)
+
+To figure out how to do:
+- Scheduling - How to upload schedules of transit services easily?
+    - GTFS data? Use a python script to generate a json.
+    - GeoJSON?
+
+Stuff to do (generator):
+- Make the animation generator fetch a json directly (API), so no uploading is needed.
+- New progress function for longer lines
+- Refer to the mtr wiki on the number of trains operating on each line. Make sure it is consistent.
+- Set custom zoom to get the same shot every time
+
+
+
+Stuff to do (editor):
+- Add z-indexes, allowing for users to put things on top of each other.
+- Idea: Separate a "branch editor" from the "line editor" to reduce the number of lines??
+- Add settings bar (e.g. hiding the lines, enabling/disabling certain lines in the video generator)
+- Highlight lines when clicking a button
+- Make the map/JSON display/left editing page separate components?
+- Add more file export/import options. (I.e. export it directly as an HTML file)
+Map rotation.
+- Display the round trip travel time
+- Put circular “buttons” on midpoints of sections. When clicked, a checkpoint should be inserted there (turn on checkpoint mode so the user can click on the position).
+- Flip Branch!
+
+Ongoing:
+Split the code into shorter readable segments
+
+Less important:
+Branch synchronisation: Maybe consider keeping the spawn frequency uniform for a branch? (i.e. modify it slightly such that the gap between each train is equivalent.)
+
+
+Later stuff to consider:
+- Interface for making new icons (just store images in a string?)

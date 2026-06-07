@@ -1,0 +1,79 @@
+
+kimi_mtr.js:
+
+Focus on the @kimi_mtr directory, specifically @kimi_mtr/kimi_mtr.html, @kimi_mtr/kimi_mtr.js, @kimi_mtr/lines_preprocessing.js, and @kimi_mtr/animation-generator.js in this task.
+This is an animation generator that generates time-lapse animations showing subway trains moving on a map. Each train is marked by a label and moves around.
+
+It takes in a javascript array called "lines". In the array, each object is a "line" with a specific color, name, and marker type. There are "branches" in each "line" with a specific spawn frequency and a list of stations that represent branches of the line. Each station contains a latitude and longtitude, travel time, dwell time, and an optional list of checkpoints. The travel time is the time, in seconds, needed for the train to travel to the next station on the list. The dwell time is the time, in seconds, that the train stops at the station. The list of checkpoints contains checkpoints that the train passes when going to the next station. Each checkpoint has a latitude and longtitude, and a "progress" value between 0 and 1 representing the amount of progress the train makes when it goes pass the checkpoint. For instance, if the "progress" is 0.7, then the train passes through the checkpoint when it is 70% of the way to the next station.
+
+The simulation is generated in the "generation" process. In this process, for each branch of each line, the program generates an array containing the coordinates (latitude and longtitude) of a train on the branch. The nth entry in the array stores the coordinates of the train in the nth second from the beginning (relative to when the train started). The length of the array is equal to the time the train takes to take a roundtrip to and from the starting point. Specifically, the train starts at the first station in the array. It goes station by station, following the run and dwell times specified. Once it reaches the last station of the branch, it turns around and goes back to the starting point. When it goes back to where it started, it has completed a roundtrip. Note that for branches of branch_type "circular", trains do not turn around. Instead, when they reach the end, they go on to the first stop, and complete their round trip then. For branches of branch-type "unidirectional", trains only complete a one-way trip.
+
+During the "playing" section, the program plays an animation of trains moving, with markers representing trains on the map. Each train has a "progress" value which is the progress, in seconds, of the train on the route. If the train's progress is in the nth second, then the train's coordinates are in the nth position of the array generated in the generation process. The simulation runs with one frame marking one second in the simulation. 
+
+For branches with a branch_type of "normal" or "circular", the starting progresses of the trains are determined by the spawn frequency. Trains when initialized, are spaced out by spawn frequencies across the time taken for a round trip. For instance, if the spawn frequency is 100 seconds per train and the round trip time is 350 seconds, then there will be trains starting at 0, 100, and 200 seconds respectively. There should be no train at 300 seconds as the 300 second train would be just 50 seconds from the 0 train. It's better to have too few trains than to have too many trains, so there shouldn't be a train at 300 seconds. Once the simulation starts, the time progress of each train adds by one every frame. In this previous example, the trains would be at 1, 101, and 201 seconds respectively after one second. If the time progress of a train exceeds the round trip time, then the position of the train should be the remainder of the time progress divided by the round trip time.
+
+For branches with a branch_type of "unidirectional", the trains don't get initialized in the beginning. Rather, they "spawn" at a time determined by the "timetable" array in the branch. If the "scheduling" parameter of the branch is "scheduled", then trains spawn at every time in the timetable; If the parameter is "scheduled_frequencies", then at each time point in the timetable, the frequency of trains spawning changes to the corresponding frequency in the timetable (in spawns per minute).
+
+The times in the timetable get converted to seconds at the start. For example, if a train spawns at the time of 02:01:00, then it spawns at 2*60*60 + 1*60 = 7260 seconds. An array called spawn_times gets made to store the times, in seconds, of the spawns. In "scheduled" mode, each time simply gets turned into seconds; In "scheduled_frequencies" mode, the program generates the times in which trains should spawn, and adds them to spawn_times.
+
+For "unidirectional" branches, the trains get displayed using markers stored using a "queue" with a head and a tail. New markers get added/removed as time progresses based on the time. If the spawn time of a train exceeds the current time, that train gets added; If the spawn time + travel duration of a train exceeds the current time, then that train gets removed.
+
+There is also a "bidirectional" mode. However, the program converts a "bidirectional" branch to two "unidirectional" branches facing opposite directions right at the start.
+
+
+Rules:
+Only do the things specified in the prompt. Do not change parts of the code that I did not tell you to change. Do not commit any changes.
+
+Task:
+
+Make it so that for the "lines" array, I can set a "z-index" variable for each line (It will be called "line_zindex" in each line object). The "z-index" determines how forward/backward the markers of each line get shown on the map. For example, if line A has a z-index of 10 and line B has a z-index of 5, then the trains (i.e. markers representing trains) of line A should be on top of the trains of line B on the map. 
+
+The following is an example of where the z-index should be read:
+{
+   "line_id": 0,
+   "name": "Island Line",
+   "line_color": "#0860a8",
+   "branches": [
+     {
+       "branch_id": 0,
+       "SPAWN_EVERY": 216,
+       "offset_time": 0,
+       "stations": [
+         {
+           "name": "Chai Wan",
+           "lat": 22.265,
+           "lng": 114.237,
+           "run": 114,
+           "dwell": 120,
+           "checkpoints": [
+             {
+               "lat": 22.272069382233497,
+               "lng": 114.24096219688232,
+               "progress": 0.5
+             }
+           ]
+         },
+         {
+           "name": "Heng Fa Chuen",
+           "lat": 22.277,
+           "lng": 114.239,
+           "run": 96,
+           "dwell": 30,
+           "checkpoints": []
+         },
+       ],
+       "branch_type": "normal"
+     }
+   ],
+   "label": "Island Line",
+   "markertype": "hkmtr",
+   "image": "assets/mtr_train1.png",
+   "max_speed": 18,
+   "acceleration": 0.6,
+   "line_visible": true,
+   "line_zindex": 0
+},
+
+Make sure to check to see if there are any errors/bugs when you are finished.
+
+
