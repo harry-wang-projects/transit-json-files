@@ -1,0 +1,77 @@
+I have some GTFS data about Hong Kong's bus routes, and I want to convert it into a JSON file for my own use.
+
+Specifically, for some routes, I want to get the following information:
+- The latitudes and longitudes of each station
+- The timetable for the route
+
+Write a Python program to generate a JSON. It should take in a route_id and service_id value and generate a JSON in the following format:
+
+{
+        "branch_id": 0,
+        "SPAWN_EVERY": 300,
+        "offset_time": 0,
+        "stations": [
+          {
+            "name": "Cyberport",
+            "lat": 22.261751762438962,
+            "lng": 114.13023197011881,
+            "run": 70,
+            "dwell": 30,
+            "checkpoints": [
+              {
+                "lat": 22.265218911112925,
+                "lng": 114.13101752398802,
+                "progress": 0.4455691108279268
+              }
+            ]
+          },
+          {
+            "name": "Queen Mary Hospital",
+            "lat": 22.269622069155673,
+            "lng": 114.13079284905456,
+            "run": 115,
+            "dwell": 30,
+            "checkpoints": [
+              {
+                "lat": 22.27516424378041,
+                "lng": 114.12976783811723,
+                "progress": 0.3493104418499866
+              },
+              {
+                "lat": 22.28061392033672,
+                "lng": 114.13171004586553,
+                "progress": 0.7058038462020675
+              }
+            ]
+          },
+          {
+            "name": "HKU",
+            "lat": 22.283846230358776,
+            "lng": 114.1354502733268,
+            "run": 90,
+            "dwell": 30
+          }
+        ],
+        "branch_type": "unidirectional",
+        "scheduling": "scheduled_frequencies",
+        "timetable": [
+          {
+            "time": "06:00",
+            "frequency": 10
+          },
+          {
+            "time": "19:00",
+            "frequency": 20
+          },
+          {
+            "time": "20:00",
+            "frequency": 10
+          }
+        ]
+}
+
+Here, the stations, as well as their latitudes and longtitudes, should be set. The timetable should also be set.
+
+There can be many trip_ids for a the same service_id and route_id. Keep the route the same for the same service_id and route_id. However, read through each trip_id, and update the calendar accordingly.
+
+For the entries that can't be obtained from the GTFS data, just ignore them. For instance, there is no shapes.txt in my GTFS data, so checkpoints can't be calculated. For each station, leave the checkpoints array blank.
