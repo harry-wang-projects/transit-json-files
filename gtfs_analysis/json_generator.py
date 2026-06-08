@@ -9,7 +9,7 @@ stop_times = pd.read_csv("../hk_gtfs/stop_times.txt")
 stops = pd.read_csv("../hk_gtfs/stops.txt")
 frequencies = pd.read_csv("../hk_gtfs/frequencies.txt")
 
-def generate_branch_json(route_id, service_id):
+def generate_line_json(line_name, route_id, service_id):
     specific_trips = trips[(trips["route_id"] == route_id) & (trips["service_id"] == service_id)]
     print((str(route_id) + '-1'))
 
@@ -18,14 +18,9 @@ def generate_branch_json(route_id, service_id):
 
     #df[['a', 'b', 'c', 'd']] = parts
 
-    # (optional) convert to integers
-    #df[['a', 'b', 'c', 'd']] = df[['a', 'b', 'c', 'd']].astype(int)
-
     specific_trips_1 = specific_trips[specific_trips["trip_id"].str.contains(str(route_id) + '-1', case=False, na=False)]
     specific_trips_2 = specific_trips[specific_trips["trip_id"].str.contains(str(route_id) + '-2', case=False, na=False)]
 
-    #specific_trips_1 = specific_trips.loc[:, [trip_id for trip_id in specific_trips.trip_id if (str(route_id) + '-1') in trip_id]]
-    #specific_trips_2 = specific_trips.loc[:, [trip_id for trip_id in specific_trips.trip_id if (str(route_id) + '-2') in trip_id]]
     #specific_trips_2 = specific_trips.filter(like=(str(route_id) + '-2'))
 
     specific_trips_1 = specific_trips_1.sort_values(by="trip_id")
@@ -41,7 +36,49 @@ def generate_branch_json(route_id, service_id):
     print(specific_trips_1)
     print(specific_trips_2)
 
+    #stops
+    route1 = stop_times[stop_times["trip_id"] == specific_trips_1.iloc[0]["trip_id"]]
+    route2 = stop_times[stop_times["trip_id"] == specific_trips_2.iloc[0]["trip_id"]]
 
-    return {"property": "idk"}
+    route1_stops = route1.merge(stops[['stop_id', 'stop_name', 'stop_lat', 'stop_lon']], on = 'stop_id', how = 'left')
+    route2_stops = route2.merge(stops[['stop_id', 'stop_name', 'stop_lat', 'stop_lon']], on = 'stop_id', how = 'left')
 
-generate_branch_json(2002580, 287)
+    print(route1_stops[['stop_id', 'stop_name']])
+    print(route2_stops[['stop_id', 'stop_name']])
+    print(route1_stops[['arrival_time', 'departure_time']])
+    print(route2_stops[['arrival_time', 'departure_time']])
+
+    #frequencies
+    frequencies_1 = specific_trips_1.merge(frequencies[['trip_id', 'start_time', 'end_time', 'headway_secs']])
+    frequencies_1 = frequencies_1.drop(columns=['service_id', 'dir'])
+    frequencies_2 = specific_trips_2.merge(frequencies[['trip_id', 'start_time', 'end_time', 'headway_secs']])
+    frequencies_2 = frequencies_2.drop(columns=['service_id', 'dir'])
+    print(frequencies_1)
+
+    to_return = {
+        "line_id": 100,
+        "name": line_name,
+        "line_color":'#ffff00',
+        "branches": [
+            {
+                "branch_id": 0,
+                "SPAWN_EVERY": 300,
+                "branch_type": "unidirectional",
+                "scheduling": "scheduled_frequencies",
+                "stations": [
+                ],
+            },
+            {
+                "branch_id": 1,
+                "SPAWN_EVERY": 300,
+                "branch_type": "unidirectional",
+                "scheduling": "scheduled_frequencies",
+                "stations": [
+                ],
+            }
+        ]
+    }
+
+    return to_return
+
+print(generate_line_json('58', 2002580, 287))
