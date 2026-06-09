@@ -67,6 +67,9 @@ def generate_line_json(line_name, route_id, service_id):
                 "scheduling": "scheduled_frequencies",
                 "stations": [
                 ],
+                "timetable": [
+
+                ],
             },
             {
                 "branch_id": 1,
@@ -75,10 +78,63 @@ def generate_line_json(line_name, route_id, service_id):
                 "scheduling": "scheduled_frequencies",
                 "stations": [
                 ],
+                "timetable": [
+
+                ],
             }
         ]
     }
 
+    #add stations
+    i = 0
+    for row in route1_stops.itertuples(index=True):
+        to_return["branches"][0]["stations"].append({
+            'name': row.stop_name,
+            'lat': row.stop_lat,
+            'lng': row.stop_lon,
+            'run': 120,
+            'dwell': 30,
+            'checkpoints': [
+            ]
+        })
+
+    i = 0
+    for row in route2_stops.itertuples(index=True):
+        to_return["branches"][1]["stations"].append({
+            'name': row.stop_name,
+            'lat': row.stop_lat,
+            'lng': row.stop_lon,
+            'run': 120,
+            'dwell': 30,
+            'checkpoints': [
+            ]
+        })
+
+    #print(frequencies_1)
+
+    #add calendar
+    for row in frequencies_1.itertuples(index=True):
+        to_return["branches"][0]["timetable"].append({
+            "time": row.start_time[:5],
+            "frequency": row.headway_secs
+        })
+
+    for row in frequencies_2.itertuples(index=True):
+        to_return["branches"][1]["timetable"].append({
+            "time": row.start_time[:5],
+            "frequency": row.headway_secs
+        })
+
     return to_return
+
+
+final_json = [
+    generate_line_json('58', 2002580, 287),
+    generate_line_json('30X', 1890, 319)
+]
+
+with open("hkbus_testing.json", "w", encoding="utf-8") as f:
+    json.dump(final_json, f, indent=4)
+
 
 print(generate_line_json('58', 2002580, 287))

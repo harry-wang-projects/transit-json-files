@@ -1,0 +1,568 @@
+[
+    {
+        "line_id": 100,
+        "name": "58",
+        "line_color": "#ffff00",
+        "branches": [
+            {
+                "branch_id": 0,
+                "SPAWN_EVERY": 300,
+                "branch_type": "unidirectional",
+                "scheduling": "scheduled_frequencies",
+                "stations": [
+                    {
+                        "name": "WU NAM STREET, OUTSIDE ON TAI BUILDING",
+                        "lat": 22.24775,
+                        "lng": 114.15558,
+                        "run": 120,
+                        "dwell": 30,
+                        "checkpoints": []
+                    },
+                    {
+                        "name": "ABERDEEN PRAYA ROAD, OUTSIDE ABERDEEN WHOLESALE FISH MARKET|JUMBO PIER, ABERDEEN PRAYA ROAD|ABERDEEN PRAYA ROAD, OUTSIDE ABERDEEN WHOLESALE FISH MARKET",
+                        "lat": 22.24789,
+                        "lng": 114.15267,
+                        "run": 120,
+                        "dwell": 30,
+                        "checkpoints": []
+                    },
+                    {
+                        "name": "TIN WAN STREET, ABERDEEN PRAYA ROAD|ABERDEEN PRAYA ROAD NEAR TIN WAN PRAYA ROAD|ABERDEEN PRAYA ROAD NEAR TIN WAN PRAYA ROAD|ABERDEEN ROAD NEAR ITS JUNCTION WITH TIN WAN PRAYA ROAD",
+                        "lat": 22.2486,
+                        "lng": 114.1482,
+                        "run": 120,
+                        "dwell": 30,
+                        "checkpoints": []
+                    },
+                    {
+                        "name": "BEL-AIR ON THE PEAK, CYBERPORT ROAD|BEL-AIR ON THE PEAK, CYBERPORT ROAD",
+                        "lat": 22.25482,
+                        "lng": 114.13377,
+                        "run": 120,
+                        "dwell": 30,
+                        "checkpoints": []
+                    },
+                    {
+                        "name": "BEL-AIR PHASE 2, CYPERPORT ROAD",
+                        "lat": 22.25626,
+                        "lng": 114.13252,
+                        "run": 120,
+                        "dwell": 30,
+                        "checkpoints": []
+                    },
+                    {
+                        "name": "BEL-AIR PHASE 1, CYPERPORT ROAD|RESIDENCE BEL-AIR, CYBERPORT ROAD",
+                        "lat": 22.25822,
+                        "lng": 114.13291,
+                        "run": 120,
+                        "dwell": 30,
+                        "checkpoints": []
+                    },
+                    {
+                        "name": "THE LAYBY AT CYBERPORT ROAD OUTSIDE THE ARCADE, CYBERPORT",
+                        "lat": 22.26136,
+                        "lng": 114.12977,
+                        "run": 120,
+                        "dwell": 30,
+                        "checkpoints": []
+                    },
+                    {
+                        "name": "SHA WAN DRIVE, OPPOSITE MACLEHOSE MEDICAL REHABILITATION CENTRE",
+                        "lat": 22.2698,
+                        "lng": 114.12374,
+                        "run": 120,
+                        "dwell": 30,
+                        "checkpoints": []
+                    },
+                    {
+                        "name": "THE DUCHESS OF KENT CHILDRENS HOSPITAL, SANDY BAY ROAD|SANDY BAY ROAD, OPPOSITE THE JOHN F. KENNEDY CENTRE",
+                        "lat": 22.27114,
+                        "lng": 114.12388,
+                        "run": 120,
+                        "dwell": 30,
+                        "checkpoints": []
+                    },
+                    {
+                        "name": "FUNG YIU KING HOSPITAL, SANDY BAY ROAD|SANDY BAY ROAD, OPPOSITE FUNG YIU KING HOSPITAL",
+                        "lat": 22.27186,
+                        "lng": 114.12502,
+                        "run": 120,
+                        "dwell": 30,
+                        "checkpoints": []
+                    },
+                    {
+                        "name": "VICTORIA ROAD, OUTSIDE ENGLISH SCHOOLS FOUNDATION WEST ISLAND SCHOOL",
+                        "lat": 22.27287,
+                        "lng": 114.12547,
+                        "run": 120,
+                        "dwell": 30,
+                        "checkpoints": []
+                    },
+                    {
+                        "name": "VICTORIA ROAD NEAR MOUNT DAVIS ROAD",
+                        "lat": 22.27416,
+                        "lng": 114.11834,
+                        "run": 120,
+                        "dwell": 30,
+                        "checkpoints": []
+                    },
+                    {
+                        "name": "CATCHICK STREET, OUTSIDE THE MERTON|CATCHICK STREET, OUTSIDE THE MERTON|CATCHICK STREET NEAR THE MERTON",
+                        "lat": 22.28305,
+                        "lng": 114.12657,
+                        "run": 120,
+                        "dwell": 30,
+                        "checkpoints": []
+                    },
+                    {
+                        "name": "KENNEDY TOWN STATION",
+                        "lat": 22.28135,
+                        "lng": 114.12893,
+                        "run": 120,
+                        "dwell": 30,
+                        "checkpoints": []
+                    }
+                ],
+                "timetable": [
+                    {
+                        "time": "05:30",
+                        "frequency": 720
+                    },
+                    {
+                        "time": "06:00",
+                        "frequency": 300
+                    },
+                    {
+                        "time": "07:00",
+                        "frequency": 240
+                    },
+                    {
+                        "time": "10:00",
+                        "frequency": 480
+                    },
+                    {
+                        "time": "16:00",
+                        "frequency": 300
+                    },
+                    {
+                        "time": "19:00",
+                        "frequency": 480
+                    },
+                    {
+                        "time": "23:30",
+                        "frequency": 900
+                    }
+                ]
+            },
+            {
+                "branch_id": 1,
+                "SPAWN_EVERY": 300,
+                "branch_type": "unidirectional",
+                "scheduling": "scheduled_frequencies",
+                "stations": [
+                    {
+                        "name": "KENNEDY TOWN STATION",
+                        "lat": 22.28135,
+                        "lng": 114.12893,
+                        "run": 120,
+                        "dwell": 30,
+                        "checkpoints": []
+                    },
+                    {
+                        "name": "VICTORIA ROAD, OPPOSITE ENGLISH SCHOOLS FOUNDATION WEST ISLAND SCHOOL",
+                        "lat": 22.27322,
+                        "lng": 114.12643,
+                        "run": 120,
+                        "dwell": 30,
+                        "checkpoints": []
+                    },
+                    {
+                        "name": "FUNG YIU KING HOSPITAL, SANDY BAY ROAD|SANDY BAY ROAD, OPPOSITE FUNG YIU KING HOSPITAL",
+                        "lat": 22.27186,
+                        "lng": 114.12502,
+                        "run": 120,
+                        "dwell": 30,
+                        "checkpoints": []
+                    },
+                    {
+                        "name": "SHA WAN DRIVE, OUTSIDE MACLEHOSE MEDICAL REHABILITATION CENTRE",
+                        "lat": 22.26978,
+                        "lng": 114.12387,
+                        "run": 120,
+                        "dwell": 30,
+                        "checkpoints": []
+                    },
+                    {
+                        "name": "THE LAYBY AT CYBERPORT ROAD OPPOSITE TO THE ARCADE, CYBERPORT",
+                        "lat": 22.26147,
+                        "lng": 114.13023,
+                        "run": 120,
+                        "dwell": 30,
+                        "checkpoints": []
+                    },
+                    {
+                        "name": "INFORMATION CRESCENT, CYBERPORT ROAD",
+                        "lat": 22.26095,
+                        "lng": 114.13142,
+                        "run": 120,
+                        "dwell": 30,
+                        "checkpoints": []
+                    },
+                    {
+                        "name": "CYBERPORT ROAD, OPPOSITE CYBERPORT 3|CYBERPORT THREE, CYBERPORT ROAD|OPPOSITE TO CYBERPORT 3, CYBERPORT ROAD",
+                        "lat": 22.25985,
+                        "lng": 114.13254,
+                        "run": 120,
+                        "dwell": 30,
+                        "checkpoints": []
+                    },
+                    {
+                        "name": "BEL-AIR PHASE 2, CYPERPORT ROAD|CYPERPORT ROAD, OPPOSITE BEL-AIR PHASE 1|RESIDENCE BEL-AIR, CYBERPORT ROAD|CYPERPORT ROAD, OPPOSITE BEL-AIR PHASE 1",
+                        "lat": 22.25667,
+                        "lng": 114.13279,
+                        "run": 120,
+                        "dwell": 30,
+                        "checkpoints": []
+                    },
+                    {
+                        "name": "BEL-AIR ON THE PEAK, CYBERPORT ROAD|BEL-AIR ON THE PEAK, CYBERPORT ROAD|BEL-AIR ON THE PEAK, CYBERPORT ROAD",
+                        "lat": 22.25473,
+                        "lng": 114.13364,
+                        "run": 120,
+                        "dwell": 30,
+                        "checkpoints": []
+                    },
+                    {
+                        "name": "SHEK PAI WAN ROAD, NEAR TIN WAN STREET|SHEK PAI WAN ROAD, NEAR TIN WAN STREET|TIN WAN STREET, SHEK PAI WAN ROAD",
+                        "lat": 22.24935,
+                        "lng": 114.14855,
+                        "run": 120,
+                        "dwell": 30,
+                        "checkpoints": []
+                    },
+                    {
+                        "name": "WU NAM STREET, OUTSIDE ON TAI BUILDING",
+                        "lat": 22.24775,
+                        "lng": 114.15558,
+                        "run": 120,
+                        "dwell": 30,
+                        "checkpoints": []
+                    }
+                ],
+                "timetable": [
+                    {
+                        "time": "05:30",
+                        "frequency": 720
+                    },
+                    {
+                        "time": "06:00",
+                        "frequency": 300
+                    },
+                    {
+                        "time": "07:00",
+                        "frequency": 240
+                    },
+                    {
+                        "time": "10:00",
+                        "frequency": 480
+                    },
+                    {
+                        "time": "16:00",
+                        "frequency": 300
+                    },
+                    {
+                        "time": "19:00",
+                        "frequency": 480
+                    },
+                    {
+                        "time": "23:30",
+                        "frequency": 900
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "line_id": 100,
+        "name": "30X",
+        "line_color": "#ffff00",
+        "branches": [
+            {
+                "branch_id": 0,
+                "SPAWN_EVERY": 300,
+                "branch_type": "unidirectional",
+                "scheduling": "scheduled_frequencies",
+                "stations": [
+                    {
+                        "name": "[CTB] CYBERPORT|[KMB+CTB] CYBERPORT BUS TERMINUS/<BR>CYBERPORT",
+                        "lat": 22.26186,
+                        "lng": 114.13032,
+                        "run": 120,
+                        "dwell": 30,
+                        "checkpoints": []
+                    },
+                    {
+                        "name": "[CTB] CYBERPORT 3, CYBERPORT ROAD|[KMB+CTB] CYBERPORT 3/<BR>CYBERPORT 3, CYBERPORT ROAD",
+                        "lat": 22.25994,
+                        "lng": 114.13244,
+                        "run": 120,
+                        "dwell": 30,
+                        "checkpoints": []
+                    },
+                    {
+                        "name": "[CTB] RESIDENCE BEL-AIR, CYBERPORT ROAD|[KMB+CTB] RESIDENCE BEL-AIR/<BR>RESIDENCE BEL-AIR, CYBERPORT ROAD",
+                        "lat": 22.25658,
+                        "lng": 114.13277,
+                        "run": 120,
+                        "dwell": 30,
+                        "checkpoints": []
+                    },
+                    {
+                        "name": "[CTB] BEL-AIR ON THE PEAK, CYBERPORT ROAD|[KMB+CTB] BEL-AIR ON THE PEAK/<BR>BEL-AIR ON THE PEAK, CYBERPORT ROAD",
+                        "lat": 22.25483,
+                        "lng": 114.13365,
+                        "run": 120,
+                        "dwell": 30,
+                        "checkpoints": []
+                    },
+                    {
+                        "name": "[CTB] WAH CHUI STREET, VICTORIA ROAD|[KMB+CTB] WAH HONG STREET</BR>WAH CHUI STREET, VICTORIA ROAD",
+                        "lat": 22.25506,
+                        "lng": 114.13622,
+                        "run": 120,
+                        "dwell": 30,
+                        "checkpoints": []
+                    },
+                    {
+                        "name": "[CTB] YU CHUN KEUNG MEMORIAL COLLEGE NO.2, POK FU LAM ROAD",
+                        "lat": 22.25599,
+                        "lng": 114.13757,
+                        "run": 120,
+                        "dwell": 30,
+                        "checkpoints": []
+                    },
+                    {
+                        "name": "[CTB] POK FU LAM VILLAGE, POK FU LAM ROAD",
+                        "lat": 22.26052,
+                        "lng": 114.13618,
+                        "run": 120,
+                        "dwell": 30,
+                        "checkpoints": []
+                    },
+                    {
+                        "name": "[CTB] EBENEZER SCHOOL, POK FU LAM ROAD",
+                        "lat": 22.26731,
+                        "lng": 114.13196,
+                        "run": 120,
+                        "dwell": 30,
+                        "checkpoints": []
+                    },
+                    {
+                        "name": "[CTB] QUEEN MARY HOSPITAL, POK FU LAM ROAD",
+                        "lat": 22.26899,
+                        "lng": 114.13068,
+                        "run": 120,
+                        "dwell": 30,
+                        "checkpoints": []
+                    },
+                    {
+                        "name": "[CTB] HKU CENTENNIAL CAMPUS, POK FU LAM ROAD",
+                        "lat": 22.28434,
+                        "lng": 114.13481,
+                        "run": 120,
+                        "dwell": 30,
+                        "checkpoints": []
+                    },
+                    {
+                        "name": "[CTB] TWO INTERNATIONAL FINANCE CENTRE, MAN YIU STREET",
+                        "lat": 22.28476,
+                        "lng": 114.15982,
+                        "run": 120,
+                        "dwell": 30,
+                        "checkpoints": []
+                    },
+                    {
+                        "name": "[CTB] CENTRAL (EXCHANGE SQUARE)|[KMB+CTB] EXCHANGE SQUARE BUS TERMINUS/<BR>CENTRAL (EXCHANGE SQUARE)",
+                        "lat": 22.28415,
+                        "lng": 114.15771,
+                        "run": 120,
+                        "dwell": 30,
+                        "checkpoints": []
+                    },
+                    {
+                        "name": "[CTB] CITY HALL, CONNAUGHT ROAD CENTRAL|[KMB+CTB] CITY HALL/<BR>CITY HALL, CONNAUGHT ROAD CENTRAL|[KMB] CITY HALL",
+                        "lat": 22.28195,
+                        "lng": 114.16125,
+                        "run": 120,
+                        "dwell": 30,
+                        "checkpoints": []
+                    },
+                    {
+                        "name": "[CTB] ADMIRALTY - MTR EXIT C",
+                        "lat": 22.27915,
+                        "lng": 114.16461,
+                        "run": 120,
+                        "dwell": 30,
+                        "checkpoints": []
+                    }
+                ],
+                "timetable": [
+                    {
+                        "time": "06:40",
+                        "frequency": 900
+                    },
+                    {
+                        "time": "07:10",
+                        "frequency": 1200
+                    },
+                    {
+                        "time": "19:30",
+                        "frequency": 1500
+                    }
+                ]
+            },
+            {
+                "branch_id": 1,
+                "SPAWN_EVERY": 300,
+                "branch_type": "unidirectional",
+                "scheduling": "scheduled_frequencies",
+                "stations": [
+                    {
+                        "name": "[CTB] ADMIRALTY - MTR EXIT D|[KMB+CTB] ADMIRALTY (EAST) TERMINUS/<BR>ADMIRALTY - MTR EXIT D",
+                        "lat": 22.27862,
+                        "lng": 114.16527,
+                        "run": 120,
+                        "dwell": 30,
+                        "checkpoints": []
+                    },
+                    {
+                        "name": "[CTB] STATUE SQUARE, CONNAUGHT ROAD CENTRAL|[KMB+CTB] STATUE SQUARE/<BR>STATUE SQUARE, CONNAUGHT ROAD CENTRAL|[KMB] STATUE SQUARE",
+                        "lat": 22.28195,
+                        "lng": 114.16013,
+                        "run": 120,
+                        "dwell": 30,
+                        "checkpoints": []
+                    },
+                    {
+                        "name": "[CTB] POTTINGER STREET, CONNAUGHT ROAD CENTRAL|[DB] CONNAUGHT ROAD CENTRAL OUTSIDE CHINESE GENERAL CHAMBER OF COMMERCE BUILDING|[KMB+CTB] POTTINGER STREET/<BR>POTTINGER STREET, CONNAUGHT ROAD CENTRAL|[KMB] POTTINGER STREET|[PI] 22-23 CONNAUGHT ROAD CENTRAL",
+                        "lat": 22.28331,
+                        "lng": 114.1575,
+                        "run": 120,
+                        "dwell": 30,
+                        "checkpoints": []
+                    },
+                    {
+                        "name": "[CTB] LI SING PRIMARY SCHOOL, POK FU LAM ROAD",
+                        "lat": 22.28547,
+                        "lng": 114.13995,
+                        "run": 120,
+                        "dwell": 30,
+                        "checkpoints": []
+                    },
+                    {
+                        "name": "[CTB] HKU WEST GATE, POK FU LAM ROAD|[KMB+CTB] HKU WEST GATE/<BR>HKU WEST GATE, POK FU LAM ROAD",
+                        "lat": 22.28361,
+                        "lng": 114.13561,
+                        "run": 120,
+                        "dwell": 30,
+                        "checkpoints": []
+                    },
+                    {
+                        "name": "[CTB] POKFIELD ROAD, POK FU LAM ROAD",
+                        "lat": 22.28196,
+                        "lng": 114.13247,
+                        "run": 120,
+                        "dwell": 30,
+                        "checkpoints": []
+                    },
+                    {
+                        "name": "[CTB] QUEEN MARY HOSPITAL, POK FU LAM ROAD",
+                        "lat": 22.26962,
+                        "lng": 114.13064,
+                        "run": 120,
+                        "dwell": 30,
+                        "checkpoints": []
+                    },
+                    {
+                        "name": "[CTB] EBENEZER SCHOOL, POK FU LAM ROAD",
+                        "lat": 22.26692,
+                        "lng": 114.1325,
+                        "run": 120,
+                        "dwell": 30,
+                        "checkpoints": []
+                    },
+                    {
+                        "name": "[CTB] POK FU LAM RESERVOIR ROAD, POK FU LAM ROAD",
+                        "lat": 22.26251,
+                        "lng": 114.13566,
+                        "run": 120,
+                        "dwell": 30,
+                        "checkpoints": []
+                    },
+                    {
+                        "name": "[CTB] POK FU LAM VILLAGE, POK FU LAM ROAD",
+                        "lat": 22.26072,
+                        "lng": 114.13652,
+                        "run": 120,
+                        "dwell": 30,
+                        "checkpoints": []
+                    },
+                    {
+                        "name": "[CTB] YU CHUN KEUNG MEMORIAL COLLEGE NO.2, POK FU LAM ROAD",
+                        "lat": 22.25594,
+                        "lng": 114.13782,
+                        "run": 120,
+                        "dwell": 30,
+                        "checkpoints": []
+                    },
+                    {
+                        "name": "[CTB] WAH CHUI STREET, VICTORIA ROAD|[KMB+CTB] WAH CHUI STREET/<BR>WAH CHUI STREET, VICTORIA ROAD",
+                        "lat": 22.25492,
+                        "lng": 114.13617,
+                        "run": 120,
+                        "dwell": 30,
+                        "checkpoints": []
+                    },
+                    {
+                        "name": "[CTB] BEL-AIR ON THE PEAK, CYBERPORT ROAD|[KMB+CTB] BEL-AIR ON THE PEAK/<BR>BEL-AIR ON THE PEAK, CYBERPORT ROAD",
+                        "lat": 22.25584,
+                        "lng": 114.13374,
+                        "run": 120,
+                        "dwell": 30,
+                        "checkpoints": []
+                    },
+                    {
+                        "name": "[CTB] RESIDENCE BEL-AIR, CYBERPORT ROAD|[KMB+CTB] RESIDENCE BEL-AIR/<BR>RESIDENCE BEL-AIR, CYBERPORT ROAD",
+                        "lat": 22.25808,
+                        "lng": 114.13292,
+                        "run": 120,
+                        "dwell": 30,
+                        "checkpoints": []
+                    },
+                    {
+                        "name": "[CTB] CYBERPORT|[KMB+CTB] CYBERPORT BUS TERMINUS/<BR>CYBERPORT",
+                        "lat": 22.26186,
+                        "lng": 114.13032,
+                        "run": 120,
+                        "dwell": 30,
+                        "checkpoints": []
+                    }
+                ],
+                "timetable": [
+                    {
+                        "time": "07:10",
+                        "frequency": 900
+                    },
+                    {
+                        "time": "07:40",
+                        "frequency": 1200
+                    },
+                    {
+                        "time": "19:40",
+                        "frequency": 1500
+                    }
+                ]
+            }
+        ]
+    }
+]
