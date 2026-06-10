@@ -1,0 +1,759 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.130324,
+          22.261868
+        ]
+      },
+      "properties": {
+        "routeId": 1890,
+        "companyCode": "CTB",
+        "routeNameE": "30X",
+        "serviceMode": "R",
+        "journeyTime": 32,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "Admiralty (East) Please inquire with the operator about the payment arrangement of the two-way fare on this route.",
+        "routeSeq": 1,
+        "stopSeq": 1,
+        "stopId": 10370,
+        "stopPickDrop": 2,
+        "stopNameE": "Cyberport"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.13245,
+          22.259945
+        ]
+      },
+      "properties": {
+        "routeId": 1890,
+        "companyCode": "CTB",
+        "routeNameE": "30X",
+        "serviceMode": "R",
+        "journeyTime": 32,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "Admiralty (East) Please inquire with the operator about the payment arrangement of the two-way fare on this route.",
+        "routeSeq": 1,
+        "stopSeq": 2,
+        "stopId": 12575,
+        "stopPickDrop": 3,
+        "stopNameE": "Cyberport 3, Cyberport Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.132771,
+          22.256586
+        ]
+      },
+      "properties": {
+        "routeId": 1890,
+        "companyCode": "CTB",
+        "routeNameE": "30X",
+        "serviceMode": "R",
+        "journeyTime": 32,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "Admiralty (East) Please inquire with the operator about the payment arrangement of the two-way fare on this route.",
+        "routeSeq": 1,
+        "stopSeq": 3,
+        "stopId": 12477,
+        "stopPickDrop": 3,
+        "stopNameE": "Residence Bel-Air, Cyberport Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.133654,
+          22.254834
+        ]
+      },
+      "properties": {
+        "routeId": 1890,
+        "companyCode": "CTB",
+        "routeNameE": "30X",
+        "serviceMode": "R",
+        "journeyTime": 32,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "Admiralty (East) Please inquire with the operator about the payment arrangement of the two-way fare on this route.",
+        "routeSeq": 1,
+        "stopSeq": 4,
+        "stopId": 12479,
+        "stopPickDrop": 3,
+        "stopNameE": "Bel-Air on the Peak, Cyberport Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.136225,
+          22.255061
+        ]
+      },
+      "properties": {
+        "routeId": 1890,
+        "companyCode": "CTB",
+        "routeNameE": "30X",
+        "serviceMode": "R",
+        "journeyTime": 32,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "Admiralty (East) Please inquire with the operator about the payment arrangement of the two-way fare on this route.",
+        "routeSeq": 1,
+        "stopSeq": 5,
+        "stopId": 12578,
+        "stopPickDrop": 3,
+        "stopNameE": "Wah Chui Street, Victoria Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.137573,
+          22.255991
+        ]
+      },
+      "properties": {
+        "routeId": 1890,
+        "companyCode": "CTB",
+        "routeNameE": "30X",
+        "serviceMode": "R",
+        "journeyTime": 32,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "Admiralty (East) Please inquire with the operator about the payment arrangement of the two-way fare on this route.",
+        "routeSeq": 1,
+        "stopSeq": 6,
+        "stopId": 375,
+        "stopPickDrop": 3,
+        "stopNameE": "Yu Chun Keung Memorial College No.2, Pok Fu Lam Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.136185,
+          22.260524
+        ]
+      },
+      "properties": {
+        "routeId": 1890,
+        "companyCode": "CTB",
+        "routeNameE": "30X",
+        "serviceMode": "R",
+        "journeyTime": 32,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "Admiralty (East) Please inquire with the operator about the payment arrangement of the two-way fare on this route.",
+        "routeSeq": 1,
+        "stopSeq": 7,
+        "stopId": 341,
+        "stopPickDrop": 3,
+        "stopNameE": "Pok Fu Lam Village, Pok Fu Lam Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.131962,
+          22.267314
+        ]
+      },
+      "properties": {
+        "routeId": 1890,
+        "companyCode": "CTB",
+        "routeNameE": "30X",
+        "serviceMode": "R",
+        "journeyTime": 32,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "Admiralty (East) Please inquire with the operator about the payment arrangement of the two-way fare on this route.",
+        "routeSeq": 1,
+        "stopSeq": 8,
+        "stopId": 344,
+        "stopPickDrop": 3,
+        "stopNameE": "Ebenezer School, Pok Fu Lam Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.130681,
+          22.268994
+        ]
+      },
+      "properties": {
+        "routeId": 1890,
+        "companyCode": "CTB",
+        "routeNameE": "30X",
+        "serviceMode": "R",
+        "journeyTime": 32,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "Admiralty (East) Please inquire with the operator about the payment arrangement of the two-way fare on this route.",
+        "routeSeq": 1,
+        "stopSeq": 9,
+        "stopId": 345,
+        "stopPickDrop": 3,
+        "stopNameE": "Queen Mary Hospital, Pok Fu Lam Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.134819,
+          22.284347
+        ]
+      },
+      "properties": {
+        "routeId": 1890,
+        "companyCode": "CTB",
+        "routeNameE": "30X",
+        "serviceMode": "R",
+        "journeyTime": 32,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "Admiralty (East) Please inquire with the operator about the payment arrangement of the two-way fare on this route.",
+        "routeSeq": 1,
+        "stopSeq": 10,
+        "stopId": 350,
+        "stopPickDrop": 3,
+        "stopNameE": "HKU Centennial Campus, Pok Fu Lam Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.159825,
+          22.284767
+        ]
+      },
+      "properties": {
+        "routeId": 1890,
+        "companyCode": "CTB",
+        "routeNameE": "30X",
+        "serviceMode": "R",
+        "journeyTime": 32,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "Admiralty (East) Please inquire with the operator about the payment arrangement of the two-way fare on this route.",
+        "routeSeq": 1,
+        "stopSeq": 11,
+        "stopId": 241,
+        "stopPickDrop": 3,
+        "stopNameE": "Two International Finance Centre, Man Yiu Street"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.15772,
+          22.284152
+        ]
+      },
+      "properties": {
+        "routeId": 1890,
+        "companyCode": "CTB",
+        "routeNameE": "30X",
+        "serviceMode": "R",
+        "journeyTime": 32,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "Admiralty (East) Please inquire with the operator about the payment arrangement of the two-way fare on this route.",
+        "routeSeq": 1,
+        "stopSeq": 12,
+        "stopId": 1441,
+        "stopPickDrop": 3,
+        "stopNameE": "Central (Exchange Square)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.161252,
+          22.281958
+        ]
+      },
+      "properties": {
+        "routeId": 1890,
+        "companyCode": "CTB",
+        "routeNameE": "30X",
+        "serviceMode": "R",
+        "journeyTime": 32,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "Admiralty (East) Please inquire with the operator about the payment arrangement of the two-way fare on this route.",
+        "routeSeq": 1,
+        "stopSeq": 13,
+        "stopId": 647,
+        "stopPickDrop": 3,
+        "stopNameE": "City Hall, Connaught Road Central"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.164619,
+          22.27915
+        ]
+      },
+      "properties": {
+        "routeId": 1890,
+        "companyCode": "CTB",
+        "routeNameE": "30X",
+        "serviceMode": "R",
+        "journeyTime": 32,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "Admiralty (East) Please inquire with the operator about the payment arrangement of the two-way fare on this route.",
+        "routeSeq": 1,
+        "stopSeq": 14,
+        "stopId": 10000286,
+        "stopPickDrop": 1,
+        "stopNameE": "Admiralty - MTR Exit C"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.165279,
+          22.278626
+        ]
+      },
+      "properties": {
+        "routeId": 1890,
+        "companyCode": "CTB",
+        "routeNameE": "30X",
+        "serviceMode": "R",
+        "journeyTime": 32,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "Admiralty (East) Please inquire with the operator about the payment arrangement of the two-way fare on this route.",
+        "routeSeq": 2,
+        "stopSeq": 1,
+        "stopId": 468,
+        "stopPickDrop": 2,
+        "stopNameE": "Admiralty - MTR Exit D"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.160136,
+          22.281958
+        ]
+      },
+      "properties": {
+        "routeId": 1890,
+        "companyCode": "CTB",
+        "routeNameE": "30X",
+        "serviceMode": "R",
+        "journeyTime": 32,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "Admiralty (East) Please inquire with the operator about the payment arrangement of the two-way fare on this route.",
+        "routeSeq": 2,
+        "stopSeq": 2,
+        "stopId": 21,
+        "stopPickDrop": 3,
+        "stopNameE": "Statue Square, Connaught Road Central"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.157506,
+          22.283313
+        ]
+      },
+      "properties": {
+        "routeId": 1890,
+        "companyCode": "CTB",
+        "routeNameE": "30X",
+        "serviceMode": "R",
+        "journeyTime": 32,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "Admiralty (East) Please inquire with the operator about the payment arrangement of the two-way fare on this route.",
+        "routeSeq": 2,
+        "stopSeq": 3,
+        "stopId": 23,
+        "stopPickDrop": 3,
+        "stopNameE": "Pottinger Street, Connaught Road Central"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.139952,
+          22.285477
+        ]
+      },
+      "properties": {
+        "routeId": 1890,
+        "companyCode": "CTB",
+        "routeNameE": "30X",
+        "serviceMode": "R",
+        "journeyTime": 32,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "Admiralty (East) Please inquire with the operator about the payment arrangement of the two-way fare on this route.",
+        "routeSeq": 2,
+        "stopSeq": 4,
+        "stopId": 327,
+        "stopPickDrop": 3,
+        "stopNameE": "Li Sing Primary School, Pok Fu Lam Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.135615,
+          22.283616
+        ]
+      },
+      "properties": {
+        "routeId": 1890,
+        "companyCode": "CTB",
+        "routeNameE": "30X",
+        "serviceMode": "R",
+        "journeyTime": 32,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "Admiralty (East) Please inquire with the operator about the payment arrangement of the two-way fare on this route.",
+        "routeSeq": 2,
+        "stopSeq": 5,
+        "stopId": 328,
+        "stopPickDrop": 3,
+        "stopNameE": "HKU West Gate, Pok Fu Lam Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.132472,
+          22.281962
+        ]
+      },
+      "properties": {
+        "routeId": 1890,
+        "companyCode": "CTB",
+        "routeNameE": "30X",
+        "serviceMode": "R",
+        "journeyTime": 32,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "Admiralty (East) Please inquire with the operator about the payment arrangement of the two-way fare on this route.",
+        "routeSeq": 2,
+        "stopSeq": 6,
+        "stopId": 3185,
+        "stopPickDrop": 3,
+        "stopNameE": "Pokfield Road, Pok Fu Lam Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.130642,
+          22.269626
+        ]
+      },
+      "properties": {
+        "routeId": 1890,
+        "companyCode": "CTB",
+        "routeNameE": "30X",
+        "serviceMode": "R",
+        "journeyTime": 32,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "Admiralty (East) Please inquire with the operator about the payment arrangement of the two-way fare on this route.",
+        "routeSeq": 2,
+        "stopSeq": 7,
+        "stopId": 334,
+        "stopPickDrop": 3,
+        "stopNameE": "Queen Mary Hospital, Pok Fu Lam Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.132506,
+          22.266926
+        ]
+      },
+      "properties": {
+        "routeId": 1890,
+        "companyCode": "CTB",
+        "routeNameE": "30X",
+        "serviceMode": "R",
+        "journeyTime": 32,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "Admiralty (East) Please inquire with the operator about the payment arrangement of the two-way fare on this route.",
+        "routeSeq": 2,
+        "stopSeq": 8,
+        "stopId": 335,
+        "stopPickDrop": 3,
+        "stopNameE": "Ebenezer School, Pok Fu Lam Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.13566,
+          22.262511
+        ]
+      },
+      "properties": {
+        "routeId": 1890,
+        "companyCode": "CTB",
+        "routeNameE": "30X",
+        "serviceMode": "R",
+        "journeyTime": 32,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "Admiralty (East) Please inquire with the operator about the payment arrangement of the two-way fare on this route.",
+        "routeSeq": 2,
+        "stopSeq": 9,
+        "stopId": 337,
+        "stopPickDrop": 3,
+        "stopNameE": "Pok Fu Lam Reservoir Road, Pok Fu Lam Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.136524,
+          22.260723
+        ]
+      },
+      "properties": {
+        "routeId": 1890,
+        "companyCode": "CTB",
+        "routeNameE": "30X",
+        "serviceMode": "R",
+        "journeyTime": 32,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "Admiralty (East) Please inquire with the operator about the payment arrangement of the two-way fare on this route.",
+        "routeSeq": 2,
+        "stopSeq": 10,
+        "stopId": 338,
+        "stopPickDrop": 3,
+        "stopNameE": "Pok Fu Lam Village, Pok Fu Lam Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.137825,
+          22.255946
+        ]
+      },
+      "properties": {
+        "routeId": 1890,
+        "companyCode": "CTB",
+        "routeNameE": "30X",
+        "serviceMode": "R",
+        "journeyTime": 32,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "Admiralty (East) Please inquire with the operator about the payment arrangement of the two-way fare on this route.",
+        "routeSeq": 2,
+        "stopSeq": 11,
+        "stopId": 308,
+        "stopPickDrop": 3,
+        "stopNameE": "Yu Chun Keung Memorial College No.2, Pok Fu Lam Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.136176,
+          22.254925
+        ]
+      },
+      "properties": {
+        "routeId": 1890,
+        "companyCode": "CTB",
+        "routeNameE": "30X",
+        "serviceMode": "R",
+        "journeyTime": 32,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "Admiralty (East) Please inquire with the operator about the payment arrangement of the two-way fare on this route.",
+        "routeSeq": 2,
+        "stopSeq": 12,
+        "stopId": 686,
+        "stopPickDrop": 3,
+        "stopNameE": "Wah Chui Street, Victoria Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.133741,
+          22.255846
+        ]
+      },
+      "properties": {
+        "routeId": 1890,
+        "companyCode": "CTB",
+        "routeNameE": "30X",
+        "serviceMode": "R",
+        "journeyTime": 32,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "Admiralty (East) Please inquire with the operator about the payment arrangement of the two-way fare on this route.",
+        "routeSeq": 2,
+        "stopSeq": 13,
+        "stopId": 12478,
+        "stopPickDrop": 3,
+        "stopNameE": "Bel-Air on the Peak, Cyberport Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.132925,
+          22.258085
+        ]
+      },
+      "properties": {
+        "routeId": 1890,
+        "companyCode": "CTB",
+        "routeNameE": "30X",
+        "serviceMode": "R",
+        "journeyTime": 32,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "Admiralty (East) Please inquire with the operator about the payment arrangement of the two-way fare on this route.",
+        "routeSeq": 2,
+        "stopSeq": 14,
+        "stopId": 12574,
+        "stopPickDrop": 3,
+        "stopNameE": "Residence Bel-Air, Cyberport Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.130324,
+          22.261868
+        ]
+      },
+      "properties": {
+        "routeId": 1890,
+        "companyCode": "CTB",
+        "routeNameE": "30X",
+        "serviceMode": "R",
+        "journeyTime": 32,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "Admiralty (East) Please inquire with the operator about the payment arrangement of the two-way fare on this route.",
+        "routeSeq": 2,
+        "stopSeq": 15,
+        "stopId": 10370,
+        "stopPickDrop": 1,
+        "stopNameE": "Cyberport"
+      }
+    }
+  ]
+}
