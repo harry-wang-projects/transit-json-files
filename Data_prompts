@@ -75,3 +75,98 @@ Here, the stations, as well as their latitudes and longtitudes, should be set. T
 There can be many trip_ids for a the same service_id and route_id. Keep the route the same for the same service_id and route_id. However, read through each trip_id, and update the calendar accordingly.
 
 For the entries that can't be obtained from the GTFS data, just ignore them. For instance, there is no shapes.txt in my GTFS data, so checkpoints can't be calculated. For each station, leave the checkpoints array blank.
+
+
+
+
+
+
+
+I have a JSON file consisting of a "type" property followed by an array called "features". Each "feature" contains a "type", "geometry", and "properties". An example can be seen below:
+
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.192446,
+          22.345353
+        ]
+      },
+      "properties": {
+        "routeId": 1001,
+        "companyCode": "KMB",
+        "district": "",
+        "routeNameC": "1",
+        "routeNameS": "1",
+        "routeNameE": "1",
+        "routeType": 1,
+        "serviceMode": "R",
+        "specialType": 0,
+        "journeyTime": 45,
+        "locStartNameC": "竹園邨",
+        "locStartNameS": "竹园邨",
+        "locStartNameE": "CHUK YUEN ESTATE",
+        "locEndNameC": "尖沙咀碼頭",
+        "locEndNameS": "尖沙咀码头",
+        "locEndNameE": "STAR FERRY",
+        "hyperlinkC": "https://search.kmb.hk/KMBWebSite/?action=routesearch&route=1&lang=zh-hk",
+        "hyperlinkS": "https://search.kmb.hk/KMBWebSite/?action=routesearch&route=1&lang=zh-cn",
+        "hyperlinkE": "https://search.kmb.hk/KMBWebSite/?action=routesearch&route=1&lang=en",
+        "fullFare": 6.7,
+        "lastUpdateDate": "2026-05-22T00:00:00",
+        "routeSeq": 1,
+        "stopSeq": 1,
+        "stopId": 4001,
+        "stopPickDrop": 2,
+        "stopNameC": "竹園邨總站",
+        "stopNameS": "竹园邨总站",
+        "stopNameE": "CHUK YUEN ESTATE BUS TERMINUS"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.190009,
+          22.345064
+        ]
+      },
+      "properties": {
+        "routeId": 1001,
+        "companyCode": "KMB",
+        "district": "",
+        "routeNameC": "1",
+        "routeNameS": "1",
+        "routeNameE": "1",
+        "routeType": 1,
+        "serviceMode": "R",
+        "specialType": 0,
+        "journeyTime": 45,
+        "locStartNameC": "竹園邨",
+        "locStartNameS": "竹园邨",
+        "locStartNameE": "CHUK YUEN ESTATE",
+        "locEndNameC": "尖沙咀碼頭",
+        "locEndNameS": "尖沙咀码头",
+        "locEndNameE": "STAR FERRY",
+        "hyperlinkC": "https://search.kmb.hk/KMBWebSite/?action=routesearch&route=1&lang=zh-hk",
+        "hyperlinkS": "https://search.kmb.hk/KMBWebSite/?action=routesearch&route=1&lang=zh-cn",
+        "hyperlinkE": "https://search.kmb.hk/KMBWebSite/?action=routesearch&route=1&lang=en",
+        "fullFare": 6.7,
+        "lastUpdateDate": "2026-05-22T00:00:00",
+        "routeSeq": 1,
+        "stopSeq": 2,
+        "stopId": 4002,
+        "stopPickDrop": 3,
+        "stopNameC": "天虹小學",
+        "stopNameS": "天虹小学",
+        "stopNameE": "RAINBOW PRIMARY SCHOOL"
+      }
+    }
+]
+
+Write a Javascript program that reads the JSON file and filters the "features" array such that only "features" with a certain property remain. Also, make it drop some entries that I can decide, such as "lastUpdateDate" in the "properties" of each feature.
