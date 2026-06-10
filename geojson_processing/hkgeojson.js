@@ -10,7 +10,7 @@ const fs = require('fs');
  * @param {string[]} options.propertiesToDrop - Array of property names to remove
  */
 function filterGeoJSON(inputFilePath, outputFilePath, options) {
-    const { filterProperty, filterValue} = options;
+    const { filterProperty, filterList} = options;
 
     // Read and parse the JSON file
     const rawData = fs.readFileSync(inputFilePath, 'utf8');
@@ -24,7 +24,12 @@ function filterGeoJSON(inputFilePath, outputFilePath, options) {
     // Filter features by property value
     const filteredFeatures = geoJSON.features.filter(feature => {
         if (!feature.properties) return false;
-        return feature.properties[filterProperty] === filterValue;
+        for(let i = 0; i < filterList.length; i++){
+            if(feature.properties[filterProperty] === filterList[i]){
+                return true;
+            }
+        }
+        return false;
     });
 
     // Drop specified properties from each feature
@@ -42,7 +47,8 @@ function filterGeoJSON(inputFilePath, outputFilePath, options) {
     console.log(`Original features: ${geoJSON.features.length}`);
     console.log(`Filtered features: ${filteredFeatures.length}`);
     console.log(`Output written to: ${outputFilePath}`);
-    
+    console.log("hi");
+
     return outputGeoJSON;
 }
 
@@ -77,9 +83,17 @@ function droponly(inputFilePath, outputFilePath, options) {
     console.log(`Original features: ${geoJSON.features.length}`);
     console.log(`Filtered features: ${filteredFeatures.length}`);
     console.log(`Output written to: ${outputFilePath}`);
+
+    console.log("hi");
+    console.log(geoJSON.length);
     
     return outputGeoJSON;
 }
+
+
+//verifying that this is everything
+
+
 
 // ============ EXAMPLE USAGE ============
 
@@ -118,7 +132,7 @@ filterGeoJSON(
     '../hk_geojson/specific_hkgeojson.json',
     {
         filterProperty: 'routeId',
-        filterValue: 1890,
+        filterList: [1890, 1665],
     }
 );
 
@@ -134,3 +148,120 @@ filterGeoJSON(
     }
 );
 */
+
+
+
+//analysis
+function analyzeJson(filePath) {
+    let data;
+    
+    try {
+        const rawData = fs.readFileSync(filePath, 'utf-8');
+        data = JSON.parse(rawData);
+    } catch (err) {
+        if (err.code === 'ENOENT') {
+            console.error(`Error: File '${filePath}' not found.`);
+            return;
+        }
+        console.error(`Error: Invalid JSON - ${err.message}`);
+        return;
+    }
+
+    // Check if 'features' array exists
+    if (!data.hasOwnProperty('features')) {
+        console.error("Error: No 'features' array found in the JSON.");
+        return;
+    }
+
+    const features = data.features;
+
+    if (!Array.isArray(features)) {
+        console.error("Error: 'features' is not an array.");
+        return;
+    }
+
+    // Count types in features
+    const typeCounts = {};
+    let objectsWithoutType = 0;
+
+    features.forEach((feature, index) => {
+        if (feature !== null && typeof feature === 'object' && feature.hasOwnProperty('type')) {
+            const type = feature.type;
+            typeCounts[type] = (typeCounts[type] || 0) + 1;
+        } else {
+            objectsWithoutType++;
+            console.warn(`Warning: Feature at index ${index} has no 'type' property`);
+        }
+    });
+
+    // Sort by count (descending), then by type name
+    const sortedTypes = Object.entries(typeCounts)
+        .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
+
+    // Print results
+    console.log(`\nFile: ${filePath}`);
+    console.log(`Root 'type': ${data.type || 'Not specified'}`);
+    console.log(`Total features: ${features.length}`);
+    console.log(`\nBreakdown by 'type' in features:`);
+    console.log('-'.repeat(40));
+
+    for (const [typeName, count] of sortedTypes) {
+        console.log(`  ${typeName}: ${count}`);
+    }
+
+    if (objectsWithoutType > 0) {
+        console.log(`  (no type): ${objectsWithoutType}`);
+    }
+
+    return typeCounts;
+}
+
+// Run analysis of the geojson
+
+analyzeJson("../hk_geojson/JSON_BUS (1).json");
+
+
+function inspectJSONProperties(filePath) {
+    try {
+        const rawData = fs.readFileSync(filePath, 'utf-8');
+        data = JSON.parse(rawData);
+    } catch (err) {
+        if (err.code === 'ENOENT') {
+            console.error(`Error: File '${filePath}' not found.`);
+            return;
+        }
+        console.error(`Error: Invalid JSON - ${err.message}`);
+        return;
+    }
+
+    
+    if (typeof data !== 'object' || data === null) {
+        return { type: typeof data, properties: null };
+    }
+    
+    if (Array.isArray(data)) {
+        return {
+            type: 'array',
+            length: data.length,
+            sampleItem: data.length > 0 ? inspectJSONProperties(data[0]) : null
+        };
+    }
+    
+    const properties = {};
+    for (const key of Object.keys(data)) {
+        const value = data[key];
+        properties[key] = {
+            type: Array.isArray(value) ? 'array' : (value === null ? 'null' : typeof value),
+            isObject: typeof value === 'object' && value !== null && !Array.isArray(value)
+        };
+    }
+    
+    return {
+        type: 'object',
+        propertyCount: Object.keys(data).length,
+        properties: properties
+    };
+}
+
+
+console.log(inspectJSONProperties("../hk_geojson/JSON_BUS (1).json"));

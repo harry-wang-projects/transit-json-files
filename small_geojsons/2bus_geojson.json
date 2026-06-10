@@ -1,0 +1,2839 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.130324,
+          22.261868
+        ]
+      },
+      "properties": {
+        "routeId": 1665,
+        "companyCode": "CTB",
+        "routeNameE": "970",
+        "serviceMode": "R",
+        "journeyTime": 81,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "So Uk Estate",
+        "routeSeq": 1,
+        "stopSeq": 1,
+        "stopId": 10370,
+        "stopPickDrop": 2,
+        "stopNameE": "Cyberport"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.13245,
+          22.259945
+        ]
+      },
+      "properties": {
+        "routeId": 1665,
+        "companyCode": "CTB",
+        "routeNameE": "970",
+        "serviceMode": "R",
+        "journeyTime": 81,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "So Uk Estate",
+        "routeSeq": 1,
+        "stopSeq": 2,
+        "stopId": 12575,
+        "stopPickDrop": 3,
+        "stopNameE": "Cyberport 3, Cyberport Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.132771,
+          22.256586
+        ]
+      },
+      "properties": {
+        "routeId": 1665,
+        "companyCode": "CTB",
+        "routeNameE": "970",
+        "serviceMode": "R",
+        "journeyTime": 81,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "So Uk Estate",
+        "routeSeq": 1,
+        "stopSeq": 3,
+        "stopId": 12477,
+        "stopPickDrop": 3,
+        "stopNameE": "Residence Bel-Air, Cyberport Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.133654,
+          22.254834
+        ]
+      },
+      "properties": {
+        "routeId": 1665,
+        "companyCode": "CTB",
+        "routeNameE": "970",
+        "serviceMode": "R",
+        "journeyTime": 81,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "So Uk Estate",
+        "routeSeq": 1,
+        "stopSeq": 4,
+        "stopId": 12479,
+        "stopPickDrop": 3,
+        "stopNameE": "Bel-Air on the Peak, Cyberport Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.136225,
+          22.255061
+        ]
+      },
+      "properties": {
+        "routeId": 1665,
+        "companyCode": "CTB",
+        "routeNameE": "970",
+        "serviceMode": "R",
+        "journeyTime": 81,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "So Uk Estate",
+        "routeSeq": 1,
+        "stopSeq": 5,
+        "stopId": 12578,
+        "stopPickDrop": 3,
+        "stopNameE": "Wah Chui Street, Victoria Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.13639,
+          22.254013
+        ]
+      },
+      "properties": {
+        "routeId": 1665,
+        "companyCode": "CTB",
+        "routeNameE": "970",
+        "serviceMode": "R",
+        "journeyTime": 81,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "So Uk Estate",
+        "routeSeq": 1,
+        "stopSeq": 6,
+        "stopId": 10000304,
+        "stopPickDrop": 3,
+        "stopNameE": "Wah Fu (North)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.135993,
+          22.252767
+        ]
+      },
+      "properties": {
+        "routeId": 1665,
+        "companyCode": "CTB",
+        "routeNameE": "970",
+        "serviceMode": "R",
+        "journeyTime": 81,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "So Uk Estate",
+        "routeSeq": 1,
+        "stopSeq": 7,
+        "stopId": 490,
+        "stopPickDrop": 3,
+        "stopNameE": "Wah Sang House Wah Fu Estate, Wah Fu Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.136216,
+          22.251837
+        ]
+      },
+      "properties": {
+        "routeId": 1665,
+        "companyCode": "CTB",
+        "routeNameE": "970",
+        "serviceMode": "R",
+        "journeyTime": 81,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "So Uk Estate",
+        "routeSeq": 1,
+        "stopSeq": 8,
+        "stopId": 499,
+        "stopPickDrop": 3,
+        "stopNameE": "Wah Tai House Wah Fu Estate, Wah Fu Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.13869,
+          22.251837
+        ]
+      },
+      "properties": {
+        "routeId": 1665,
+        "companyCode": "CTB",
+        "routeNameE": "970",
+        "serviceMode": "R",
+        "journeyTime": 81,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "So Uk Estate",
+        "routeSeq": 1,
+        "stopSeq": 9,
+        "stopId": 7111,
+        "stopPickDrop": 3,
+        "stopNameE": "Wah On House Wah Fu Estate, Wah Fu Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.137573,
+          22.255991
+        ]
+      },
+      "properties": {
+        "routeId": 1665,
+        "companyCode": "CTB",
+        "routeNameE": "970",
+        "serviceMode": "R",
+        "journeyTime": 81,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "So Uk Estate",
+        "routeSeq": 1,
+        "stopSeq": 10,
+        "stopId": 375,
+        "stopPickDrop": 3,
+        "stopNameE": "Yu Chun Keung Memorial College No.2, Pok Fu Lam Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.136185,
+          22.260524
+        ]
+      },
+      "properties": {
+        "routeId": 1665,
+        "companyCode": "CTB",
+        "routeNameE": "970",
+        "serviceMode": "R",
+        "journeyTime": 81,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "So Uk Estate",
+        "routeSeq": 1,
+        "stopSeq": 11,
+        "stopId": 341,
+        "stopPickDrop": 3,
+        "stopNameE": "Pok Fu Lam Village, Pok Fu Lam Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.13467,
+          22.263044
+        ]
+      },
+      "properties": {
+        "routeId": 1665,
+        "companyCode": "CTB",
+        "routeNameE": "970",
+        "serviceMode": "R",
+        "journeyTime": 81,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "So Uk Estate",
+        "routeSeq": 1,
+        "stopSeq": 12,
+        "stopId": 1486,
+        "stopPickDrop": 3,
+        "stopNameE": "Pok Fu Lam Reservoir Road, Pok Fu Lam Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.133292,
+          22.264633
+        ]
+      },
+      "properties": {
+        "routeId": 1665,
+        "companyCode": "CTB",
+        "routeNameE": "970",
+        "serviceMode": "R",
+        "journeyTime": 81,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "So Uk Estate",
+        "routeSeq": 1,
+        "stopSeq": 13,
+        "stopId": 343,
+        "stopPickDrop": 3,
+        "stopNameE": "Woodbury Court, Pok Fu Lam Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.131962,
+          22.267314
+        ]
+      },
+      "properties": {
+        "routeId": 1665,
+        "companyCode": "CTB",
+        "routeNameE": "970",
+        "serviceMode": "R",
+        "journeyTime": 81,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "So Uk Estate",
+        "routeSeq": 1,
+        "stopSeq": 14,
+        "stopId": 344,
+        "stopPickDrop": 3,
+        "stopNameE": "Ebenezer School, Pok Fu Lam Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.130681,
+          22.268994
+        ]
+      },
+      "properties": {
+        "routeId": 1665,
+        "companyCode": "CTB",
+        "routeNameE": "970",
+        "serviceMode": "R",
+        "journeyTime": 81,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "So Uk Estate",
+        "routeSeq": 1,
+        "stopSeq": 15,
+        "stopId": 345,
+        "stopPickDrop": 3,
+        "stopNameE": "Queen Mary Hospital, Pok Fu Lam Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.129893,
+          22.273942
+        ]
+      },
+      "properties": {
+        "routeId": 1665,
+        "companyCode": "CTB",
+        "routeNameE": "970",
+        "serviceMode": "R",
+        "journeyTime": 81,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "So Uk Estate",
+        "routeSeq": 1,
+        "stopSeq": 16,
+        "stopId": 346,
+        "stopPickDrop": 3,
+        "stopNameE": "HKCCCU Pok Fu Lam Road Cemetery, Pok Fu Lam Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.13094,
+          22.278331
+        ]
+      },
+      "properties": {
+        "routeId": 1665,
+        "companyCode": "CTB",
+        "routeNameE": "970",
+        "serviceMode": "R",
+        "journeyTime": 81,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "So Uk Estate",
+        "routeSeq": 1,
+        "stopSeq": 17,
+        "stopId": 347,
+        "stopPickDrop": 3,
+        "stopNameE": "Mount Davis Road, Pok Fu Lam Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.131308,
+          22.280047
+        ]
+      },
+      "properties": {
+        "routeId": 1665,
+        "companyCode": "CTB",
+        "routeNameE": "970",
+        "serviceMode": "R",
+        "journeyTime": 81,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "So Uk Estate",
+        "routeSeq": 1,
+        "stopSeq": 18,
+        "stopId": 1487,
+        "stopPickDrop": 3,
+        "stopNameE": "Fulham Garden, Pok Fu Lam Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.132287,
+          22.282152
+        ]
+      },
+      "properties": {
+        "routeId": 1665,
+        "companyCode": "CTB",
+        "routeNameE": "970",
+        "serviceMode": "R",
+        "journeyTime": 81,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "So Uk Estate",
+        "routeSeq": 1,
+        "stopSeq": 19,
+        "stopId": 348,
+        "stopPickDrop": 3,
+        "stopNameE": "Pokfield Road, Pok Fu Lam Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.132966,
+          22.283624
+        ]
+      },
+      "properties": {
+        "routeId": 1665,
+        "companyCode": "CTB",
+        "routeNameE": "970",
+        "serviceMode": "R",
+        "journeyTime": 81,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "So Uk Estate",
+        "routeSeq": 1,
+        "stopSeq": 20,
+        "stopId": 349,
+        "stopPickDrop": 3,
+        "stopNameE": "Lady Ho Tung Hall, Pok Fu Lam Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.134819,
+          22.284347
+        ]
+      },
+      "properties": {
+        "routeId": 1665,
+        "companyCode": "CTB",
+        "routeNameE": "970",
+        "serviceMode": "R",
+        "journeyTime": 81,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "So Uk Estate",
+        "routeSeq": 1,
+        "stopSeq": 21,
+        "stopId": 350,
+        "stopPickDrop": 3,
+        "stopNameE": "HKU Centennial Campus, Pok Fu Lam Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.138448,
+          22.285278
+        ]
+      },
+      "properties": {
+        "routeId": 1665,
+        "companyCode": "CTB",
+        "routeNameE": "970",
+        "serviceMode": "R",
+        "journeyTime": 81,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "So Uk Estate",
+        "routeSeq": 1,
+        "stopSeq": 22,
+        "stopId": 351,
+        "stopPickDrop": 3,
+        "stopNameE": "St. Stephen's Church College, Pok Fu Lam Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.139923,
+          22.285956
+        ]
+      },
+      "properties": {
+        "routeId": 1665,
+        "companyCode": "CTB",
+        "routeNameE": "970",
+        "serviceMode": "R",
+        "journeyTime": 81,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "So Uk Estate",
+        "routeSeq": 1,
+        "stopSeq": 23,
+        "stopId": 1489,
+        "stopPickDrop": 3,
+        "stopNameE": "Sai Ying Pun Post Office, Pok Fu Lam Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.138641,
+          22.28777
+        ]
+      },
+      "properties": {
+        "routeId": 1665,
+        "companyCode": "CTB",
+        "routeNameE": "970",
+        "serviceMode": "R",
+        "journeyTime": 81,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "So Uk Estate",
+        "routeSeq": 1,
+        "stopSeq": 24,
+        "stopId": 8015,
+        "stopPickDrop": 3,
+        "stopNameE": "Water Street"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.159124,
+          22.305013
+        ]
+      },
+      "properties": {
+        "routeId": 1665,
+        "companyCode": "CTB",
+        "routeNameE": "970",
+        "serviceMode": "R",
+        "journeyTime": 81,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "So Uk Estate",
+        "routeSeq": 1,
+        "stopSeq": 25,
+        "stopId": 921,
+        "stopPickDrop": 3,
+        "stopNameE": "Western Harbour Crossing Bus-Bus Interchange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.166315,
+          22.306179
+        ]
+      },
+      "properties": {
+        "routeId": 1665,
+        "companyCode": "CTB",
+        "routeNameE": "970",
+        "serviceMode": "R",
+        "journeyTime": 81,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "So Uk Estate",
+        "routeSeq": 1,
+        "stopSeq": 26,
+        "stopId": 4247,
+        "stopPickDrop": 3,
+        "stopNameE": "Austin Station, Jordan Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.168809,
+          22.305673
+        ]
+      },
+      "properties": {
+        "routeId": 1665,
+        "companyCode": "CTB",
+        "routeNameE": "970",
+        "serviceMode": "R",
+        "journeyTime": 81,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "So Uk Estate",
+        "routeSeq": 1,
+        "stopSeq": 27,
+        "stopId": 4248,
+        "stopPickDrop": 3,
+        "stopNameE": "Shanghai Street, Jordan Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.17142,
+          22.306396
+        ]
+      },
+      "properties": {
+        "routeId": 1665,
+        "companyCode": "CTB",
+        "routeNameE": "970",
+        "serviceMode": "R",
+        "journeyTime": 81,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "So Uk Estate",
+        "routeSeq": 1,
+        "stopSeq": 28,
+        "stopId": 4052,
+        "stopPickDrop": 3,
+        "stopNameE": "Nanking Street, Nathan Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.170993,
+          22.310704
+        ]
+      },
+      "properties": {
+        "routeId": 1665,
+        "companyCode": "CTB",
+        "routeNameE": "970",
+        "serviceMode": "R",
+        "journeyTime": 81,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "So Uk Estate",
+        "routeSeq": 1,
+        "stopSeq": 29,
+        "stopId": 970,
+        "stopPickDrop": 3,
+        "stopNameE": "Public Square Street, Nathan Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.170177,
+          22.314867
+        ]
+      },
+      "properties": {
+        "routeId": 1665,
+        "companyCode": "CTB",
+        "routeNameE": "970",
+        "serviceMode": "R",
+        "journeyTime": 81,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "So Uk Estate",
+        "routeSeq": 1,
+        "stopSeq": 30,
+        "stopId": 9052,
+        "stopPickDrop": 3,
+        "stopNameE": "Dundas Street, Nathan Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.169682,
+          22.317251
+        ]
+      },
+      "properties": {
+        "routeId": 1665,
+        "companyCode": "CTB",
+        "routeNameE": "970",
+        "serviceMode": "R",
+        "journeyTime": 81,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "So Uk Estate",
+        "routeSeq": 1,
+        "stopSeq": 31,
+        "stopId": 9054,
+        "stopPickDrop": 3,
+        "stopNameE": "Shantung Street, Nathan Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.16875,
+          22.321766
+        ]
+      },
+      "properties": {
+        "routeId": 1665,
+        "companyCode": "CTB",
+        "routeNameE": "970",
+        "serviceMode": "R",
+        "journeyTime": 81,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "So Uk Estate",
+        "routeSeq": 1,
+        "stopSeq": 32,
+        "stopId": 752,
+        "stopPickDrop": 3,
+        "stopNameE": "Bute Street, Nathan Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.167915,
+          22.325784
+        ]
+      },
+      "properties": {
+        "routeId": 1665,
+        "companyCode": "CTB",
+        "routeNameE": "970",
+        "serviceMode": "R",
+        "journeyTime": 81,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "So Uk Estate",
+        "routeSeq": 1,
+        "stopSeq": 33,
+        "stopId": 9077,
+        "stopPickDrop": 3,
+        "stopNameE": "Prince Edward Station, Nathan Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.165518,
+          22.328114
+        ]
+      },
+      "properties": {
+        "routeId": 1665,
+        "companyCode": "CTB",
+        "routeNameE": "970",
+        "serviceMode": "R",
+        "journeyTime": 81,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "So Uk Estate",
+        "routeSeq": 1,
+        "stopSeq": 34,
+        "stopId": 9218,
+        "stopPickDrop": 3,
+        "stopNameE": "Maple Street, Cheung Sha Wan Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.162334,
+          22.330579
+        ]
+      },
+      "properties": {
+        "routeId": 1665,
+        "companyCode": "CTB",
+        "routeNameE": "970",
+        "serviceMode": "R",
+        "journeyTime": 81,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "So Uk Estate",
+        "routeSeq": 1,
+        "stopSeq": 35,
+        "stopId": 756,
+        "stopPickDrop": 3,
+        "stopNameE": "Pei Ho Street, Cheung Sha Wan Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.159732,
+          22.332602
+        ]
+      },
+      "properties": {
+        "routeId": 1665,
+        "companyCode": "CTB",
+        "routeNameE": "970",
+        "serviceMode": "R",
+        "journeyTime": 81,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "So Uk Estate",
+        "routeSeq": 1,
+        "stopSeq": 36,
+        "stopId": 4111,
+        "stopPickDrop": 3,
+        "stopNameE": "Yee Ching Court, Cheung Sha Wan Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.157781,
+          22.335311
+        ]
+      },
+      "properties": {
+        "routeId": 1665,
+        "companyCode": "CTB",
+        "routeNameE": "970",
+        "serviceMode": "R",
+        "journeyTime": 81,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "So Uk Estate",
+        "routeSeq": 1,
+        "stopSeq": 37,
+        "stopId": 205,
+        "stopPickDrop": 3,
+        "stopNameE": "Cheung Sha Wan Station, Tonkin Street"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.15912,
+          22.337623
+        ]
+      },
+      "properties": {
+        "routeId": 1665,
+        "companyCode": "CTB",
+        "routeNameE": "970",
+        "serviceMode": "R",
+        "journeyTime": 81,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "So Uk Estate",
+        "routeSeq": 1,
+        "stopSeq": 38,
+        "stopId": 4113,
+        "stopPickDrop": 3,
+        "stopNameE": "Po Hei Court, Po On Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.157625,
+          22.340187
+        ]
+      },
+      "properties": {
+        "routeId": 1665,
+        "companyCode": "CTB",
+        "routeNameE": "970",
+        "serviceMode": "R",
+        "journeyTime": 81,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "So Uk Estate",
+        "routeSeq": 1,
+        "stopSeq": 39,
+        "stopId": 4114,
+        "stopPickDrop": 3,
+        "stopNameE": "Begonia House So Uk Estate, Cheung Fat Street"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.158692,
+          22.340874
+        ]
+      },
+      "properties": {
+        "routeId": 1665,
+        "companyCode": "CTB",
+        "routeNameE": "970",
+        "serviceMode": "R",
+        "journeyTime": 81,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "So Uk Estate",
+        "routeSeq": 1,
+        "stopSeq": 40,
+        "stopId": 4097,
+        "stopPickDrop": 1,
+        "stopNameE": "So Uk Estate"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.158692,
+          22.340874
+        ]
+      },
+      "properties": {
+        "routeId": 1665,
+        "companyCode": "CTB",
+        "routeNameE": "970",
+        "serviceMode": "R",
+        "journeyTime": 81,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "So Uk Estate",
+        "routeSeq": 2,
+        "stopSeq": 1,
+        "stopId": 4097,
+        "stopPickDrop": 2,
+        "stopNameE": "So Uk Estate"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.160838,
+          22.339185
+        ]
+      },
+      "properties": {
+        "routeId": 1665,
+        "companyCode": "CTB",
+        "routeNameE": "970",
+        "serviceMode": "R",
+        "journeyTime": 81,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "So Uk Estate",
+        "routeSeq": 2,
+        "stopSeq": 2,
+        "stopId": 4098,
+        "stopPickDrop": 3,
+        "stopNameE": "SKH Kei Oi Primary School, Kwong Lee Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.159702,
+          22.337036
+        ]
+      },
+      "properties": {
+        "routeId": 1665,
+        "companyCode": "CTB",
+        "routeNameE": "970",
+        "serviceMode": "R",
+        "journeyTime": 81,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "So Uk Estate",
+        "routeSeq": 2,
+        "stopSeq": 3,
+        "stopId": 4099,
+        "stopPickDrop": 3,
+        "stopNameE": "Shun Ning Road, Tonkin Street"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.160353,
+          22.33541
+        ]
+      },
+      "properties": {
+        "routeId": 1665,
+        "companyCode": "CTB",
+        "routeNameE": "970",
+        "serviceMode": "R",
+        "journeyTime": 81,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "So Uk Estate",
+        "routeSeq": 2,
+        "stopSeq": 4,
+        "stopId": 206,
+        "stopPickDrop": 3,
+        "stopNameE": "Camp Street, Castle Peak Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.162081,
+          22.33281
+        ]
+      },
+      "properties": {
+        "routeId": 1665,
+        "companyCode": "CTB",
+        "routeNameE": "970",
+        "serviceMode": "R",
+        "journeyTime": 81,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "So Uk Estate",
+        "routeSeq": 2,
+        "stopSeq": 5,
+        "stopId": 4101,
+        "stopPickDrop": 3,
+        "stopNameE": "Fuk Wing Street, Yen Chow Street"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.162363,
+          22.330814
+        ]
+      },
+      "properties": {
+        "routeId": 1665,
+        "companyCode": "CTB",
+        "routeNameE": "970",
+        "serviceMode": "R",
+        "journeyTime": 81,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "So Uk Estate",
+        "routeSeq": 2,
+        "stopSeq": 6,
+        "stopId": 9217,
+        "stopPickDrop": 3,
+        "stopNameE": "Pei Ho Street, Cheung Sha Wan Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.165799,
+          22.328168
+        ]
+      },
+      "properties": {
+        "routeId": 1665,
+        "companyCode": "CTB",
+        "routeNameE": "970",
+        "serviceMode": "R",
+        "journeyTime": 81,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "So Uk Estate",
+        "routeSeq": 2,
+        "stopSeq": 7,
+        "stopId": 9219,
+        "stopPickDrop": 3,
+        "stopNameE": "Maple Street, Cheung Sha Wan Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.168236,
+          22.325459
+        ]
+      },
+      "properties": {
+        "routeId": 1665,
+        "companyCode": "CTB",
+        "routeNameE": "970",
+        "serviceMode": "R",
+        "journeyTime": 81,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "So Uk Estate",
+        "routeSeq": 2,
+        "stopSeq": 8,
+        "stopId": 211,
+        "stopPickDrop": 3,
+        "stopNameE": "Prince Edward Station, Nathan Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.168634,
+          22.3234
+        ]
+      },
+      "properties": {
+        "routeId": 1665,
+        "companyCode": "CTB",
+        "routeNameE": "970",
+        "serviceMode": "R",
+        "journeyTime": 81,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "So Uk Estate",
+        "routeSeq": 2,
+        "stopSeq": 9,
+        "stopId": 212,
+        "stopPickDrop": 3,
+        "stopNameE": "Allied Plaza, Nathan Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.169381,
+          22.319806
+        ]
+      },
+      "properties": {
+        "routeId": 1665,
+        "companyCode": "CTB",
+        "routeNameE": "970",
+        "serviceMode": "R",
+        "journeyTime": 81,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "So Uk Estate",
+        "routeSeq": 2,
+        "stopSeq": 10,
+        "stopId": 4047,
+        "stopPickDrop": 3,
+        "stopNameE": "Argyle Centre, Nathan Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.169721,
+          22.3181
+        ]
+      },
+      "properties": {
+        "routeId": 1665,
+        "companyCode": "CTB",
+        "routeNameE": "970",
+        "serviceMode": "R",
+        "journeyTime": 81,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "So Uk Estate",
+        "routeSeq": 2,
+        "stopSeq": 11,
+        "stopId": 7036,
+        "stopPickDrop": 3,
+        "stopNameE": "Bank Centre, Nathan Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.170362,
+          22.315011
+        ]
+      },
+      "properties": {
+        "routeId": 1665,
+        "companyCode": "CTB",
+        "routeNameE": "970",
+        "serviceMode": "R",
+        "journeyTime": 81,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "So Uk Estate",
+        "routeSeq": 2,
+        "stopSeq": 12,
+        "stopId": 744,
+        "stopPickDrop": 3,
+        "stopNameE": "Dundas Street, Nathan Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.170896,
+          22.312356
+        ]
+      },
+      "properties": {
+        "routeId": 1665,
+        "companyCode": "CTB",
+        "routeNameE": "970",
+        "serviceMode": "R",
+        "journeyTime": 81,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "So Uk Estate",
+        "routeSeq": 2,
+        "stopSeq": 13,
+        "stopId": 745,
+        "stopPickDrop": 3,
+        "stopNameE": "Man Ming Lane, Nathan Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.171527,
+          22.307416
+        ]
+      },
+      "properties": {
+        "routeId": 1665,
+        "companyCode": "CTB",
+        "routeNameE": "970",
+        "serviceMode": "R",
+        "journeyTime": 81,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "So Uk Estate",
+        "routeSeq": 2,
+        "stopSeq": 14,
+        "stopId": 4049,
+        "stopPickDrop": 3,
+        "stopNameE": "Nathan Hotel, Nathan Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.170391,
+          22.305145
+        ]
+      },
+      "properties": {
+        "routeId": 1665,
+        "companyCode": "CTB",
+        "routeNameE": "970",
+        "serviceMode": "R",
+        "journeyTime": 81,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "So Uk Estate",
+        "routeSeq": 2,
+        "stopSeq": 15,
+        "stopId": 4272,
+        "stopPickDrop": 3,
+        "stopNameE": "Parkes Street, Jordan Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.168528,
+          22.305538
+        ]
+      },
+      "properties": {
+        "routeId": 1665,
+        "companyCode": "CTB",
+        "routeNameE": "970",
+        "serviceMode": "R",
+        "journeyTime": 81,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "So Uk Estate",
+        "routeSeq": 2,
+        "stopSeq": 16,
+        "stopId": 1164,
+        "stopPickDrop": 3,
+        "stopNameE": "Battery Street, Jordan Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.164889,
+          22.306215
+        ]
+      },
+      "properties": {
+        "routeId": 1665,
+        "companyCode": "CTB",
+        "routeNameE": "970",
+        "serviceMode": "R",
+        "journeyTime": 81,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "So Uk Estate",
+        "routeSeq": 2,
+        "stopSeq": 17,
+        "stopId": 13310,
+        "stopPickDrop": 3,
+        "stopNameE": "Austin Station, Jordan Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.159842,
+          22.304246
+        ]
+      },
+      "properties": {
+        "routeId": 1665,
+        "companyCode": "CTB",
+        "routeNameE": "970",
+        "serviceMode": "R",
+        "journeyTime": 81,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "So Uk Estate",
+        "routeSeq": 2,
+        "stopSeq": 18,
+        "stopId": 911,
+        "stopPickDrop": 3,
+        "stopNameE": "Western Harbour Crossing Bus-Bus Interchange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.141756,
+          22.288539
+        ]
+      },
+      "properties": {
+        "routeId": 1665,
+        "companyCode": "CTB",
+        "routeNameE": "970",
+        "serviceMode": "R",
+        "journeyTime": 81,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "So Uk Estate",
+        "routeSeq": 2,
+        "stopSeq": 19,
+        "stopId": 8013,
+        "stopPickDrop": 3,
+        "stopNameE": "Connaught Garden, Connaught Road West"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.139952,
+          22.285477
+        ]
+      },
+      "properties": {
+        "routeId": 1665,
+        "companyCode": "CTB",
+        "routeNameE": "970",
+        "serviceMode": "R",
+        "journeyTime": 81,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "So Uk Estate",
+        "routeSeq": 2,
+        "stopSeq": 20,
+        "stopId": 327,
+        "stopPickDrop": 3,
+        "stopNameE": "Li Sing Primary School, Pok Fu Lam Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.135615,
+          22.283616
+        ]
+      },
+      "properties": {
+        "routeId": 1665,
+        "companyCode": "CTB",
+        "routeNameE": "970",
+        "serviceMode": "R",
+        "journeyTime": 81,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "So Uk Estate",
+        "routeSeq": 2,
+        "stopSeq": 21,
+        "stopId": 328,
+        "stopPickDrop": 3,
+        "stopNameE": "HKU West Gate, Pok Fu Lam Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.133374,
+          22.283741
+        ]
+      },
+      "properties": {
+        "routeId": 1665,
+        "companyCode": "CTB",
+        "routeNameE": "970",
+        "serviceMode": "R",
+        "journeyTime": 81,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "So Uk Estate",
+        "routeSeq": 2,
+        "stopSeq": 22,
+        "stopId": 329,
+        "stopPickDrop": 3,
+        "stopNameE": "Lady Ho Tung Hall, Pok Fu Lam Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.132472,
+          22.281962
+        ]
+      },
+      "properties": {
+        "routeId": 1665,
+        "companyCode": "CTB",
+        "routeNameE": "970",
+        "serviceMode": "R",
+        "journeyTime": 81,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "So Uk Estate",
+        "routeSeq": 2,
+        "stopSeq": 23,
+        "stopId": 3185,
+        "stopPickDrop": 3,
+        "stopNameE": "Pokfield Road, Pok Fu Lam Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.131134,
+          22.278259
+        ]
+      },
+      "properties": {
+        "routeId": 1665,
+        "companyCode": "CTB",
+        "routeNameE": "970",
+        "serviceMode": "R",
+        "journeyTime": 81,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "So Uk Estate",
+        "routeSeq": 2,
+        "stopSeq": 24,
+        "stopId": 331,
+        "stopPickDrop": 3,
+        "stopNameE": "Pok Fu Lam Road Playground, Pok Fu Lam Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.130291,
+          22.273482
+        ]
+      },
+      "properties": {
+        "routeId": 1665,
+        "companyCode": "CTB",
+        "routeNameE": "970",
+        "serviceMode": "R",
+        "journeyTime": 81,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "So Uk Estate",
+        "routeSeq": 2,
+        "stopSeq": 25,
+        "stopId": 332,
+        "stopPickDrop": 3,
+        "stopNameE": "HKCCCU Pok Fu Lam Road Cemetery, Pok Fu Lam Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.130642,
+          22.269626
+        ]
+      },
+      "properties": {
+        "routeId": 1665,
+        "companyCode": "CTB",
+        "routeNameE": "970",
+        "serviceMode": "R",
+        "journeyTime": 81,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "So Uk Estate",
+        "routeSeq": 2,
+        "stopSeq": 26,
+        "stopId": 334,
+        "stopPickDrop": 3,
+        "stopNameE": "Queen Mary Hospital, Pok Fu Lam Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.132506,
+          22.266926
+        ]
+      },
+      "properties": {
+        "routeId": 1665,
+        "companyCode": "CTB",
+        "routeNameE": "970",
+        "serviceMode": "R",
+        "journeyTime": 81,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "So Uk Estate",
+        "routeSeq": 2,
+        "stopSeq": 27,
+        "stopId": 335,
+        "stopPickDrop": 3,
+        "stopNameE": "Ebenezer School, Pok Fu Lam Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.133739,
+          22.264353
+        ]
+      },
+      "properties": {
+        "routeId": 1665,
+        "companyCode": "CTB",
+        "routeNameE": "970",
+        "serviceMode": "R",
+        "journeyTime": 81,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "So Uk Estate",
+        "routeSeq": 2,
+        "stopSeq": 28,
+        "stopId": 336,
+        "stopPickDrop": 3,
+        "stopNameE": "Middleton Towers, Pok Fu Lam Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.13566,
+          22.262511
+        ]
+      },
+      "properties": {
+        "routeId": 1665,
+        "companyCode": "CTB",
+        "routeNameE": "970",
+        "serviceMode": "R",
+        "journeyTime": 81,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "So Uk Estate",
+        "routeSeq": 2,
+        "stopSeq": 29,
+        "stopId": 337,
+        "stopPickDrop": 3,
+        "stopNameE": "Pok Fu Lam Reservoir Road, Pok Fu Lam Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.136524,
+          22.260723
+        ]
+      },
+      "properties": {
+        "routeId": 1665,
+        "companyCode": "CTB",
+        "routeNameE": "970",
+        "serviceMode": "R",
+        "journeyTime": 81,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "So Uk Estate",
+        "routeSeq": 2,
+        "stopSeq": 30,
+        "stopId": 338,
+        "stopPickDrop": 3,
+        "stopNameE": "Pok Fu Lam Village, Pok Fu Lam Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.137825,
+          22.255946
+        ]
+      },
+      "properties": {
+        "routeId": 1665,
+        "companyCode": "CTB",
+        "routeNameE": "970",
+        "serviceMode": "R",
+        "journeyTime": 81,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "So Uk Estate",
+        "routeSeq": 2,
+        "stopSeq": 31,
+        "stopId": 308,
+        "stopPickDrop": 3,
+        "stopNameE": "Yu Chun Keung Memorial College No.2, Pok Fu Lam Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.138486,
+          22.251693
+        ]
+      },
+      "properties": {
+        "routeId": 1665,
+        "companyCode": "CTB",
+        "routeNameE": "970",
+        "serviceMode": "R",
+        "journeyTime": 81,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "So Uk Estate",
+        "routeSeq": 2,
+        "stopSeq": 32,
+        "stopId": 495,
+        "stopPickDrop": 3,
+        "stopNameE": "Wah Lok House Wah Fu Estate, Wah Fu Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.137342,
+          22.250916
+        ]
+      },
+      "properties": {
+        "routeId": 1665,
+        "companyCode": "CTB",
+        "routeNameE": "970",
+        "serviceMode": "R",
+        "journeyTime": 81,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "So Uk Estate",
+        "routeSeq": 2,
+        "stopSeq": 33,
+        "stopId": 496,
+        "stopPickDrop": 3,
+        "stopNameE": "Wah Fu Commercial Complex, Wah Fu Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.136003,
+          22.25199
+        ]
+      },
+      "properties": {
+        "routeId": 1665,
+        "companyCode": "CTB",
+        "routeNameE": "970",
+        "serviceMode": "R",
+        "journeyTime": 81,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "So Uk Estate",
+        "routeSeq": 2,
+        "stopSeq": 34,
+        "stopId": 497,
+        "stopPickDrop": 3,
+        "stopNameE": "Wah Ching House Wah Fu Estate, Wah Fu Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.135721,
+          22.253408
+        ]
+      },
+      "properties": {
+        "routeId": 1665,
+        "companyCode": "CTB",
+        "routeNameE": "970",
+        "serviceMode": "R",
+        "journeyTime": 81,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "So Uk Estate",
+        "routeSeq": 2,
+        "stopSeq": 35,
+        "stopId": 498,
+        "stopPickDrop": 3,
+        "stopNameE": "Pui Ying Secondary School, Wah Fu Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.136176,
+          22.254925
+        ]
+      },
+      "properties": {
+        "routeId": 1665,
+        "companyCode": "CTB",
+        "routeNameE": "970",
+        "serviceMode": "R",
+        "journeyTime": 81,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "So Uk Estate",
+        "routeSeq": 2,
+        "stopSeq": 36,
+        "stopId": 686,
+        "stopPickDrop": 3,
+        "stopNameE": "Wah Chui Street, Victoria Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.134517,
+          22.256216
+        ]
+      },
+      "properties": {
+        "routeId": 1665,
+        "companyCode": "CTB",
+        "routeNameE": "970",
+        "serviceMode": "R",
+        "journeyTime": 81,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "So Uk Estate",
+        "routeSeq": 2,
+        "stopSeq": 37,
+        "stopId": 689,
+        "stopPickDrop": 3,
+        "stopNameE": "Victoria Road Zone Sub-station, Victoria Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.133741,
+          22.255846
+        ]
+      },
+      "properties": {
+        "routeId": 1665,
+        "companyCode": "CTB",
+        "routeNameE": "970",
+        "serviceMode": "R",
+        "journeyTime": 81,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "So Uk Estate",
+        "routeSeq": 2,
+        "stopSeq": 38,
+        "stopId": 12478,
+        "stopPickDrop": 3,
+        "stopNameE": "Bel-Air on the Peak, Cyberport Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.132925,
+          22.258085
+        ]
+      },
+      "properties": {
+        "routeId": 1665,
+        "companyCode": "CTB",
+        "routeNameE": "970",
+        "serviceMode": "R",
+        "journeyTime": 81,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "So Uk Estate",
+        "routeSeq": 2,
+        "stopSeq": 39,
+        "stopId": 12574,
+        "stopPickDrop": 3,
+        "stopNameE": "Residence Bel-Air, Cyberport Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.130324,
+          22.261868
+        ]
+      },
+      "properties": {
+        "routeId": 1665,
+        "companyCode": "CTB",
+        "routeNameE": "970",
+        "serviceMode": "R",
+        "journeyTime": 81,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "So Uk Estate",
+        "routeSeq": 2,
+        "stopSeq": 40,
+        "stopId": 10370,
+        "stopPickDrop": 1,
+        "stopNameE": "Cyberport"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.130324,
+          22.261868
+        ]
+      },
+      "properties": {
+        "routeId": 1890,
+        "companyCode": "CTB",
+        "routeNameE": "30X",
+        "serviceMode": "R",
+        "journeyTime": 32,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "Admiralty (East) Please inquire with the operator about the payment arrangement of the two-way fare on this route.",
+        "routeSeq": 1,
+        "stopSeq": 1,
+        "stopId": 10370,
+        "stopPickDrop": 2,
+        "stopNameE": "Cyberport"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.13245,
+          22.259945
+        ]
+      },
+      "properties": {
+        "routeId": 1890,
+        "companyCode": "CTB",
+        "routeNameE": "30X",
+        "serviceMode": "R",
+        "journeyTime": 32,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "Admiralty (East) Please inquire with the operator about the payment arrangement of the two-way fare on this route.",
+        "routeSeq": 1,
+        "stopSeq": 2,
+        "stopId": 12575,
+        "stopPickDrop": 3,
+        "stopNameE": "Cyberport 3, Cyberport Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.132771,
+          22.256586
+        ]
+      },
+      "properties": {
+        "routeId": 1890,
+        "companyCode": "CTB",
+        "routeNameE": "30X",
+        "serviceMode": "R",
+        "journeyTime": 32,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "Admiralty (East) Please inquire with the operator about the payment arrangement of the two-way fare on this route.",
+        "routeSeq": 1,
+        "stopSeq": 3,
+        "stopId": 12477,
+        "stopPickDrop": 3,
+        "stopNameE": "Residence Bel-Air, Cyberport Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.133654,
+          22.254834
+        ]
+      },
+      "properties": {
+        "routeId": 1890,
+        "companyCode": "CTB",
+        "routeNameE": "30X",
+        "serviceMode": "R",
+        "journeyTime": 32,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "Admiralty (East) Please inquire with the operator about the payment arrangement of the two-way fare on this route.",
+        "routeSeq": 1,
+        "stopSeq": 4,
+        "stopId": 12479,
+        "stopPickDrop": 3,
+        "stopNameE": "Bel-Air on the Peak, Cyberport Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.136225,
+          22.255061
+        ]
+      },
+      "properties": {
+        "routeId": 1890,
+        "companyCode": "CTB",
+        "routeNameE": "30X",
+        "serviceMode": "R",
+        "journeyTime": 32,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "Admiralty (East) Please inquire with the operator about the payment arrangement of the two-way fare on this route.",
+        "routeSeq": 1,
+        "stopSeq": 5,
+        "stopId": 12578,
+        "stopPickDrop": 3,
+        "stopNameE": "Wah Chui Street, Victoria Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.137573,
+          22.255991
+        ]
+      },
+      "properties": {
+        "routeId": 1890,
+        "companyCode": "CTB",
+        "routeNameE": "30X",
+        "serviceMode": "R",
+        "journeyTime": 32,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "Admiralty (East) Please inquire with the operator about the payment arrangement of the two-way fare on this route.",
+        "routeSeq": 1,
+        "stopSeq": 6,
+        "stopId": 375,
+        "stopPickDrop": 3,
+        "stopNameE": "Yu Chun Keung Memorial College No.2, Pok Fu Lam Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.136185,
+          22.260524
+        ]
+      },
+      "properties": {
+        "routeId": 1890,
+        "companyCode": "CTB",
+        "routeNameE": "30X",
+        "serviceMode": "R",
+        "journeyTime": 32,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "Admiralty (East) Please inquire with the operator about the payment arrangement of the two-way fare on this route.",
+        "routeSeq": 1,
+        "stopSeq": 7,
+        "stopId": 341,
+        "stopPickDrop": 3,
+        "stopNameE": "Pok Fu Lam Village, Pok Fu Lam Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.131962,
+          22.267314
+        ]
+      },
+      "properties": {
+        "routeId": 1890,
+        "companyCode": "CTB",
+        "routeNameE": "30X",
+        "serviceMode": "R",
+        "journeyTime": 32,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "Admiralty (East) Please inquire with the operator about the payment arrangement of the two-way fare on this route.",
+        "routeSeq": 1,
+        "stopSeq": 8,
+        "stopId": 344,
+        "stopPickDrop": 3,
+        "stopNameE": "Ebenezer School, Pok Fu Lam Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.130681,
+          22.268994
+        ]
+      },
+      "properties": {
+        "routeId": 1890,
+        "companyCode": "CTB",
+        "routeNameE": "30X",
+        "serviceMode": "R",
+        "journeyTime": 32,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "Admiralty (East) Please inquire with the operator about the payment arrangement of the two-way fare on this route.",
+        "routeSeq": 1,
+        "stopSeq": 9,
+        "stopId": 345,
+        "stopPickDrop": 3,
+        "stopNameE": "Queen Mary Hospital, Pok Fu Lam Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.134819,
+          22.284347
+        ]
+      },
+      "properties": {
+        "routeId": 1890,
+        "companyCode": "CTB",
+        "routeNameE": "30X",
+        "serviceMode": "R",
+        "journeyTime": 32,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "Admiralty (East) Please inquire with the operator about the payment arrangement of the two-way fare on this route.",
+        "routeSeq": 1,
+        "stopSeq": 10,
+        "stopId": 350,
+        "stopPickDrop": 3,
+        "stopNameE": "HKU Centennial Campus, Pok Fu Lam Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.159825,
+          22.284767
+        ]
+      },
+      "properties": {
+        "routeId": 1890,
+        "companyCode": "CTB",
+        "routeNameE": "30X",
+        "serviceMode": "R",
+        "journeyTime": 32,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "Admiralty (East) Please inquire with the operator about the payment arrangement of the two-way fare on this route.",
+        "routeSeq": 1,
+        "stopSeq": 11,
+        "stopId": 241,
+        "stopPickDrop": 3,
+        "stopNameE": "Two International Finance Centre, Man Yiu Street"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.15772,
+          22.284152
+        ]
+      },
+      "properties": {
+        "routeId": 1890,
+        "companyCode": "CTB",
+        "routeNameE": "30X",
+        "serviceMode": "R",
+        "journeyTime": 32,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "Admiralty (East) Please inquire with the operator about the payment arrangement of the two-way fare on this route.",
+        "routeSeq": 1,
+        "stopSeq": 12,
+        "stopId": 1441,
+        "stopPickDrop": 3,
+        "stopNameE": "Central (Exchange Square)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.161252,
+          22.281958
+        ]
+      },
+      "properties": {
+        "routeId": 1890,
+        "companyCode": "CTB",
+        "routeNameE": "30X",
+        "serviceMode": "R",
+        "journeyTime": 32,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "Admiralty (East) Please inquire with the operator about the payment arrangement of the two-way fare on this route.",
+        "routeSeq": 1,
+        "stopSeq": 13,
+        "stopId": 647,
+        "stopPickDrop": 3,
+        "stopNameE": "City Hall, Connaught Road Central"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.164619,
+          22.27915
+        ]
+      },
+      "properties": {
+        "routeId": 1890,
+        "companyCode": "CTB",
+        "routeNameE": "30X",
+        "serviceMode": "R",
+        "journeyTime": 32,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "Admiralty (East) Please inquire with the operator about the payment arrangement of the two-way fare on this route.",
+        "routeSeq": 1,
+        "stopSeq": 14,
+        "stopId": 10000286,
+        "stopPickDrop": 1,
+        "stopNameE": "Admiralty - MTR Exit C"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.165279,
+          22.278626
+        ]
+      },
+      "properties": {
+        "routeId": 1890,
+        "companyCode": "CTB",
+        "routeNameE": "30X",
+        "serviceMode": "R",
+        "journeyTime": 32,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "Admiralty (East) Please inquire with the operator about the payment arrangement of the two-way fare on this route.",
+        "routeSeq": 2,
+        "stopSeq": 1,
+        "stopId": 468,
+        "stopPickDrop": 2,
+        "stopNameE": "Admiralty - MTR Exit D"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.160136,
+          22.281958
+        ]
+      },
+      "properties": {
+        "routeId": 1890,
+        "companyCode": "CTB",
+        "routeNameE": "30X",
+        "serviceMode": "R",
+        "journeyTime": 32,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "Admiralty (East) Please inquire with the operator about the payment arrangement of the two-way fare on this route.",
+        "routeSeq": 2,
+        "stopSeq": 2,
+        "stopId": 21,
+        "stopPickDrop": 3,
+        "stopNameE": "Statue Square, Connaught Road Central"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.157506,
+          22.283313
+        ]
+      },
+      "properties": {
+        "routeId": 1890,
+        "companyCode": "CTB",
+        "routeNameE": "30X",
+        "serviceMode": "R",
+        "journeyTime": 32,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "Admiralty (East) Please inquire with the operator about the payment arrangement of the two-way fare on this route.",
+        "routeSeq": 2,
+        "stopSeq": 3,
+        "stopId": 23,
+        "stopPickDrop": 3,
+        "stopNameE": "Pottinger Street, Connaught Road Central"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.139952,
+          22.285477
+        ]
+      },
+      "properties": {
+        "routeId": 1890,
+        "companyCode": "CTB",
+        "routeNameE": "30X",
+        "serviceMode": "R",
+        "journeyTime": 32,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "Admiralty (East) Please inquire with the operator about the payment arrangement of the two-way fare on this route.",
+        "routeSeq": 2,
+        "stopSeq": 4,
+        "stopId": 327,
+        "stopPickDrop": 3,
+        "stopNameE": "Li Sing Primary School, Pok Fu Lam Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.135615,
+          22.283616
+        ]
+      },
+      "properties": {
+        "routeId": 1890,
+        "companyCode": "CTB",
+        "routeNameE": "30X",
+        "serviceMode": "R",
+        "journeyTime": 32,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "Admiralty (East) Please inquire with the operator about the payment arrangement of the two-way fare on this route.",
+        "routeSeq": 2,
+        "stopSeq": 5,
+        "stopId": 328,
+        "stopPickDrop": 3,
+        "stopNameE": "HKU West Gate, Pok Fu Lam Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.132472,
+          22.281962
+        ]
+      },
+      "properties": {
+        "routeId": 1890,
+        "companyCode": "CTB",
+        "routeNameE": "30X",
+        "serviceMode": "R",
+        "journeyTime": 32,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "Admiralty (East) Please inquire with the operator about the payment arrangement of the two-way fare on this route.",
+        "routeSeq": 2,
+        "stopSeq": 6,
+        "stopId": 3185,
+        "stopPickDrop": 3,
+        "stopNameE": "Pokfield Road, Pok Fu Lam Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.130642,
+          22.269626
+        ]
+      },
+      "properties": {
+        "routeId": 1890,
+        "companyCode": "CTB",
+        "routeNameE": "30X",
+        "serviceMode": "R",
+        "journeyTime": 32,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "Admiralty (East) Please inquire with the operator about the payment arrangement of the two-way fare on this route.",
+        "routeSeq": 2,
+        "stopSeq": 7,
+        "stopId": 334,
+        "stopPickDrop": 3,
+        "stopNameE": "Queen Mary Hospital, Pok Fu Lam Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.132506,
+          22.266926
+        ]
+      },
+      "properties": {
+        "routeId": 1890,
+        "companyCode": "CTB",
+        "routeNameE": "30X",
+        "serviceMode": "R",
+        "journeyTime": 32,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "Admiralty (East) Please inquire with the operator about the payment arrangement of the two-way fare on this route.",
+        "routeSeq": 2,
+        "stopSeq": 8,
+        "stopId": 335,
+        "stopPickDrop": 3,
+        "stopNameE": "Ebenezer School, Pok Fu Lam Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.13566,
+          22.262511
+        ]
+      },
+      "properties": {
+        "routeId": 1890,
+        "companyCode": "CTB",
+        "routeNameE": "30X",
+        "serviceMode": "R",
+        "journeyTime": 32,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "Admiralty (East) Please inquire with the operator about the payment arrangement of the two-way fare on this route.",
+        "routeSeq": 2,
+        "stopSeq": 9,
+        "stopId": 337,
+        "stopPickDrop": 3,
+        "stopNameE": "Pok Fu Lam Reservoir Road, Pok Fu Lam Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.136524,
+          22.260723
+        ]
+      },
+      "properties": {
+        "routeId": 1890,
+        "companyCode": "CTB",
+        "routeNameE": "30X",
+        "serviceMode": "R",
+        "journeyTime": 32,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "Admiralty (East) Please inquire with the operator about the payment arrangement of the two-way fare on this route.",
+        "routeSeq": 2,
+        "stopSeq": 10,
+        "stopId": 338,
+        "stopPickDrop": 3,
+        "stopNameE": "Pok Fu Lam Village, Pok Fu Lam Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.137825,
+          22.255946
+        ]
+      },
+      "properties": {
+        "routeId": 1890,
+        "companyCode": "CTB",
+        "routeNameE": "30X",
+        "serviceMode": "R",
+        "journeyTime": 32,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "Admiralty (East) Please inquire with the operator about the payment arrangement of the two-way fare on this route.",
+        "routeSeq": 2,
+        "stopSeq": 11,
+        "stopId": 308,
+        "stopPickDrop": 3,
+        "stopNameE": "Yu Chun Keung Memorial College No.2, Pok Fu Lam Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.136176,
+          22.254925
+        ]
+      },
+      "properties": {
+        "routeId": 1890,
+        "companyCode": "CTB",
+        "routeNameE": "30X",
+        "serviceMode": "R",
+        "journeyTime": 32,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "Admiralty (East) Please inquire with the operator about the payment arrangement of the two-way fare on this route.",
+        "routeSeq": 2,
+        "stopSeq": 12,
+        "stopId": 686,
+        "stopPickDrop": 3,
+        "stopNameE": "Wah Chui Street, Victoria Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.133741,
+          22.255846
+        ]
+      },
+      "properties": {
+        "routeId": 1890,
+        "companyCode": "CTB",
+        "routeNameE": "30X",
+        "serviceMode": "R",
+        "journeyTime": 32,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "Admiralty (East) Please inquire with the operator about the payment arrangement of the two-way fare on this route.",
+        "routeSeq": 2,
+        "stopSeq": 13,
+        "stopId": 12478,
+        "stopPickDrop": 3,
+        "stopNameE": "Bel-Air on the Peak, Cyberport Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.132925,
+          22.258085
+        ]
+      },
+      "properties": {
+        "routeId": 1890,
+        "companyCode": "CTB",
+        "routeNameE": "30X",
+        "serviceMode": "R",
+        "journeyTime": 32,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "Admiralty (East) Please inquire with the operator about the payment arrangement of the two-way fare on this route.",
+        "routeSeq": 2,
+        "stopSeq": 14,
+        "stopId": 12574,
+        "stopPickDrop": 3,
+        "stopNameE": "Residence Bel-Air, Cyberport Road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.130324,
+          22.261868
+        ]
+      },
+      "properties": {
+        "routeId": 1890,
+        "companyCode": "CTB",
+        "routeNameE": "30X",
+        "serviceMode": "R",
+        "journeyTime": 32,
+        "locStartNameC": "數碼港",
+        "locStartNameS": "数码港",
+        "locStartNameE": "Cyberport",
+        "locEndNameE": "Admiralty (East) Please inquire with the operator about the payment arrangement of the two-way fare on this route.",
+        "routeSeq": 2,
+        "stopSeq": 15,
+        "stopId": 10370,
+        "stopPickDrop": 1,
+        "stopNameE": "Cyberport"
+      }
+    }
+  ]
+}
