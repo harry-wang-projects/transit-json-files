@@ -170,3 +170,5 @@ I have a JSON file consisting of a "type" property followed by an array called "
 ]
 
 Write a Javascript program that reads the JSON file and filters the "features" array such that only "features" with a certain property remain. Also, make it drop some entries that I can decide, such as "lastUpdateDate" in the "properties" of each feature.
+
+I have a JSON file consisting of an few properties, one of which is an array called "features". For each element in "features", there is a property called "properties" that includes a property called "ROUTE_ID". Write me a jq command that filters the JSON file such that the "features" array only includes elements with certain "ROUTE_ID"s. 

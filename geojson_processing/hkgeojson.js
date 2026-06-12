@@ -126,9 +126,8 @@ droponly(
 */
 
 
-// Example 2: Filter by companyCode = "KMB" and drop multiple properties
 filterGeoJSON(
-    '../hk_geojson/cleaned_hkgeojson.json',
+    '../hk_geojson/FB_ROUTE_gdb_FB_ROUTE_LINE_converted.geojson',
     '../hk_geojson/specific_hkgeojson.json',
     {
         filterProperty: 'routeId',
@@ -218,7 +217,7 @@ function analyzeJson(filePath) {
 
 // Run analysis of the geojson
 
-analyzeJson("../hk_geojson/JSON_BUS (1).json");
+//analyzeJson("../hk_geojson/JSON_BUS (1).json");
 
 
 function inspectJSONProperties(filePath) {
@@ -264,4 +263,4 @@ function inspectJSONProperties(filePath) {
 }
 
 
-console.log(inspectJSONProperties("../hk_geojson/JSON_BUS (1).json"));
+//console.log(inspectJSONProperties("../hk_geojson/JSON_BUS (1).json"));

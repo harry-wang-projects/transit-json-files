@@ -1,0 +1,1 @@
+jq --argjson ids '[1665, 1890]' '.features |= map(select(.properties.ROUTE_ID | IN($ids[])))' ../hk_geojson/FB_ROUTE_gdb_FB_ROUTE_LINE_converted.geojson > ../hk_geojson/specific_hkgeojson.json
